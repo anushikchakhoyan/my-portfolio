@@ -1,14 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import {useTranslation} from 'gatsby-plugin-react-i18next';
 
-import About from "@/components/about"
-import Hero from "@/components/hero"
-import Seo from "@/components/seo"
+import About from "@/features/about";
+import Hero from "@/features/hero";
+import Seo from "@/features/seo";
 
 const IndexPage: React.FC = () => {
-  const {t} = useTranslation();
-
   return (
     <div className="overflow-y-scroll h-screen" style={{ scrollSnapType: 'y mandatory' }}>
       <Hero />
