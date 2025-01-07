@@ -16,6 +16,7 @@ export const onCreateWebpackConfig = ({ actions } : any) => {
     resolve: {
       alias: {
         "@/components/ui": path.resolve(__dirname, "src/components/ui"),
+        "@/components/base": path.resolve(__dirname, "src/components/base"),
         "@/features": path.resolve(__dirname, "src/features"),
         "@/images": path.resolve(__dirname, "src/images"),
         "@/lib/utils": path.resolve(__dirname, "src/lib/utils"),

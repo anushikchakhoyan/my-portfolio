@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 
 import Seo from "@/features/seo";
 
@@ -11,4 +11,4 @@ const NotFoundPage: React.FC = () => (
 
 export const Head = () => <Seo title="404: Not Found" />
 
-export default NotFoundPage
+export default NotFoundPage;

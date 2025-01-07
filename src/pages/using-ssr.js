@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-import MainLayout from "../features/layout/main";
+import MainLayout from "../features/layout";
 import Seo from "../features/seo";
 
 const UsingSSR = ({ serverData }) => {

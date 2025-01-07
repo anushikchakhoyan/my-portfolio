@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `locale`,
+        name: `locales`,
         path: `${__dirname}/src/locales`,
       }
     },
@@ -77,29 +77,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        localeJsonSourceName: `locales`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `ru`, `arm`],
         defaultLanguage: `en`,
         siteUrl: `/`,
         trailingSlash: 'always',
         i18nextOptions: {
           interpolation: {
-            escapeValue: false // not needed for react as it escapes by default
+            escapeValue: false,
           },
+          ns: ["translation"],
+          defaultNS: "translation",
           keySeparator: false,
           nsSeparator: false
         },
         pages: [
           {
-            matchPath: '/:lang?/blog/:uid',
+            matchPath: "/",
             getLanguageFromPath: true,
-            excludeLanguages: ['es']
           },
-          {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
+          // {
+          //   matchPath: "/:lang?/contact",
+          //   getLanguageFromPath: true,
+          // },
+        ],
       }
     }
   ],

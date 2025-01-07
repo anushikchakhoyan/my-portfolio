@@ -1,13 +1,10 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { ArrowDown } from "lucide-react";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import ExternalLink from "@/features/hero/components/externalLink";
 import SectionsLayout from "@/features/layout/section";
 import { STARTED_CAREER_AT } from "@/utils";
 
-import ExternalLink from "@/features/hero/components/ExternalLink";
-import Link from "@/features/link";
 
 const externalLinks = [
   { link: "https://www.linkedin.com/in/anush-chakhoyan/", text: "Linkedin" },
@@ -17,7 +14,6 @@ const externalLinks = [
 
 const Hero = () => {
   const duration = 2;
-  const {t} = useTranslation();
   const startYear = STARTED_CAREER_AT;
   const endYear = new Date().getFullYear();
   const [yearsExperience, setYearsExperience] = useState(startYear);
@@ -42,8 +38,8 @@ const Hero = () => {
   }, [startYear, endYear, duration]);
 
   return (
-    <SectionsLayout id="main" className="flex-col justify-between">
-      <div/>
+    <SectionsLayout id="main" className="flex-col">
+      {/*<div/>*/}
       <div className="flex flex-col gap-4 mx-auto">
         <h1 className="flex items-center mb-2">
           <span className="text-9xl font-josefinSans m-0">Port
@@ -58,11 +54,11 @@ const Hero = () => {
         </ul>
       </div>
 
-      <p className="mr-auto ml-auto py-12">
-        <Link to="#about" text={t('scrollDown')} className="flex text-gray-600" aria-label="Scroll down">
-          <ArrowDown className="mx-4 w-5 animate-bounce"/>
-        </Link>
-      </p>
+      {/*<p className="mr-auto ml-auto py-12">*/}
+      {/*  <Link to="#about" text={t('scrollDown')} className="flex text-gray-600" aria-label="Scroll down">*/}
+      {/*    <ArrowDown className="mx-4 w-5 animate-bounce"/>*/}
+      {/*  </Link>*/}
+      {/*</p>*/}
     </SectionsLayout>
   )
 }
