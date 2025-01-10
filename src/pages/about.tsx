@@ -1,19 +1,20 @@
-import React from "react";
+import * as React from "react";
 import { graphql } from "gatsby";
 
 import MainLayout from "@/features/layout";
-import Hero from "@/features/hero";
+import About from "@/features/about";
 import Seo from "@/features/seo";
 
-const IndexPage: React.FC = () => {
+const AboutPage: React.FC = () => {
   return (
     <MainLayout>
-       <Hero />
+      <About />
     </MainLayout>
   )
 }
 
-export const Head: React.FC = () => <Seo title="Home" />
+
+export const Head = () => <Seo title="about" />
 
 export const query = graphql`
   query ($language: String!) {
@@ -29,4 +30,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage
+export default AboutPage

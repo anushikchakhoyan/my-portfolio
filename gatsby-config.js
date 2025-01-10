@@ -11,12 +11,30 @@ module.exports = {
   siteMetadata: {
     title: `Anush Chakhoyan`,
     position: `Frontend Engineer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `I’m Anush Chakhoyan, a dedicated developer with a strong background in building modern, efficient, and user-friendly web applications. Alongside my work in React, TypeScript, and cutting-edge UI frameworks, I share insights and expertise through articles on Medium, helping others navigate the world of web development. Let’s bring innovative ideas to life!`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,8 +42,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -43,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `locale`,
+        name: `locales`,
         path: `${__dirname}/src/locales`,
       }
     },
@@ -61,29 +77,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        localeJsonSourceName: `locales`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `ru`, `arm`],
         defaultLanguage: `en`,
         siteUrl: `/`,
         trailingSlash: 'always',
         i18nextOptions: {
           interpolation: {
-            escapeValue: false // not needed for react as it escapes by default
+            escapeValue: false,
           },
+          ns: ["translation"],
+          defaultNS: "translation",
           keySeparator: false,
           nsSeparator: false
         },
         pages: [
           {
-            matchPath: '/:lang?/blog/:uid',
+            matchPath: "/",
             getLanguageFromPath: true,
-            excludeLanguages: ['es']
           },
-          {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
+          // {
+          //   matchPath: "/:lang?/contact",
+          //   getLanguageFromPath: true,
+          // },
+        ],
       }
     }
   ],
