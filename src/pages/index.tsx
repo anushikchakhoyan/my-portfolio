@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { graphql } from "gatsby";
 
 import MainLayout from "@/features/layout";
@@ -8,9 +8,7 @@ import Seo from "@/features/seo";
 const IndexPage: React.FC = () => {
   return (
     <MainLayout>
-      <div className="overflow-y-scroll h-screen" style={{ scrollSnapType: "y mandatory" }}>
-        <Hero />
-      </div>
+       <Hero />
     </MainLayout>
   )
 }

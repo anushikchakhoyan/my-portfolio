@@ -20,8 +20,9 @@ export const onCreateWebpackConfig = ({ actions } : any) => {
         "@/features": path.resolve(__dirname, "src/features"),
         "@/images": path.resolve(__dirname, "src/images"),
         "@/lib/utils": path.resolve(__dirname, "src/lib/utils"),
+        "@/lib/constants": path.resolve(__dirname, "src/lib/constants"),
+        "@/hooks": path.resolve(__dirname, "src/hooks"),
         "@/locales/en": path.resolve(__dirname, "src/locales/en"),
-        "@/utils": path.resolve(__dirname, "src/utils"),
       },
     },
   });

@@ -1,5 +1,6 @@
-import * as React from "react"
-import Header from "@/features/layout/header"
+import * as React from "react";
+import Header from "@/features/layout/header";
+import InteractiveCanvas from "@/features/interactive-canvas";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,9 +9,9 @@ type LayoutProps = {
 const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main>
+      <InteractiveCanvas/>
       <Header />
       {children}
-      {/*<Footer />*/}
     </main>
   )
 }

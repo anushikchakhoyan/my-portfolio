@@ -1,9 +1,9 @@
-import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-import SectionsLayout from "@/features/layout/section"
+import SectionsLayout from "@/features/layout/section";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -17,13 +17,7 @@ const About: React.FC = () => {
     }
   `)
 
-  const image = getImage(data.file.childImageSharp.gatsbyImageData) as IGatsbyImageData
-  // const description = t(data.site.siteMetadata.description)
-  // site {
-  //   siteMetadata {
-  //     description
-  //   }
-  // }
+  const image = getImage(data.file.childImageSharp.gatsbyImageData) as IGatsbyImageData;
 
   return (
     <SectionsLayout id="about" className="items-center justify-start w-screen relative px-0">
@@ -34,7 +28,7 @@ const About: React.FC = () => {
         <h1 className="text-9xl font-lighter font-josefinSans">
           {t("hello")}
         </h1>
-        <span className="px-3 text-lg font-medium font-josefinSans">⎯ {t('dd')}</span>
+        <span className="px-3 text-lg font-medium font-josefinSans">⎯ {t('itsMe')}</span>
         <p className="px-3 py-6 w-5/6 font-josefinSans">{t("description")}</p>
       </div>
     </SectionsLayout>

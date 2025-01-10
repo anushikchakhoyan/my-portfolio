@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import Footer from "@/features/layout/footer";
 import ContactUs from "@/features/contact-us";
 import MainLayout from "@/features/layout";
 import Seo from "@/features/seo";
@@ -9,6 +10,7 @@ import Seo from "@/features/seo";
 const ContactUsPage: React.FC = () => (
   <MainLayout>
     <ContactUs />
+    <Footer />
   </MainLayout>
 )
 
