@@ -78,9 +78,10 @@ module.exports = {
   			pink: {
   				'50': '#dfc8cf',
   				'100': '#ddc0c8',
-  				'200': '#c5a6ab',
+  				'200': '#E6C4B0',
   				'300': '#d5a5a8',
-  				'400': '#9e707c'
+  				'400': '#9e707c',
+  				'900': '#5C4151'
   			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
@@ -114,11 +115,29 @@ module.exports = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+				'slider-shape': {
+					"0%, 100%": {
+						borderRadius: "42% 58% 70% 30% / 45% 45% 55% 55%",
+						transform: "translate3d(0, 0, 0) rotateZ(0.01deg)",
+					},
+					"34%": {
+						borderRadius: "70% 30% 46% 54% / 30% 29% 71% 70%",
+						transform: "translate3d(0, 5px, 0) rotateZ(0.01deg)",
+					},
+					"50%": {
+						transform: "translate3d(0, 0, 0) rotateZ(0.01deg)",
+					},
+					"67%": {
+						borderRadius: "100% 60% 60% 100% / 100% 100% 60% 60%",
+						transform: "translate3d(0, -3px, 0) rotateZ(0.01deg)",
+					},
+				},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+				'slider-shape': "slider-shape 5s linear infinite"
   		}
   	}
   },

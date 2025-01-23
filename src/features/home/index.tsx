@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-import ExternalLink from "@/features/hero/components/externalLink";
+import { GITHUB_URL, LINKEDIN_URL, MEDIUM_URL, STARTED_CAREER_AT } from "@/lib/constants";
+import ExternalLink from "@/components/base/external-link";
 import SectionsLayout from "@/features/layout/section";
-import { STARTED_CAREER_AT } from "@/lib/constants";
 
 interface ExternalLink {
-  link: string;
+  url: string;
   text: string;
 }
 
 const externalLinks: ExternalLink[] = [
-  { link: "https://www.linkedin.com/in/anush-chakhoyan/", text: "Linkedin" },
-  { link: "https://anushchakhoyan.medium.com/", text: "Medium" },
-  { link: "https://github.com/anushikchakhoyan", text: "GitHub" }
+  { url: LINKEDIN_URL, text: "Linkedin" },
+  { url: MEDIUM_URL, text: "Medium" },
+  { url: GITHUB_URL, text: "GitHub" }
 ]
 
-const Hero = () => {
+const Home = () => {
   const duration = 2;
   const startYear = STARTED_CAREER_AT;
   const endYear = new Date().getFullYear();
@@ -49,9 +49,9 @@ const Hero = () => {
           </span>
           <sup className="text-2xl font-bold font-josefinSans inline-block">{yearsExperience}</sup>
         </h1>
-        <ul className="flex gap-4 m-0">
-          {externalLinks.map(({ link, text }) => (
-            <li key={link}><ExternalLink link={link} text={text} /></li>
+        <ul className="flex gap-4 m-0 px-3">
+          {externalLinks.map(({ url, text }) => (
+            <li key={url}><ExternalLink to={url} text={text} /></li>
           ))}
         </ul>
       </div>
@@ -59,4 +59,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default Home;

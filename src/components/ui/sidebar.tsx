@@ -14,7 +14,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Tally2 } from "lucide-react";
+import { LuAlignLeft } from "react-icons/lu";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -275,7 +275,7 @@ const SidebarTrigger = React.forwardRef<
       }}
       {...props}
     >
-      <Tally2 className="rotate-90" />
+      <LuAlignLeft />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )

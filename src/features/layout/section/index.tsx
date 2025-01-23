@@ -1,16 +1,16 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from "react"
+import { cn } from "@/lib/utils"
 
 type LayoutProps = {
-  children: React.ReactNode;
-  className?: string;
-  id: string;
+  id: string,
+  className?: string,
+  children: React.ReactNode,
+  style?: object,
 }
 
-const SectionsLayout: React.FC<LayoutProps> = ({ children, className, id }) => {
+const SectionsLayout: React.FC<LayoutProps> = ({ children, className, id, ...props }) => {
   return (
-    <section id={id} className={cn("h-dvh px-5 bg-gray-200 flex justify-center", className)}
-             style={{ scrollSnapAlign: "start" }}>
+    <section id={id} className={cn("h-dvh px-5 flex justify-center", className)} {...props}>
       {children}
     </section>
   )

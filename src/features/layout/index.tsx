@@ -1,16 +1,15 @@
 import * as React from "react";
-import Header from "@/features/layout/header";
-import InteractiveCanvas from "@/features/interactive-canvas";
+import SidebarNavigation from "@/features/layout/sidebar-navigation";
 
 type LayoutProps = {
   children: React.ReactNode;
+  className?: string;
 }
 
-const MainLayout: React.FC<LayoutProps> = ({ children }) => {
+const MainLayout: React.FC<LayoutProps> = ({ className, children }) => {
   return (
-    <main>
-      <InteractiveCanvas/>
-      <Header />
+    <main className={className}>
+      <SidebarNavigation />
       {children}
     </main>
   )

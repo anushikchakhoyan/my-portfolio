@@ -10,7 +10,21 @@
   "itsMe": "I'm Anush a front-end engineer",
   "exploreMyJourney": "Explore my journey",
   "notFound": "Not Found",
-  "description": "A dedicated developer with a strong background in building modern, efficient, and user-friendly web applications. Alongside my work in React, TypeScript, and cutting-edge UI frameworks, I share insights and expertise through articles on Medium, helping others navigate the world of web development. Let’s bring innovative ideas to life!",
+  "description": "A dedicated developer with a strong background in building modern, efficient, and user-friendly web applications. Alongside my work in React, TypeScript, and cutting-edge UI frameworks, I share insights and expertise through articles on Medium, helping others navigate the world of web development.",
+  "innovativeIdeas": "Let’s bring innovative ideas to life!",
   "builtWith": "Built with",
-  "love": "LOVE"
+  "love": "LOVE",
+  "subscribe": "Subscribe",
+  "subscribeToGet": "Subscribe to get",
+  "stayInTouch": "Subscribe to our newsletter to stay in touch with the latest.",
+  "latestNews": "Latest news from us!",
+  "invalidEmail": "Invalid email address",
+  "requiredField": "This field is required",
+  "email": "Email",
+  "contactDescription": "Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out!",
+  "haveSomethingShare": "Have Something to Share?",
+  "reachOutMe": "I'm always happy to connect! Reach out via the form below or email me directly at ",
+  "getBackToYouSoon": "I'll get back to you as soon as possible.",
+  "fullName": "Full Name",
+  "tellUsYourself": "Tell us a little bit about yourself..."
 }
