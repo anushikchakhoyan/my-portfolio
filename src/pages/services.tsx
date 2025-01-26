@@ -1,21 +1,19 @@
-import React from "react";
+import * as React from "react"
 import { graphql } from "gatsby";
 
-import InteractiveCanvas from "@/components/base/interactive-canvas";
 import MainLayout from "@/features/layout";
-import Home from "@/features/home";
+import Content from "@/features/content";
 import Seo from "@/features/seo";
 
-const IndexPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <MainLayout>
-      <InteractiveCanvas/>
-      <Home />
+      <Content />
     </MainLayout>
   )
 }
 
-export const Head: React.FC = () => <Seo title="Home" />
+export const Head = () => <Seo title="services" />
 
 export const query = graphql`
   query ($language: String!) {
@@ -29,6 +27,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexPage
+export default ServicesPage
