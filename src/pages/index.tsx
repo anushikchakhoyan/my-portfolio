@@ -5,7 +5,7 @@ import MainLayout from "@/features/layout";
 import Home from "@/features/home";
 import Seo from "@/features/seo";
 
-const IndexPage: React.FC = () => {
+const IndexPage = () => {
   return (
     <MainLayout>
       {/* <InteractiveCanvas /> */}
@@ -18,7 +18,7 @@ export const Head: React.FC = () => <Seo title="Home" />
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
       edges {
         node {
           ns

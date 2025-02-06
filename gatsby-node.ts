@@ -1,19 +1,51 @@
 import * as path from "path";
+import type { GatsbyNode } from "gatsby";
 
-export const createPages = async ({ actions }: any) => {
+interface LocaleNode {
+  language: string;
+}
+
+interface LocaleQueryResult {
+  allLocale: {
+    nodes: LocaleNode[];
+  };
+}
+
+export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  createPage({
-    path: "/using-dsg",
-    component: path.resolve(__dirname, "src/templates/using-dsg.tsx"),
-    context: {},
-    defer: true,
+  const result = await graphql<LocaleQueryResult>(`
+    query {
+      allLocale {
+        nodes {
+          language
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    throw new Error(result.errors);
+  }
+
+  const languages = result.data?.allLocale.nodes.map((node) => node.language);
+
+  // Create pages for each language
+  languages?.forEach((language: string) => {
+    createPage({
+      path: `/${language}`,
+      component: path.resolve(`src/templates/index.tsx`),
+      context: {
+        language,
+      },
+    });
   });
 };
 
-export const onCreateWebpackConfig = ({ actions }: any) => {
+export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({ actions }: any) => {
   actions.setWebpackConfig({
     resolve: {
+      fallback: { fs: false },
       alias: {
         "@/ui": path.resolve(__dirname, "src/components/ui"),
         "@/base": path.resolve(__dirname, "src/components/base"),
@@ -21,7 +53,6 @@ export const onCreateWebpackConfig = ({ actions }: any) => {
         "@/images": path.resolve(__dirname, "src/images"),
         "@/lib": path.resolve(__dirname, "src/lib"),
         "@/hooks": path.resolve(__dirname, "src/hooks"),
-        "@/locales": path.resolve(__dirname, "src/locales/en"),
         "@/contexts": path.resolve(__dirname, "src/contexts"),
       },
     },

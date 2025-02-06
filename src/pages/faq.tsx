@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import Footer from "@/features/layout/footer";
 import MainLayout from "@/features/layout";
 import FaqList from "@/features/faq-list";
 import Seo from "@/features/seo";

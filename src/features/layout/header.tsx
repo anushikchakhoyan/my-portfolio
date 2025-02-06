@@ -1,7 +1,8 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import { LanguageSwitcher } from "./language-switcher";
 import { useTheme } from "@/contexts/ThemeContext";
 import useIsMobile from "@/hooks/use-mobile";
 import { Button } from "@/ui/button";
@@ -9,7 +10,7 @@ import { NavMenu } from "./nav-menu";
 import { Link } from "@/base/";
 
 const Header = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [toggle, setToggle] = useState(false);
 
     const isMobile = useIsMobile();
@@ -25,7 +26,6 @@ const Header = () => {
         }
     }, [isMobile]);
 
-
     return (
         <header className="fixed flex w-full top-0 font-josefinSans z-10 px-5 py-3 justify-between lg:justify-start">
             <Link to="/" className="flex items-center text-base md:text-lg font-josefinSans">
@@ -36,6 +36,7 @@ const Header = () => {
                 <Button variant="ghost" className="hidden lg:block">
                     {t('chooseColorPallete')}
                 </Button>
+                <LanguageSwitcher />
                 <Button
                     variant="outline"
                     size="icon"

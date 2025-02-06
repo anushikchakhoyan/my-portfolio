@@ -9,5 +9,9 @@ import "./src/styles/global.css";
 import { ThemeProvider } from "./src/contexts/ThemeContext";
 
 export const wrapRootElement = ({ element }: { element: React.ReactNode }) => {
-    return <ThemeProvider>{element}</ThemeProvider>;
+    return (
+        <ThemeProvider>
+            {element}
+        </ThemeProvider>
+    );
 };

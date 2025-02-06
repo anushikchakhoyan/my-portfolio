@@ -4,10 +4,9 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Anush Chakhoyan`,
     position: `Frontend Engineer`,
@@ -78,30 +77,32 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `ru`, `arm`],
+        languages: [`en`, `hy`],
         defaultLanguage: `en`,
-        siteUrl: `/`,
+        siteUrl: `http://localhost:8000/`,
         trailingSlash: 'always',
         i18nextOptions: {
+          fallbackLng: `en`,
           interpolation: {
             escapeValue: false,
           },
-          ns: ["translation"],
-          defaultNS: "translation",
           keySeparator: false,
           nsSeparator: false
         },
         pages: [
           {
-            matchPath: "/",
+            matchPath: '/:lang?/blog/:uid',
             getLanguageFromPath: true,
+            excludeLanguages: ['es']
           },
-          // {
-          //   matchPath: "/:lang?/contact",
-          //   getLanguageFromPath: true,
-          // },
-        ],
+          {
+            matchPath: '/preview',
+            languages: ['en']
+          }
+        ]
       }
     }
   ],
 }
+
+export default config;
