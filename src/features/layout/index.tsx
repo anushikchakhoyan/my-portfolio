@@ -1,16 +1,18 @@
 import * as React from "react";
-import SidebarNavigation from "@/features/layout/sidebar-navigation";
+import Header from "@/features/layout/header";
+import Footer from "./footer";
 
-type LayoutProps = {
+type LayoutTypes = {
   children: React.ReactNode;
   className?: string;
 }
 
-const MainLayout: React.FC<LayoutProps> = ({ className, children }) => {
+const MainLayout: React.FC<LayoutTypes> = ({ className, children }) => {
   return (
     <main className={className}>
-      <SidebarNavigation />
+      <Header />
       {children}
+      <Footer />
     </main>
   )
 }

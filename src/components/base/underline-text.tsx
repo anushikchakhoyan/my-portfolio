@@ -1,5 +1,5 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
 type UnderlineTextTypes = {
   text: string;
@@ -10,7 +10,7 @@ const UnderlineText: React.FC<UnderlineTextTypes> = ({ text, className }) => {
 
   return (
     <p className={cn(
-      `text-gray-700 text-base font-medium font-montserrat
+      `text-gray-700 text-base font-medium
       transition-colors duration-200 ease-in-out underline ${className}`
     )}>
       {text}

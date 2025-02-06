@@ -10,3 +10,10 @@
 exports.onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` })
 }
+
+import React from "react";
+import { ThemeProvider } from "./src/contexts/ThemeContext";
+
+export const wrapRootElement = ({ element }: { element: React.ReactNode }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+);

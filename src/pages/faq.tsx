@@ -1,20 +1,22 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import Footer from "@/features/layout/footer";
 import MainLayout from "@/features/layout";
-import Home from "@/features/home";
+import FaqList from "@/features/faq-list";
 import Seo from "@/features/seo";
 
-const IndexPage: React.FC = () => {
-  return (
-    <MainLayout>
-      {/* <InteractiveCanvas /> */}
-      <Home />
-    </MainLayout>
-  )
-}
+const FaqPage: React.FC = () => (
+  <MainLayout>
+    <FaqList />
+  </MainLayout>
+)
 
-export const Head: React.FC = () => <Seo title="Home" />
+export const Head = () => {
+  const { t } = useTranslation()
+  return <Seo title={t("contact")} />
+}
 
 export const query = graphql`
   query ($language: String!) {
@@ -30,4 +32,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage
+export default FaqPage;

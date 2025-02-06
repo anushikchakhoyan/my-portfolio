@@ -1,19 +1,22 @@
-import * as React from "react";
+import { LG_BREAKPOINT } from "@/lib/constants";
+import { useEffect, useState } from "react";
 
-const MOBILE_BREAKPOINT = 768;
+const getIsMobile = () => window.innerWidth <= LG_BREAKPOINT;
 
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
+export default function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(getIsMobile());
 
-  React.useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
-    const onChange = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+  useEffect(() => {
+    const onResize = () => {
+      setIsMobile(getIsMobile());
     }
-    mql.addEventListener("change", onChange)
-    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
-    return () => mql.removeEventListener("change", onChange)
-  }, [])
 
-  return !!isMobile
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    }
+  }, []);
+
+  return isMobile;
 }

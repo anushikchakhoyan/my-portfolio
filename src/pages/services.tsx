@@ -1,14 +1,19 @@
-import * as React from "react"
+import * as React from "react";
 import { graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 
+import ServicesSection from "@/features/services";
+import WhatIOffer from "@/features/what-i-offer";
 import MainLayout from "@/features/layout";
-import Content from "@/features/content";
 import Seo from "@/features/seo";
 
 const ServicesPage: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <MainLayout>
-      <Content />
+      <ServicesSection />
+      <WhatIOffer />
     </MainLayout>
   )
 }

@@ -10,7 +10,6 @@ import Seo from "@/features/seo";
 const ContactUsPage: React.FC = () => (
   <MainLayout>
     <ContactUs />
-    <Footer />
   </MainLayout>
 )
 

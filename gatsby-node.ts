@@ -11,18 +11,18 @@ export const createPages = async ({ actions }: any) => {
   });
 };
 
-export const onCreateWebpackConfig = ({ actions } : any) => {
+export const onCreateWebpackConfig = ({ actions }: any) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        "@/components/ui": path.resolve(__dirname, "src/components/ui"),
-        "@/components/base": path.resolve(__dirname, "src/components/base"),
+        "@/ui": path.resolve(__dirname, "src/components/ui"),
+        "@/base": path.resolve(__dirname, "src/components/base"),
         "@/features": path.resolve(__dirname, "src/features"),
         "@/images": path.resolve(__dirname, "src/images"),
-        "@/lib/utils": path.resolve(__dirname, "src/lib/utils"),
-        "@/lib/constants": path.resolve(__dirname, "src/lib/constants"),
+        "@/lib": path.resolve(__dirname, "src/lib"),
         "@/hooks": path.resolve(__dirname, "src/hooks"),
-        "@/locales/en": path.resolve(__dirname, "src/locales/en"),
+        "@/locales": path.resolve(__dirname, "src/locales/en"),
+        "@/contexts": path.resolve(__dirname, "src/contexts"),
       },
     },
   });

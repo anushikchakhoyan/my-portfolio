@@ -1,46 +1,76 @@
 import * as Yup from "yup";
-import * as React from "react";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import emailjs from "@emailjs/browser";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import React, { FormEvent, SyntheticEvent, useState } from "react";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 
-import UnderlineText from "@/components/base/underline-text";
-import SectionsLayout from "@/features/layout/section";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@/lib/constants";
+import { UnderlineText, SectionsLayout } from "@/base/";
+import { Textarea } from "@/ui/textarea";
+import { Button } from "@/ui/button";
+import { Input } from "@/ui/input";
 
-interface SubscribeTypes {
+type SubscribeTypes = {
   email: string;
+  name: string;
+  message: string;
 }
 
 const ContactUs: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
-  const initialValues: SubscribeTypes = { email: "" }
+  const initialValues: SubscribeTypes = { email: "", name: "", message: "" }
 
-  const handleSubmit = (values: SubscribeTypes, actions: any) => {
-    console.log({ values, actions })
-    actions.setSubmitting(false)
-  }
-
-  const validationSchema = Yup.object({
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required(t("requiredField") as string),
     email: Yup.string()
-      .email(t("invalidEmail") || "")
-      .required(t("requiredField") || "")
-  })
+      .email(t("invalidEmail") as string)
+      .required(t("requiredField") as string),
+    message: Yup.string().required(t("requiredField") as string),
+  });
+
+  const handleSubmit = async (
+    values: SubscribeTypes,
+    { setSubmitting, resetForm }: FormikHelpers<SubscribeTypes>
+  ): Promise<void> => {
+    try {
+      const response = await emailjs.send(
+        EMAIL_JS_SERVICE_ID,
+        EMAIL_JS_TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        },
+        EMAIL_JS_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        alert(t("emailSent"));
+        resetForm();
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert(t("emailFailed"));
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
-    <SectionsLayout id="contact" className="px-10">
-      <div className="flex items-center justify-start w-full gap-20">
-        <div className="w-1/2 px-5 flex items-start flex-col gap-5">
-          <h1 className="text-5xl font-bold font-montserrat">{t("contact")}</h1>
+    <SectionsLayout id="contact" title={t("contact")}>
+      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-20">
+        <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-5">
+          <h2 className="text-4xl font-bold">{t("getInTouch")}</h2>
           <span className="px-3 text-lg font-medium font-josefinSans">
             ⎯ {t("haveSomethingShare")} {t("contactDescription")} {t("getBackToYouSoon")}
           </span>
-          <p className="py-2 font-montserrat">
-            {t("reachOutMe")}
-            <UnderlineText text={"anush.chakhoyan.work@gmail.com"} className="inline-block text-sm font-montserrat" />
+          <p className="py-2">
+            {t("reachOutViaEmail")}
+            <UnderlineText text={"anush.chakhoyan.work@gmail.com"} className="inline-block text-sm" />
           </p>
+        </div>
+        <div className="w-full md:w-1/2 md:px-5 flex items-center justify-center">
           <Formik
             onSubmit={handleSubmit}
             initialValues={initialValues}
@@ -51,7 +81,7 @@ const ContactUs: React.FC = () => {
                 <Field
                   as={Input}
                   type="text"
-                  name="fullName"
+                  name="name"
                   placeholder={t("fullName")}
                   className="h-12"
                 />
@@ -62,17 +92,17 @@ const ContactUs: React.FC = () => {
                   placeholder={t("email")}
                   className="h-12"
                 />
+                {/* <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-xs font-josefinSans"
+                /> */}
                 <Field
                   as={Textarea}
                   type="text"
                   name="message"
                   className="resize-none h-28"
                   placeholder={t("tellUsYourself")}
-                />
-                <ErrorMessage
-                  name="email"
-                  component="div"
-                  className="px-3 text-red-500 text-xs font-josefinSans"
                 />
                 <Button
                   size="xl"
@@ -85,11 +115,9 @@ const ContactUs: React.FC = () => {
             )}
           </Formik>
         </div>
-        <div className="w-1/4 flex items-center justify-center font-montserrat">
-          <div className="bg-pink-50 w-full max-w-lg blur-3xl h-12 absolute -z-10" />
-        </div>
       </div>
     </SectionsLayout>
   )
 }
+
 export default ContactUs
