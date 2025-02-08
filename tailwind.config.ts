@@ -10,11 +10,12 @@ const config: Config = {
 		container: {
 			center: true,
 			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
+			screens: {}
 		},
 		extend: {
+			screens: {
+				xs: "480px",
+			},
 			fontFamily: {
 				josefinSans: [
 					'Josefin Sans',
@@ -71,7 +72,8 @@ const config: Config = {
 					'400': '#c5c5c5',
 					'500': '#737373',
 					'600': '#222423',
-					'700': '#0a0a0a'
+					'700': '#0a0a0a',
+					'800': '#282828'
 				},
 				pink: {
 					'50': '#dfc8cf',

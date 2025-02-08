@@ -10,9 +10,9 @@ type ExternalLinkProps = {
 }
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({ text, to, Icon = FiArrowUpRight }) => (
-  <Button variant="link" className="border rounded-3xl hover:bg-pink-300 group">
+  <Button variant="link" className="border rounded-3xl hover:bg-pink-300 dark:hover:bg-pink-400 group">
     <a href={to} target="_blank" rel="noreferrer"
-      className="flex items-center text-gray-600 dark:text-white dark:group-hover:text-black group-hover:text-white">
+      className="flex items-center text-gray-600 dark:text-white group-hover:text-white">
       {text} <Icon height={20} />
     </a>
   </Button>

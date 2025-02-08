@@ -1,21 +1,26 @@
 import React, { SyntheticEvent } from "react"
 import { useI18next } from 'gatsby-plugin-react-i18next';
 
-export function LanguageSwitcher() {
-    const { languages, changeLanguage } = useI18next();
+import { Button } from "@/ui/button";
 
-    const changeLanguageHandler = ({ e, lng }: { e: SyntheticEvent, lng: string }) => {
+export function LanguageSwitcher() {
+    const { language, changeLanguage } = useI18next();
+
+    const changeLanguageHandler = (e: React.MouseEvent) => {
         e.preventDefault();
-        changeLanguage(lng);
-    }
+        changeLanguage(language === "hy" ? "en" : "hy");
+    };
 
     return (
-        <>
-            {languages.map((lng) => (
-                <button key={lng} onClick={(e) => changeLanguageHandler({ e, lng })}>
-                    {lng}
-                </button>
-            ))}
-        </>
+        <Button
+            className={`w-8 h-8 rounded-lg border-1 border-gray-300 bg-cover bg-center transition-all 
+                duration-300 hover:border-gray-500 hover:scale-110 
+                ${language === "hy"
+                    ? "bg-[url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg')]"
+                    : "bg-[url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg')]"
+                }`}
+            onClick={changeLanguageHandler}
+            aria-label="Switch Language"
+        />
     )
 }

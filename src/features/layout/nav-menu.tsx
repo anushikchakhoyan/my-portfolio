@@ -33,80 +33,75 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
 
     const navigations: NavigationTypes[] = [
         {
-            title: t("General"),
+            title: t("general"),
             intro: {
                 abbr: 'frontend/dev',
                 content: t('pixelPerfectInterfaces')
             },
             items: [
                 {
-                    title: t("About"),
+                    title: t("about"),
                     url: "/about",
-                    description: t("Learn more about my background. \nDiscover my journey and experience.")
+                    description: t("discoverMyJourney")
                 },
                 {
-                    title: t("FAQ"),
+                    title: t("faq"),
                     url: "/faq",
-                    description: t("Find answers to common questions. \nGet insights into my work process.")
+                    description: t("getInsightsMyWork")
                 },
             ],
         },
         {
-            title: t("Explore"),
+            title: t("explore"),
             items: [
                 {
-                    title: t("Portfolio"),
+                    title: t("portfolio"),
                     url: "/portfolio",
-                    description: t("Browse my latest works and projects. \nSee my creative approach in action.")
+                    description: t("browseMyWorks")
                 },
                 {
-                    title: t("Projects"),
+                    title: t("projects"),
                     url: "/projects",
-                    description: t("Detailed case studies of my work. \nUnderstand the process behind each project.")
-                },
-                {
-                    title: t("Testimonials"),
-                    url: "/testimonials",
-                    description: t("See what clients say about my work. \nRead real feedback from happy clients.")
+                    description: t("detailedCaseStudies")
                 },
             ],
         },
         {
-            title: t("Services"),
+            title: t("services"),
             items: [
                 {
-                    title: t("What I Offer"),
+                    title: t("whatIOffer"),
                     url: "/services",
-                    description: t("Discover the services I provide. \nFind out how I can help your project.")
+                    description: t("discoverTheServices")
                 },
                 {
-                    title: t("Pricing"),
+                    title: t("pricing"),
                     url: "/pricing",
-                    description: t("Explore my pricing and packages. \nChoose what fits your needs best.")
+                    description: t("exploreMyPricing")
                 },
             ],
         },
         {
-            title: t("Connect"),
+            title: t("connect"),
             intro: {
                 content: t('makeLearningInteractive'),
                 abbr: 'web/guide'
             },
             items: [
                 {
-                    title: t("Contact"),
+                    title: t("contact"),
                     url: "/contact-us",
-                    description: t("Get in touch for inquiries and collaborations. \nLet's create something great together.")
+                    description: t("getInTouchForCollaborations")
                 },
                 {
-                    title: t("Subscribe"),
+                    title: t("subscribe"),
                     url: "/subscribe",
-                    description: t("Stay updated with my latest news. \nJoin my mailing list for exclusive content.")
+                    description: t("joinMyMailingList")
                 },
                 {
-                    title: t("Blog"),
+                    title: t("blog"),
                     url: "/blog",
-                    description: t("Read insights and articles. \nGet inspired by my thoughts and experiences.")
+                    description: t("readInsightsAndArticles")
                 },
             ],
         },
@@ -114,7 +109,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
 
     return (
         <NavigationMenu
-            className={cn(`max-w-full py-0 top-0`,
+            className={cn(`max-w-full py-0 top-0 bg-white dark:bg-gray-800`,
                 isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start",
                 isMobile && !toggle && 'hidden lg:flex')}>
             <NavigationMenuList className={cn(`flex-row`, isMobile && toggle && "flex-col items-start")}>
@@ -139,7 +134,8 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                                             <li className="row-span-3">
                                                 <NavigationMenuLink>
                                                     <a
-                                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                                                        className="flex h-full w-full select-none flex-col justify-end rounded-md 
+                                                        bg-gray-100 dark:bg-pink-400/20 p-6 no-underline outline-none focus:shadow-md"
                                                         href="/"
                                                     >
                                                         LOGO

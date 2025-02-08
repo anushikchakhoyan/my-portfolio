@@ -5,7 +5,7 @@ const Footer = () => {
   const { t } = useTranslation()
 
   return (
-    <footer className="flex items-center justify-between font-josefinSans w-full px-3 md:px-5 py-6">
+    <footer className="flex items-center justify-between font-josefinSans w-full px-3 md:px-5 py-3">
       <p className="m-0 text-sm">
         © {new Date().getFullYear()} &middot;  All rights reserved
       </p>
