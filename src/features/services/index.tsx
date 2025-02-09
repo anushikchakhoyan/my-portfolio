@@ -33,7 +33,7 @@ const ServicesSection = () => {
   ]
 
   return (
-    <SectionsLayout id="title" title={t('services')} className="h-auto">
+    <SectionsLayout id="title" title={t('services')}>
       {servicesData.map(({ title, hint, description, contactMe, reverse }: ServiceTypes) => (
         <div key={title} className={cn("flex flex-col md:flex-row h-3/5", reverse && 'md:flex-row-reverse')}>
           <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-8">

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import useIsMobile from "@/hooks/use-mobile";
@@ -109,8 +109,8 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
 
     return (
         <NavigationMenu
-            className={cn(`max-w-full py-0 top-0 bg-white dark:bg-gray-800`,
-                isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start",
+            className={cn(`max-w-full py-0`,
+                isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start bg-white dark:bg-gray-800",
                 isMobile && !toggle && 'hidden lg:flex')}>
             <NavigationMenuList className={cn(`flex-row`, isMobile && toggle && "flex-col items-start")}>
                 {navigations.map(({ title, items, intro }: NavigationTypes) => (
@@ -138,7 +138,8 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                                                         bg-gray-100 dark:bg-pink-400/20 p-6 no-underline outline-none focus:shadow-md"
                                                         href="/"
                                                     >
-                                                        LOGO
+                                                        <span className="font-italiana">A N U S H</span>
+
                                                         <div className="mb-2 mt-4 text-base font-medium">
                                                             {intro.abbr}
                                                         </div>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import { SectionsLayout } from "@/base/";
 
@@ -7,7 +7,7 @@ const WhatIOffer = () => {
     const { t } = useTranslation();
 
     return (
-        <SectionsLayout id="title" title={t('whatIOffer')} className="h-auto">
+        <SectionsLayout id="title" title={t('whatIOffer')}>
             <div className="flex justify-center">
                 <p className="w-full md:w-1/2 p-4 md:p-5" dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }} />
             </div>

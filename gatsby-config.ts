@@ -52,7 +52,7 @@ const config: GatsbyConfig = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/about-2.jpg`,
       },
     },
     {
@@ -68,7 +68,7 @@ const config: GatsbyConfig = {
         fonts: [
           `Josefin Sans\:400,700`,
           `Dancing Script\:400,700`,
-          `Montserrat\:400,500,700,800`,
+          `Italiana\:400`,
         ],
         display: 'swap',
       },

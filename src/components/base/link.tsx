@@ -14,7 +14,7 @@ const Link: React.FC<LinkTypes> = ({ text, to, children, className }) => {
   return (
     <GatsbyLink to={to} className={cn(
       `text-base font-medium transition-colors duration-200 ease-in-out no-underline ${className}`
-    )} activeClassName="text-pink-400">
+    )}>
       {text}
       {children}
     </GatsbyLink>

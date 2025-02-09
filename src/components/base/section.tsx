@@ -11,8 +11,8 @@ type LayoutTypes = {
 
 const SectionsLayout: React.FC<LayoutTypes> = ({ children, className, id, title, ...props }) => {
   return (
-    <section id={id} className={cn("px-2 md:px-5 pt-16", className)} {...props}>
-      {title && <h1 className="px-2 md:px-5 py-10 text-4xl lg:text-5xl font-bold">{title}</h1>}
+    <section id={id} className={cn("w-full max-w-8xl mx-auto px-4 pt-16", className)} {...props}>
+      {title && <h1 className="pt-12 pb-8 text-xl md:text-2xl xl:text-3xl font-medium">{title}</h1>}
 
       {children}
     </section>

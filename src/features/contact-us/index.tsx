@@ -1,11 +1,11 @@
 import * as Yup from "yup";
+import React from "react";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import React, { FormEvent, SyntheticEvent, useState } from "react";
-import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik"
 
 import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@/lib/constants";
-import { UnderlineText, SectionsLayout } from "@/base/";
+import { UnderlineText, SectionsLayout, InteractiveCanvas } from "@/base/";
 import { Textarea } from "@/ui/textarea";
 import { Button } from "@/ui/button";
 import { Input } from "@/ui/input";
@@ -58,10 +58,14 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <SectionsLayout id="contact" title={t("contact")}>
+    <SectionsLayout id="contact" title={""} className="space-y-10">
+      {/* <GatsbyImage image={image} className="hero-img h-full" alt={t("itsMe")} /> */}
+      <div className="bg-gray-200 h-96 w-full flex items-end justify-center py-10 overflow-hidden">
+        <h2 className="text-4xl font-bold">{t("getInTouch")}</h2>
+        <InteractiveCanvas />
+      </div>
       <div className="flex flex-col md:flex-row items-center justify-between w-full gap-20">
         <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-5">
-          <h2 className="text-4xl font-bold">{t("getInTouch")}</h2>
           <span className="px-3 text-lg font-medium font-josefinSans">
             ⎯ {t("haveSomethingShare")} {t("contactDescription")} {t("getBackToYouSoon")}
           </span>

@@ -16,6 +16,9 @@ const config: Config = {
 			screens: {
 				xs: "480px",
 			},
+			maxWidth: {
+				"8xl": '90rem', //1440px
+			},
 			fontFamily: {
 				josefinSans: [
 					'Josefin Sans',
@@ -25,8 +28,8 @@ const config: Config = {
 					'Dancing Script',
 					'sans-serif'
 				],
-				montserrat: [
-					'Montserrat',
+				italiana: [
+					'Italiana',
 					'sans-serif'
 				]
 			},
@@ -81,6 +84,7 @@ const config: Config = {
 					'200': '#E6C4B0',
 					'300': '#d5a5a8',
 					'400': '#9e707c',
+					'500': "#A35C7A",
 					'900': '#5C4151'
 				},
 				sidebar: {

@@ -20,7 +20,7 @@ const FaqList = () => {
 
 
     return (
-        <SectionsLayout id="title" title={t('frequentlyAskedQuestions')} className="h-auto">
+        <SectionsLayout id="title" title={t('frequentlyAskedQuestions')}>
             <div className="w-full md:w-2/3 lg:w-1/2 mx-auto px-4 md:px-5">
                 {items.map(({ title, description }: FAQItem) => (
                     <Accordion key={title} type="single" collapsible>

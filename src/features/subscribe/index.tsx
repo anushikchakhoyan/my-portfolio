@@ -41,7 +41,6 @@ const Subscribe = () => {
           </Button>
         </div>
         <div className="w-full lg:w-2/5 xl:w-1/4 px-4 md:px-5 flex lg:items-center lg:justify-center">
-          <div className="bg-pink-50 w-full max-w-lg blur-3xl h-12 absolute -z-10" />
           <div className="max-w-sm pt-8">
             <p className="text-2xl font-bold font-josefinSans">{t("latestNews")}</p>
             <p className="text-xl py-2 font-josefinSans">{t("stayInTouch")}</p>
