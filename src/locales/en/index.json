@@ -36,7 +36,7 @@
   "contactDescription": "Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out!",
   "haveSomethingShare": "Have Something to Share?",
   "reachOutViaEmail": "I'm always happy to connect! Reach out via the form or email me directly at ",
-  "getBackToYouSoon": "I'll get back to you as soon as possible.",
+  "getBackToYouSoon": "We will get back to you as soon as possible.",
   "fullName": "Full Name",
   "tellUsYourself": "Tell us a little bit about yourself...",
   "needMentor": "Looking for a Mentor?",
@@ -94,5 +94,11 @@
   "testingFeedback": "Testing & Feedback",
   "testingFeedbackDesc": "Ensuring functionality, responsiveness, and gathering feedback for improvements.",
   "launchSupport": "Launch & Support",
-  "launchSupportDesc": "Deploying the site, providing docs, and ongoing maintenance if needed."
+  "launchSupportDesc": "Deploying the site, providing docs, and ongoing maintenance if needed.",
+  "haveQuestions": "Have questions? We may have your answer in our FAQ section ⎯ Take a quick look",
+  "social": "Social",
+  "emailSent": "Thank you!",
+  "emailSentDesc": "Your message has been sent successfully.",
+  "emailFailed": "Uh oh! Something went wrong.",
+  "emailFailedDesc": "There was a problem with your request."
 }

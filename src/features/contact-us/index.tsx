@@ -1,127 +1,107 @@
-import * as Yup from "yup";
 import React from "react";
-import emailjs from "@emailjs/browser";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik"
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@lib/constants";
-import { UnderlineText, SectionsLayout, InteractiveCanvas } from "@base/";
-import { Textarea } from "@ui/textarea";
-import { Button } from "@ui/button";
-import { Input } from "@ui/input";
-
-type SubscribeTypes = {
-  email: string;
-  name: string;
-  message: string;
-}
+import { UnderlineText, SectionsLayout } from "@base/";
+import SocialMedia from "@features/social-media";
+import ContactForm from "./form";
 
 const ContactUs: React.FC = () => {
   const { t } = useTranslation();
 
-  const initialValues: SubscribeTypes = { email: "", name: "", message: "" }
-
-  const validationSchema = Yup.object().shape({
-    name: Yup.string().required(t("requiredField") as string),
-    email: Yup.string()
-      .email(t("invalidEmail") as string)
-      .required(t("requiredField") as string),
-    message: Yup.string().required(t("requiredField") as string),
-  });
-
-  const handleSubmit = async (
-    values: SubscribeTypes,
-    { setSubmitting, resetForm }: FormikHelpers<SubscribeTypes>
-  ): Promise<void> => {
-    try {
-      const response = await emailjs.send(
-        EMAIL_JS_SERVICE_ID,
-        EMAIL_JS_TEMPLATE_ID,
-        {
-          name: values.name,
-          email: values.email,
-          message: values.message,
-        },
-        EMAIL_JS_PUBLIC_KEY
-      );
-
-      if (response.status === 200) {
-        alert(t("emailSent"));
-        resetForm();
+  const data = useStaticQuery(graphql`
+    query {
+      coverImage: file(relativePath: { eq: "bg-about.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF, JPG]
+            aspectRatio: 1.77
+            width: 1200
+          )
+        }
       }
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      alert(t("emailFailed"));
-    } finally {
-      setSubmitting(false);
     }
-  };
+  `);
+
+  const coverImage = getImage(data.coverImage) as IGatsbyImageData;
 
   return (
     <SectionsLayout id="contact" title={""} className="space-y-10">
-      {/* <GatsbyImage image={image} className="hero-img h-full" alt={t("itsMe")} /> */}
-      <div className="h-96 w-full flex items-end justify-center py-10 overflow-hidden">
-        <h2 className="text-4xl font-bold">{t("getInTouch")}</h2>
-        <InteractiveCanvas />
-      </div>
-      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-20">
-        <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-5">
-          <span className="px-3 text-lg font-medium font-josefinSans">
-            ⎯ {t("haveSomethingShare")} {t("contactDescription")} {t("getBackToYouSoon")}
-          </span>
-          <p className="py-2">
-            {t("reachOutViaEmail")}
-            <UnderlineText text={"anush.chakhoyan.work@gmail.com"} className="inline-block text-sm" />
-          </p>
+      <div className="relative h-96 w-full flex items-end justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-black/45 z-10 flex items-end justify-center">
+          <h2 className="text-4xl text-white font-bold py-20 uppercase font-italiana">
+            {t("getInTouch")}
+          </h2>
         </div>
-        <div className="w-full md:w-1/2 md:px-5 flex items-center justify-center">
-          <Formik
-            onSubmit={handleSubmit}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-          >
-            {({ isSubmitting }) => (
-              <Form className="flex flex-col gap-4 w-full">
-                <Field
-                  as={Input}
-                  type="text"
-                  name="name"
-                  placeholder={t("fullName")}
-                  className="h-12"
-                />
-                <Field
-                  as={Input}
-                  type="email"
-                  name="email"
-                  placeholder={t("email")}
-                  className="h-12"
-                />
-                {/* <ErrorMessage
-                  name="email"
-                  component="div"
-                  className="text-red-500 text-xs font-josefinSans"
-                /> */}
-                <Field
-                  as={Textarea}
-                  type="text"
-                  name="message"
-                  className="resize-none h-28"
-                  placeholder={t("tellUsYourself")}
-                />
-                <Button
-                  size="xl"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? t("submitting") : t("subscribe")}
-                </Button>
-              </Form>
-            )}
-          </Formik>
+        <GatsbyImage
+          image={coverImage}
+          alt={t("itsMe")}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="w-full flex flex-col items-center justify-center gap-10">
+        <ContactTitle />
+        <div className="w-full flex flex-col-reverse md:flex-row items-start justify-center gap-10">
+          <ContactForm />
+          <ContactInfo />
         </div>
       </div>
     </SectionsLayout>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
+
+const ContactInfo: React.FC<{}> = (() => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="w-full md:w-1/3 flex flex-col gap-6 lg:px-20">
+      <div>
+        <p className="text-base uppercase text-gray-900 dark:text-white font-medium">{t("email")}</p>
+        <p className="text-base text-gray-600 dark:text-gray-300 font-light">
+          anush.chakhoyan.work@gmail.com
+        </p>
+      </div>
+      <div>
+        <p className="text-base uppercase text-gray-900 dark:text-white font-medium">{t("phone")}</p>
+        <p className="text-base text-gray-600 dark:text-gray-300 font-light">094 00 00 00</p>
+      </div>
+      <div>
+        <p className="text-base uppercase text-gray-900 dark:text-white font-medium">
+          {t("social")}
+        </p>
+        <SocialMedia iconSize="text-base" className="gap-4" />
+      </div>
+    </div>
+  )
+});
+ContactInfo.displayName = "ContactInfo";
+
+const ContactTitle: React.FC<{}> = (() => {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <h5 className="max-w-sm text-sm font-medium text-center space-x-1">
+        <span>{t("haveQuestions")}</span>
+        <Link to="/faq">
+          <UnderlineText
+            text={`${t("here")}!`}
+            className="inline-block text-sm text-pink-700"
+          />
+        </Link>
+      </h5>
+      <h3 className="text-3xl font-italiana max-w-xl text-center">
+        {t("haveSomethingShare")} {t("contactDescription")}
+        <span className="block text-base py-5 font-medium">
+          {t("getBackToYouSoon")}
+        </span>
+      </h3>
+    </>
+  )
+});
+ContactTitle.displayName = "ContactTitle";

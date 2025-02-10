@@ -40,7 +40,7 @@ const Header = () => {
                     <ModeSwitcher />
                     {!isMobile && (
                         <Link to="/contact-us">
-                            <Button>
+                            <Button variant="outline">
                                 {t('getInTouch')}
                             </Button>
                         </Link>

@@ -6,6 +6,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { BiLogoLinkedin, BiLogoMedium } from "react-icons/bi";
 
 import { FACEBOOK_URL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL, MEDIUM_SUBSCRIBE, MEDIUM_URL } from "@lib/constants";
+import SocialMedia from "@features/social-media";
 import { SectionsLayout, Link } from "@base/";
 import { Button } from "@ui/button";
 
@@ -32,13 +33,7 @@ const Subscribe = () => {
           <p className="text-center text-2xl lg:text-4xl font-italiana text-gray-900 dark:text-gray-100">
             {t('stayInTouch')} {t('joinMyMailingList')}
           </p>
-          <div className="flex align-baseline gap-5 pt-5">
-            {socialLinks.map(({ url, Icon }) => (
-              <Link to={url} key={url}>
-                <Icon className="text-2xl text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400" />
-              </Link>
-            ))}
-          </div>
+          <SocialMedia />
           <Button variant="outline" onClick={handleSubscribeClick}>
             {t("subscribe")}
           </Button>

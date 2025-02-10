@@ -5,16 +5,17 @@ const Footer = () => {
   const { t } = useTranslation()
 
   return (
-    <footer className="flex items-center justify-between font-josefinSans w-full px-3 md:px-5 py-3">
-      <p className="m-0 text-sm">
-        © {new Date().getFullYear()} &middot;  All rights reserved
-      </p>
-
-      <p className="m-0 text-sm ">
-        {t('builtWith')}
-        <a href="https://medium.com/@anushchakhoyan" target="_blank"
-          className="text-base font-bold text-pink-500">{` `} {t('love')}</a>
-      </p>
+    <footer className="w-full bg-gray-50 dark:bg-gray-800 font-josefinSans w-full py-4 mt-5">
+      <div className="flex items-center justify-between max-w-8xl w-full mx-auto px-4">
+        <p className="text-sm">
+          {t('builtWith')}
+          <a href="https://medium.com/@anushchakhoyan" target="_blank"
+            className="text-base font-bold text-pink-500">{` `} {t('love')}</a>
+        </p>
+        <p className="text-sm">
+          © {new Date().getFullYear()} &middot;  All rights reserved
+        </p>
+      </div>
     </footer>
   )
 }

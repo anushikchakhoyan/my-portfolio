@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import Header from "@features/layout/header";
+import { Toaster } from "@ui/toaster";
 import Footer from "./footer";
 
 type LayoutTypes = {
@@ -14,6 +15,7 @@ const MainLayout: React.FC<LayoutTypes> = ({ className, children }) => {
       <Header />
       {children}
       <Footer />
+      <Toaster />
     </main>
   )
 }
