@@ -2,7 +2,7 @@ import { loadSlim } from "@tsparticles/slim";
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
-import { particlesOptions } from "@/lib/utils";
+import { particlesOptions } from "@lib/utils";
 
 const InteractiveCanvas: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);

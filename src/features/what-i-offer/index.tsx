@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 
-import { SectionsLayout } from "@/base/";
+import { SectionsLayout } from "@base/";
 
 const WhatIOffer = () => {
     const { t } = useTranslation();

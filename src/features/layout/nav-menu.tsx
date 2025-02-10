@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import useIsMobile from "@/hooks/use-mobile";
-import { cn } from "@/lib/utils";
+import useIsMobile from "@hooks/use-mobile";
+import { cn } from "@lib/utils";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -10,7 +10,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/ui/navigation-menu";
+} from "@ui/navigation-menu";
 
 type IntroType = {
     content: string;
@@ -92,11 +92,6 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                     title: t("contact"),
                     url: "/contact-us",
                     description: t("getInTouchForCollaborations")
-                },
-                {
-                    title: t("subscribe"),
-                    url: "/subscribe",
-                    description: t("joinMyMailingList")
                 },
                 {
                     title: t("blog"),

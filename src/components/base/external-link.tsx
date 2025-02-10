@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 
-import { Button } from "@/ui/button";
+import { Button } from "@ui/button";
 
 type ExternalLinkProps = {
   to: string;
@@ -10,10 +10,21 @@ type ExternalLinkProps = {
 }
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({ text, to, Icon = FiArrowUpRight }) => (
-  <Button variant="link" className="border rounded-3xl hover:bg-pink-300 dark:hover:bg-pink-400 group">
-    <a href={to} target="_blank" rel="noreferrer"
-      className="flex items-center text-gray-600 dark:text-white group-hover:text-white">
-      {text} <Icon height={20} />
+  <Button
+    variant="link"
+    className="border border-gray-300 dark:border-gray-500 rounded-3xl transition-colors 
+               hover:border-pink-500 dark:hover:border-gray-700 group dark:hover:bg-white">
+    <a
+      href={to}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-1 text-gray-700 dark:text-gray-300 transition-colors
+                dark:group-hover:text-gray-800"
+    >
+      {text}
+      <Icon size={18}
+        className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5
+         group-hover:text-pink-500 dark:group-hover:text-pink-500" />
     </a>
   </Button>
 );

@@ -4,10 +4,10 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { LanguageSwitcher } from "./language-switcher";
 import { ModeSwitcher } from "./mode-switcher";
-import useIsMobile from "@/hooks/use-mobile";
-import { Button } from "@/ui/button";
+import useIsMobile from "@hooks/use-mobile";
+import { Button } from "@ui/button";
 import { NavMenu } from "./nav-menu";
-import { Link } from "@/base/";
+import { Link } from "@base/";
 
 const Header = () => {
     const { t } = useTranslation();
@@ -26,7 +26,7 @@ const Header = () => {
     }, [isMobile]);
 
     return (
-        <header className="fixed z-10 top-0 left-0 right-0 bg-white dark:bg-gray-800">
+        <header className="fixed z-20 top-0 left-0 right-0 bg-white dark:bg-gray-800">
             <div className="w-full max-w-8xl mx-auto px-4 py-3 flex justify-between lg:justify-center">
                 <Link to="/" className="flex items-center font-bold text-lg lg:text-xl xl:text-2xl font-italiana">
                     {t('im')}

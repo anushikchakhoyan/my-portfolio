@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@/lib/utils"
+import { cn } from "@lib/utils"
 import { Link as GatsbyLink, GatsbyLinkProps } from "gatsby";
 
 type LinkTypes = Omit<GatsbyLinkProps<{}>, "to"> & {

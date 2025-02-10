@@ -1,7 +1,7 @@
 import React, { createContext, ReactNode, useContext, useState, useEffect } from 'react';
 
-import { THEME_TYPES } from '@/lib/constants';
-import { Theme } from '@/lib/types';
+import { THEME_TYPES } from '@lib/constants';
+import { Theme } from '@lib/types';
 
 type ThemeContextType = {
     theme: Theme,

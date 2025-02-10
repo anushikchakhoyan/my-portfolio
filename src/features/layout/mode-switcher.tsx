@@ -2,8 +2,8 @@ import React from "react";
 import { MdSunny } from "react-icons/md";
 import { FaStar, FaMoon } from "react-icons/fa";
 
-import { useTheme } from "@/contexts/ThemeContext";
-import { THEME_TYPES } from '@/lib/constants';
+import { useTheme } from "@contexts/ThemeContext";
+import { THEME_TYPES } from '@lib/constants';
 
 export function ModeSwitcher() {
     const { theme, toggleTheme } = useTheme();

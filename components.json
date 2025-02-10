@@ -9,16 +9,5 @@
     "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
-  },
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "base": "@/components/base",
-    "features": "@/components/features",
-    "images": "@/components/images",
-    "lib": "@/lib",
-    "hooks": "@/hooks",
-    "contexts": "@/contexts"
   }
 }

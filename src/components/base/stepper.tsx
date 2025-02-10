@@ -1,8 +1,8 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@ui/tooltip";
 
-import { cn } from "@/lib/utils";
-import { Step } from "@/lib/types";
+import { cn } from "@lib/utils";
+import { Step } from "@lib/types";
 
 interface StepCircleProps {
     step: Step;

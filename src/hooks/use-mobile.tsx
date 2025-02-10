@@ -1,4 +1,4 @@
-import { LG_BREAKPOINT } from "@/lib/constants";
+import { LG_BREAKPOINT } from "@lib/constants";
 import { useEffect, useState } from "react";
 
 const getIsMobile = () => window.innerWidth <= LG_BREAKPOINT;

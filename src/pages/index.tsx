@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import MainLayout from "@/features/layout";
-import Home from "@/features/home";
-import Seo from "@/features/seo";
+import MainLayout from "@features/layout";
+import Home from "@features/home";
+import Seo from "@features/seo";
 
 const IndexPage = () => {
   return (

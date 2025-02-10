@@ -1,8 +1,8 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
-import { UnderlineText, SectionsLayout } from "@/base/";
+import { UnderlineText, SectionsLayout } from "@base/";
+import { cn } from "@lib/utils";
 
 type ServiceTypes = {
   title: string,

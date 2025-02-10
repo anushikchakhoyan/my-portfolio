@@ -4,11 +4,11 @@ import emailjs from "@emailjs/browser";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik"
 
-import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@/lib/constants";
-import { UnderlineText, SectionsLayout, InteractiveCanvas } from "@/base/";
-import { Textarea } from "@/ui/textarea";
-import { Button } from "@/ui/button";
-import { Input } from "@/ui/input";
+import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@lib/constants";
+import { UnderlineText, SectionsLayout, InteractiveCanvas } from "@base/";
+import { Textarea } from "@ui/textarea";
+import { Button } from "@ui/button";
+import { Input } from "@ui/input";
 
 type SubscribeTypes = {
   email: string;
@@ -60,7 +60,7 @@ const ContactUs: React.FC = () => {
   return (
     <SectionsLayout id="contact" title={""} className="space-y-10">
       {/* <GatsbyImage image={image} className="hero-img h-full" alt={t("itsMe")} /> */}
-      <div className="bg-gray-200 h-96 w-full flex items-end justify-center py-10 overflow-hidden">
+      <div className="h-96 w-full flex items-end justify-center py-10 overflow-hidden">
         <h2 className="text-4xl font-bold">{t("getInTouch")}</h2>
         <InteractiveCanvas />
       </div>

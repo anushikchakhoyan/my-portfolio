@@ -1,7 +1,7 @@
 import React, { SyntheticEvent } from "react"
 import { useI18next } from 'gatsby-plugin-react-i18next';
 
-import { Button } from "@/ui/button";
+import { Button } from "@ui/button";
 
 export function LanguageSwitcher() {
     const { language, changeLanguage } = useI18next();

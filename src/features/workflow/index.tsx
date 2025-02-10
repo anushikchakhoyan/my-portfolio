@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 
-import { SectionsLayout, Stepper } from "@/base/";
+import { SectionsLayout, Stepper } from "@base/";
 
 const Workflow = () => {
   const { t } = useTranslation();
@@ -15,8 +15,8 @@ const Workflow = () => {
   ];
 
   return (
-    <SectionsLayout id="content" className="lg:h-screen">
-      <div className="space-y-5">
+    <SectionsLayout id="content" className="py-10 bg-gray-50 dark:bg-gray-800">
+      <div className="space-y-8">
         <h1 className="text-4xl font-medium font-italiana">{t('workingWithClient')}</h1>
         <span className="text-base">{t('buildingWebsite')}</span>
         <Stepper steps={steps} />

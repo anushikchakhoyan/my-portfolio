@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/ui/accordion";
-import { SectionsLayout } from "@/base/";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@ui/accordion";
+import { SectionsLayout } from "@base/";
 
 interface FAQItem {
     title: string,

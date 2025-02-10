@@ -1,5 +1,5 @@
 import React from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "@lib/utils"
 
 type CircleThumbTypes = {
   className?: string;
@@ -10,12 +10,12 @@ type CircleThumbTypes = {
 }
 
 const CircleThumb: React.FC<CircleThumbTypes> = ({
-                                                   className,
-                                                   children,
-                                                   size = "md",
-                                                   position = "topLeft",
-                                                   color = "bg-pink-400"
-                                                 }) => {
+  className,
+  children,
+  size = "md",
+  position = "topLeft",
+  color = "bg-pink-400"
+}) => {
   const sizeOptions = {
     sm: "w-[200px] h-[200px]",
     md: "w-[300px] h-[300px]",

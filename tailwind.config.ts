@@ -68,24 +68,28 @@ const config: Config = {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				gray: {
-					'50': '#fbfbfb',
-					'100': '#f3f4f6',
-					'200': '#f8f8f8',
-					'300': '#d1d5db',
-					'400': '#c5c5c5',
-					'500': '#737373',
-					'600': '#222423',
-					'700': '#0a0a0a',
-					'800': '#282828'
+					'50': '#fcfcfc',   // Near-white, perfect for backgrounds
+					'100': '#f5f5f5',  // Soft gray, subtle contrast
+					'200': '#e5e5e5',  // Light gray, great for UI elements
+					'300': '#d4d4d4',  // Neutral gray, ideal for borders
+					'400': '#a3a3a3',  // Mid-gray, works for disabled elements
+					'500': '#737373',  // Balanced gray, suitable for text
+					'600': '#525252',  // Darker gray, readable in both themes
+					'700': '#404040',  // Deep gray, good for dark mode text
+					'800': '#262626',  // Almost black, used for high contrast
+					'900': '#171717',  // Darkest gray, ideal for backgrounds
 				},
 				pink: {
-					'50': '#dfc8cf',
-					'100': '#ddc0c8',
-					'200': '#E6C4B0',
-					'300': '#d5a5a8',
-					'400': '#9e707c',
-					'500': "#A35C7A",
-					'900': '#5C4151'
+					'50': '#fdf2f6', // Lightest
+					'100': '#f8dae4',
+					'200': '#f2b9cf',
+					'300': '#eb98b9',
+					'400': '#e479a3',
+					'500': '#A35C7A', // Base color
+					'600': '#8d4f68', // Dark mode highlight
+					'700': '#763f55', // Dark mode secondary
+					'800': '#5e3244', // Dark mode primary
+					'900': '#472532'  // Darkest
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

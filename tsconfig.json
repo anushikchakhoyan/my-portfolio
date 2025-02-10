@@ -14,25 +14,25 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/ui/*": [
+      "@ui/*": [
         "src/components/ui/*"
       ],
-      "@/base/*": [
+      "@base/*": [
         "src/components/base/index"
       ],
-      "@/features/*": [
+      "@features/*": [
         "src/features/*"
       ],
-      "@/images/*": [
+      "@images/*": [
         "src/images/*"
       ],
-      "@/lib/*": [
+      "@lib/*": [
         "src/lib/*"
       ],
-      "@/hooks/*": [
+      "@hooks/*": [
         "src/hooks/*"
       ],
-      "@/contexts/*": [
+      "@contexts/*": [
         "src/contexts/*"
       ],
     },

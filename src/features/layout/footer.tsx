@@ -13,7 +13,7 @@ const Footer = () => {
       <p className="m-0 text-sm ">
         {t('builtWith')}
         <a href="https://medium.com/@anushchakhoyan" target="_blank"
-          className="text-base font-bold text-pink-400">{` `} {t('love')}</a>
+          className="text-base font-bold text-pink-500">{` `} {t('love')}</a>
       </p>
     </footer>
   )
