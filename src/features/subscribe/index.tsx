@@ -34,7 +34,7 @@ const Subscribe = () => {
             {t('stayInTouch')} {t('joinMyMailingList')}
           </p>
           <SocialMedia />
-          <Button variant="outline" onClick={handleSubscribeClick}>
+          <Button variant="outline" className="px-8 py-2" onClick={handleSubscribeClick}>
             {t("subscribe")}
           </Button>
         </div>
