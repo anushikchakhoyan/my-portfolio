@@ -53,22 +53,16 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
         },
         {
             title: t("explore"),
+            intro: {
+                abbr: "process/steps",
+                content: t("understandMyProcess"),
+            },
             items: [
                 {
-                    title: t("portfolio"),
-                    url: "/portfolio",
-                    description: t("browseMyWorks")
+                    title: t("workflows"),
+                    url: "/workflows",
+                    description: t("websiteAndMentorship"),
                 },
-                {
-                    title: t("projects"),
-                    url: "/projects",
-                    description: t("detailedCaseStudies")
-                },
-            ],
-        },
-        {
-            title: t("services"),
-            items: [
                 {
                     title: t("whatIOffer"),
                     url: "/services",
@@ -124,7 +118,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                             <>
                                 <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                                    <ul className="grid gap-1 p-3 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                         {intro && (
                                             <li className="row-span-3">
                                                 <NavigationMenuLink>
@@ -135,7 +129,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                                                     >
                                                         <span className="font-italiana">A N U S H</span>
 
-                                                        <div className="mb-2 mt-4 text-base font-medium">
+                                                        <div className="mb-1 mt-4 text-base font-medium">
                                                             {intro.abbr}
                                                         </div>
                                                         <p className="text-xs leading-tight text-muted-foreground">
@@ -181,7 +175,7 @@ const ListItem = React.forwardRef<
                     {...props}
                 >
                     <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
                         {children}
                     </p>
                 </a>

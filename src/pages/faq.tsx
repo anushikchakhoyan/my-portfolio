@@ -14,7 +14,7 @@ const FaqPage: React.FC = () => (
 
 export const Head = () => {
   const { t } = useTranslation()
-  return <Seo title={t("contact")} />
+  return <Seo title={t("faq")} />
 }
 
 export const query = graphql`

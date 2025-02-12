@@ -2,25 +2,23 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import Subscribe from "@features/subscribe";
+import Workflow from "@features/workflow";
 import MainLayout from "@features/layout";
-import Content from "@features/content";
-import About from "@features/about";
 import Seo from "@features/seo";
 
-const AboutPage: React.FC = () => {
+const WorkflowsPage = () => {
+  const { t } = useTranslation();
+
   return (
     <MainLayout>
-      <About />
-      <Subscribe />
-      <Content />
+      <Workflow />
     </MainLayout>
   )
 }
 
 export const Head = () => {
   const { t } = useTranslation()
-  return <Seo title={t("about")} />
+  return <Seo title={t("workflow")} />
 }
 
 export const query = graphql`
@@ -37,4 +35,4 @@ export const query = graphql`
   }
 `;
 
-export default AboutPage
+export default WorkflowsPage;

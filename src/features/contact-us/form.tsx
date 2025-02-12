@@ -5,10 +5,10 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 
 import { EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from "@lib/constants";
+import { useToast } from "@hooks/use-toast";
 import { Textarea } from "@ui/textarea";
 import { Button } from "@ui/button";
 import { Input } from "@ui/input";
-import { useToast } from "@hooks/use-toast";
 
 type SubscribeTypes = {
     email: string;

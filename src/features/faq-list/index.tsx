@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@ui/accordion";
 import { SectionsLayout } from "@base/";
@@ -17,7 +17,6 @@ const FaqList = () => {
             description: t(`faqDesc${data}`)
         };
     });
-
 
     return (
         <SectionsLayout id="title" title={t('frequentlyAskedQuestions')}>

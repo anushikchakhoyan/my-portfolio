@@ -1,9 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import ServicesSection from "@features/services";
-import WhatIOffer from "@features/what-i-offer";
 import Subscribe from "@features/subscribe";
 import MainLayout from "@features/layout";
 import Seo from "@features/seo";
@@ -15,7 +14,6 @@ const ServicesPage: React.FC = () => {
     <MainLayout>
       <ServicesSection />
       <Subscribe />
-      <WhatIOffer />
     </MainLayout>
   )
 }
