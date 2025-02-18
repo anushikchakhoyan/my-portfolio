@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionsLayout id="about" className="h-screen flex flex-col transition-colors duration-300">
+    <SectionsLayout id="about" className="md:h-screen flex flex-col transition-colors duration-300">
       <div className="flex-1 w-full flex flex-col items-center justify-center py-10 
       bg-gray-800 dark:bg-gray-700 relative overflow-hidden text-center space-y-4">
         <h2 className="text-2xl sm:text-5xl md:text-6xl font-italiana text-gray-100 dark:text-pink-50 

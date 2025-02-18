@@ -52,7 +52,7 @@ const config: GatsbyConfig = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/about-2.jpg`,
+        icon: `src/images/favicon.png`,
       },
     },
     {

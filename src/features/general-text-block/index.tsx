@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 
 interface GeneralTextBlockProps {
     id?: string;
@@ -11,7 +10,6 @@ interface GeneralTextBlockProps {
 const GeneralTextBlock: React.FC<GeneralTextBlockProps> = ({
     title, subtitle, description
 }) => {
-    const { t } = useTranslation();
 
     return (
         <div className="flex-1 flex items-center justify-center py-20 md:py-8">

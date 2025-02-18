@@ -1,67 +1,17 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { Link, UnderlineText, SectionsLayout } from "@base/";
 import GeneralTextBlock from "@features/general-text-block";
+import useServicesData from "@hooks/use-services-data";
 import { Button } from "@ui/button";
 import { cn } from "@lib/utils";
 
-type ServiceTypes = {
-  title: string;
-  hint: string;
-  description: string;
-  contactMe: string;
-  image: string;
-};
 
 const ServicesSection = () => {
   const { t } = useTranslation();
-
-  const data = useStaticQuery(graphql`
-    query {
-      mentor: file(relativePath: { eq: "mentor.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-      websiteCreation: file(relativePath: { eq: "website.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-      collab: file(relativePath: { eq: "collab.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
-  const servicesData = [
-    {
-      title: t("websiteCreationTitle"),
-      hint: t("websiteCreationHint"),
-      description: t("websiteCreationDescription"),
-      contactMe: t("websiteCreationContact"),
-      image: getImage(data.websiteCreation.childImageSharp.gatsbyImageData),
-    },
-    {
-      title: t("mentorshipTitle"),
-      hint: t("mentorshipHint"),
-      description: t("mentorshipDescription"),
-      contactMe: t("mentorshipContact"),
-      image: getImage(data.mentor.childImageSharp.gatsbyImageData),
-    },
-    {
-      title: t("collabTitle"),
-      hint: t("collabHint"),
-      description: t("collabDescription"),
-      contactMe: t("collabContact"),
-      image: getImage(data.collab.childImageSharp.gatsbyImageData),
-    },
-  ];
+  const servicesData = useServicesData();
 
   return (
     <SectionsLayout id="title">

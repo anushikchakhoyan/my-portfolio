@@ -1,22 +1,10 @@
 import React from "react";
-import { FaInstagram } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
-import { MdOutlineFacebook } from "react-icons/md";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import { BiLogoLinkedin, BiLogoMedium } from "react-icons/bi";
 
-import { FACEBOOK_URL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL, MEDIUM_SUBSCRIBE, MEDIUM_URL } from "@lib/constants";
+import { MEDIUM_SUBSCRIBE } from "@lib/constants";
 import SocialMedia from "@features/social-media";
-import { SectionsLayout, Link } from "@base/";
+import { SectionsLayout } from "@base/";
 import { Button } from "@ui/button";
-
-const socialLinks = [
-  { url: FACEBOOK_URL, Icon: MdOutlineFacebook },
-  { url: LINKEDIN_URL, Icon: BiLogoLinkedin },
-  { url: GITHUB_URL, Icon: IoLogoGithub },
-  { url: INSTAGRAM_URL, Icon: FaInstagram },
-  { url: MEDIUM_URL, Icon: BiLogoMedium }
-]
 
 const Subscribe = () => {
   const { t } = useTranslation()

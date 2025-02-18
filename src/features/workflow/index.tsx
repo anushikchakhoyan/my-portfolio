@@ -42,19 +42,42 @@ const Workflow = () => {
     return (
         <SectionsLayout id="workflow">
             <GeneralTextBlock
-                title={t("ourExpertise")}
-                subtitle={t("transformYourVisionIntoReality")}
-                description={t("fromStrategyToExecution")} />
+                title={t("ourProcess")}
+                subtitle={t("streamlinedWorkflows")}
+                description={t("efficientAndTransparentProcesses")}
+            />
 
+            <GeneralTextBlock
+                title={t("websiteWorkflow")}
+                subtitle={t("buildYourDreamWebsite")}
+                description={t("fromConceptToLaunch")}
+            />
             <WorkflowSection
                 title={t('workingWithClient')}
                 subtitle={t('buildingWebsite')}
                 steps={buildingWebsiteSteps}
             />
+
+            <GeneralTextBlock
+                title={t("mentorshipWorkflow")}
+                subtitle={t("guidedGrowth")}
+                description={t("personalizedMentorshipJourney")}
+            />
             <WorkflowSection
                 title={t('mentorshipProcess')}
                 subtitle={t('---')}
                 steps={mentorshipProcessSteps}
+            />
+
+            <GeneralTextBlock
+                title={t("collaborationAndCommunication")}
+                subtitle={t("workingTogether")}
+                description={t("transparentAndEffectiveCollaboration")}
+            />
+            <WorkflowSection
+                title={t('collaboration')}
+                subtitle={t('---')}
+                steps={[]}
             />
             <Subscribe />
         </SectionsLayout>
