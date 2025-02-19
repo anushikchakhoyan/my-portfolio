@@ -2,9 +2,9 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import Experiences from "@features/experiences";
 import Subscribe from "@features/subscribe";
 import MainLayout from "@features/layout";
-import Content from "@features/content";
 import Skills from "@features/skills";
 import About from "@features/about";
 import Rates from "@features/rates";
@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
       <Rates limit={[0, 3]} />
       <Skills />
       <Rates limit={[3, 5]} />
-      <Content />
+      <Experiences />
       <Subscribe />
     </MainLayout>
   )

@@ -6,3 +6,4 @@ export { default as SectionsLayout } from "./section";
 export { default as UnderlineText } from "./underline-text";
 export { default as Stepper } from "./stepper";
 export { default as AnimatedCounter } from "./animated-counter";
+export { default as CustomSlider } from "./custom-slider";
