@@ -3,17 +3,17 @@ import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 interface ServiceTypes {
-    title: string;
-    hint: string;
-    description: string;
-    contactMe: string;
-    image: ReturnType<typeof getImage>;
+  title: string;
+  hint: string;
+  description: string;
+  contactMe: string;
+  image: ReturnType<typeof getImage>;
 }
 
-const useServicesData = (): ServiceTypes[] => {
-    const { t } = useTranslation();
+export default function useServicesData() {
+  const { t } = useTranslation();
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       mentor: file(relativePath: { eq: "mentor.jpg" }) {
         childImageSharp {
@@ -33,31 +33,29 @@ const useServicesData = (): ServiceTypes[] => {
     }
   `);
 
-    const servicesData: ServiceTypes[] = [
-        {
-            title: t("websiteCreationTitle"),
-            hint: t("websiteCreationHint"),
-            description: t("websiteCreationDescription"),
-            contactMe: t("websiteCreationContact"),
-            image: getImage(data.websiteCreation.childImageSharp.gatsbyImageData),
-        },
-        {
-            title: t("mentorshipTitle"),
-            hint: t("mentorshipHint"),
-            description: t("mentorshipDescription"),
-            contactMe: t("mentorshipContact"),
-            image: getImage(data.mentor.childImageSharp.gatsbyImageData),
-        },
-        {
-            title: t("collabTitle"),
-            hint: t("collabHint"),
-            description: t("collabDescription"),
-            contactMe: t("collabContact"),
-            image: getImage(data.collab.childImageSharp.gatsbyImageData),
-        },
-    ];
+  const servicesData: ServiceTypes[] = [
+    {
+      title: t("websiteCreationTitle"),
+      hint: t("websiteCreationHint"),
+      description: t("websiteCreationDescription"),
+      contactMe: t("websiteCreationContact"),
+      image: getImage(data.websiteCreation.childImageSharp.gatsbyImageData),
+    },
+    {
+      title: t("mentorshipTitle"),
+      hint: t("mentorshipHint"),
+      description: t("mentorshipDescription"),
+      contactMe: t("mentorshipContact"),
+      image: getImage(data.mentor.childImageSharp.gatsbyImageData),
+    },
+    {
+      title: t("collabTitle"),
+      hint: t("collabHint"),
+      description: t("collabDescription"),
+      contactMe: t("collabContact"),
+      image: getImage(data.collab.childImageSharp.gatsbyImageData),
+    },
+  ];
 
-    return servicesData;
+  return servicesData;
 };
-
-export default useServicesData;

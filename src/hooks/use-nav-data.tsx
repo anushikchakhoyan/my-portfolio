@@ -1,7 +1,7 @@
 import { NavigationTypes } from "@lib/types";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const useNavigationData = () => {
+export default function useNavigationData() {
     const { t } = useTranslation();
     const navigations: NavigationTypes[] = [
         {
@@ -70,5 +70,3 @@ const useNavigationData = () => {
 
     return navigations;
 }
-
-export default useNavigationData;

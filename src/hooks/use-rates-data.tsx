@@ -7,7 +7,7 @@ interface RatesTypes {
     description: string;
 }
 
-const useRatesData = (): RatesTypes[] => {
+export default function useRatesData() {
     const { t } = useTranslation();
 
     const rates: RatesTypes[] = [{
@@ -43,5 +43,3 @@ const useRatesData = (): RatesTypes[] => {
 
     return rates;
 };
-
-export default useRatesData;

@@ -9,7 +9,7 @@ interface SkillsTypes {
     }[];
 };
 
-const useRatesData = (): SkillsTypes[] => {
+export default function useRatesData() {
     const { t } = useTranslation();
 
     const skills: SkillsTypes[] = [
@@ -46,5 +46,3 @@ const useRatesData = (): SkillsTypes[] => {
 
     return skills;
 };
-
-export default useRatesData;
