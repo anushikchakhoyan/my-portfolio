@@ -1,5 +1,6 @@
 import React from "react"
 import { cn } from "@lib/utils"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 type CircleThumbTypes = {
   className?: string;
@@ -7,6 +8,7 @@ type CircleThumbTypes = {
   children?: React.ReactNode;
   size?: "sm" | "md" | "lg";
   position?: "centerLeft" | "topLeft" | "bottomRight";
+  bgImage?: IGatsbyImageData;
 }
 
 const CircleThumb: React.FC<CircleThumbTypes> = ({
@@ -14,7 +16,8 @@ const CircleThumb: React.FC<CircleThumbTypes> = ({
   children,
   size = "md",
   position = "topLeft",
-  color = "bg-pink-400"
+  color = "bg-pink-400",
+  bgImage,
 }) => {
   const sizeOptions = {
     sm: "w-[200px] h-[200px]",
@@ -29,13 +32,21 @@ const CircleThumb: React.FC<CircleThumbTypes> = ({
   }
 
   return (
-    <>
-      <div
-        className={cn(`absolute z-[-1] rounded-[62%_47%_82%_35%/45%_45%_80%_66%] animate-slider-shape`,
-          sizeOptions[size], positionOptions[position], color, className)}
-      />
+    <div
+      className={cn(`absolute overflow-hidden z-10 rounded-[62%_47%_82%_35%/45%_45%_80%_66%] animate-slider-shape`,
+        sizeOptions[size], positionOptions[position], color, className)}
+    >
+      {bgImage ? (
+        <GatsbyImage
+          image={bgImage}
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className={cn("w-full h-full", color)} />
+      )}
       {children}
-    </>
+    </div >
   )
 }
 

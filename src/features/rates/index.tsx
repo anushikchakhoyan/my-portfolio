@@ -15,7 +15,7 @@ const Rates = ({ limit }: RatesProps) => {
     const isInView = useInView(ref, { once: false, margin: "-100px" });
 
     return (
-        <SectionsLayout id="rates" className="h-auto my-5 pt-0 bg-gray-100 dark:bg-gray-800 flex justify-center">
+        <SectionsLayout id="rates" className="h-auto my-5 pt-0 bg-gray-100 dark:bg-gray-800 flex justify-center rounded-lg">
             <div ref={ref} className="flex flex-col items-center justify-center md:flex-row w-full lg:w-5/6 gap-10 py-10">
                 {rates.map(({ id, name, rate, description }) => (
                     <div key={id} className="text-center text-gray-900 dark:text-gray-100">

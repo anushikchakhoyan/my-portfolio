@@ -12,7 +12,7 @@ const ContactUs: React.FC = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      coverImage: file(relativePath: { eq: "bg-about.jpg" }) {
+      coverImage: file(relativePath: { eq: "contact-cover.jpg" }) {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH

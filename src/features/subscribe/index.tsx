@@ -14,7 +14,7 @@ const Subscribe = () => {
   }
 
   return (
-    <SectionsLayout id="contact" className="h-50 my-5 pt-0 bg-gray-100 dark:bg-gray-800">
+    <SectionsLayout id="contact" className="h-50 my-5 pt-0 bg-gray-100 dark:bg-gray-800 rounded-lg">
       <div className="flex items-center justify-center py-20 md:py-8">
         <div className="w-full md:w-2/3 flex flex-col items-center gap-4">
           <h2 className="text-sm font-medium text-pink-500 dark:text-pink-400"> ⎯ {t("latestNews")}</h2>

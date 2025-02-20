@@ -7,9 +7,9 @@ interface SkillsTypes {
         skill: string;
         percentage?: number;
     }[];
-};
+}
 
-export default function useRatesData() {
+export function useSkillsData() {
     const { t } = useTranslation();
 
     const skills: SkillsTypes[] = [
@@ -26,23 +26,29 @@ export default function useRatesData() {
                 { skill: "TypeScript", percentage: 85 },
                 { skill: "REST APIs (Fetching, Pagination, Authentication)", percentage: 80 },
                 { skill: "State Management (Redux)", percentage: 75 },
-                { skill: "Web Performance Optimization (Lighthouse, Lazy Loading)", percentage: 85 },
-                { skill: "SEO Best Practices", percentage: 80 },
-                { skill: "Version Control (Git, GitHub)", percentage: 90 },
-                { skill: "Agile Methodologies & Team Collaboration", percentage: 85 },
-            ],
-        },
-        {
-            id: 2,
-            title: t("softSkills"),
-            items: [
-                { skill: "Problem-Solving & Debugging Skills" },
-                { skill: "Communication & Documentation Skills" },
-                { skill: "Keeping Up with Industry Trends" },
-                { skill: "Code Splitting & Lazy Loading" },
-            ],
-        },
+            ]
+        }
     ];
 
     return skills;
+};
+
+export function useEssentialSkillsData() {
+    const items = [
+        "Problem-Solving",
+        "Communication",
+        "Keeping Up with Industry Trends",
+        "Code Splitting & Lazy Loading",
+        "Team Collaboration",
+        "Documentation Skills",
+        "Web Performance Optimization",
+        "Lazy Loading",
+        "Debugging",
+        "Lighthouse",
+        "SEO Best Practices",
+        "Agile Methodologies",
+        "Version Control (Git, GitHub)"
+    ]
+
+    return items;
 };

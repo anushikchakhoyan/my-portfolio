@@ -115,19 +115,19 @@ const SliderContent: React.FC<SliderContentProps> = (({ items, direction, curren
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-col w-xl md:flex-row items-start gap-4 md:gap-8"
+                className="flex flex-col w-xl md:flex-row items-center gap-4 md:gap-8"
             >
                 <div className="w-20 h-20 mx-auto">
                     {items[currentIndex].logo}
                 </div>
-                <div className="text-center md:text-left flex-1">
-                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
+                <div className="text-center md:text-left flex-1 grid gap-1">
+                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
                         {items[currentIndex].company}
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-1">
+                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
                         {items[currentIndex].role}
                     </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
                         {items[currentIndex].duration}
                     </p>
                 </div>

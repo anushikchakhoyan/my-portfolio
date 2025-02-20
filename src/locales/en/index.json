@@ -22,7 +22,7 @@
   "itsMe": "I'm Anush \n a front-end engineer",
   "exploreMyJourney": "Explore my journey",
   "notFound": "Not Found",
-  "description1": "A dedicated developer with a strong background in building modern, efficient, and user-friendly web applications.",
+  "description1": "A dedicated developer with a strong background in building modern,\n efficient, and user-friendly web applications.",
   "description2": "Alongside my work in React, TypeScript, and cutting-edge UI frameworks, I share insights and expertise through articles on Medium, helping others navigate the world of web development.",
   "innovativeIdeas": "Let’s bring innovative ideas to life!",
   "builtWith": "Built with",
@@ -145,6 +145,6 @@
   "ongoingProjects": "Ongoing Projects",
   "ongoingProjectsDescription": "Active projects currently in development",
   "checkOutCoreSkills": "Core & Technical Skills",
-  "softSkills": "Soft Skills & Best Practices",
+  "essentialSkills": "Essential Skills",
   "experienceDesc": "Experience transforms challenges into lessons."
 }
