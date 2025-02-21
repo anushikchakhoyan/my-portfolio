@@ -23,15 +23,15 @@ const About: React.FC = () => {
   return (
     <SectionsLayout id="about" className="flex flex-col transition-colors duration-300">
       <div className="flex-1 w-full gap-6 flex flex-col md:flex-row items-center justify-center
-       bg-gray-800 dark:bg-gray-700 px-4 py-6 md:p-10">
+       bg-zinc-700 dark:bg-zinc-800 py-6 md:p-10">
         <CircleThumb
           className="static"
           size={isMobile ? "sm" : "md"}
           bgImage={getImage(data.me.childImageSharp.gatsbyImageData)} />
 
         <div className="space-y-4 text-center">
-          <h2 className="text-center text-3xl md:text-5xl xl:text-6xl font-italiana transition-all duration-300
-           text-gray-100 dark:text-pink-50 tracking-wide  hover:translate-x-4 whitespace-break-spaces">
+          <h2 className="text-center text-3xl md:text-5xl xl:text-6xl font-italiana 
+           text-gray-100 dark:text-pink-50 tracking-wide whitespace-break-spaces">
             {t("itsMe")}
           </h2>
           <p className="text-sm md:text-base text-gray-400 dark:text-gray-300 whitespace-break-spaces">{t('description1')}</p>
@@ -44,7 +44,7 @@ const About: React.FC = () => {
           </span>
 
           <div className="relative group">
-            <div className="absolute inset-0 bg-pink-100/30 dark:bg-pink-900/20 transform 
+            <div className="absolute inset-0 bg-pink-100/30 dark:bg-pink-600/20 transform 
             -skew-y-2 scale-105 group-hover:scale-110 transition-all duration-300" />
             <p
               className="relative text-center text-2xl lg:text-3xl xl:text-4xl font-italiana 

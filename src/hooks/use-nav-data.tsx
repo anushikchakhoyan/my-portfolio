@@ -31,18 +31,18 @@ export default function useNavigationData() {
             },
             items: [
                 {
-                    title: t("workflows"),
-                    url: "/workflows",
-                    description: t("websiteAndMentorship"),
-                },
-                {
                     title: t("whatIOffer"),
                     url: "/services",
                     description: t("discoverTheServices")
                 },
                 {
-                    title: t("pricing"),
-                    url: "/pricing",
+                    title: t("workflows"),
+                    url: "/workflows",
+                    description: t("websiteAndMentorship"),
+                },
+                {
+                    title: t("packages"),
+                    url: "/packages",
                     description: t("exploreMyPricing")
                 },
             ],

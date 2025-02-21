@@ -11,23 +11,26 @@ const Skills = () => {
     const skillsData = useSkillsData();
 
     return (
-        <SectionsLayout id="skills" className="py-16">
+        <SectionsLayout id="skills" className="py-16 ">
             <div className="flex flex-col items-center justify-start gap-10">
-                <h1 className="text-center text-4xl md:text-5xl font-italiana font-bold">{t("topSkills")}</h1>
+                <h1 className="text-center text-4xl md:text-5xl font-italiana font-bold dark:text-zinc-100">
+                    {t("topSkills")}
+                </h1>
                 {skillsData.map(({ id, title, items }) => (
-                    <div key={id} className="w-full bg-gray-50 dark:bg-gray-800 rounded-lg lg:shadow-sm p-4 md:p-8 space-y-5">
-                        <p className="text-2xl text-center text-gray-500 dark:text-pink-500">
+                    <div key={id} className="w-full bg-zinc-50 dark:bg-zinc-800 rounded-lg lg:shadow-sm p-4 md:p-8 space-y-5 
+                        transition-colors duration-300 hover:dark:bg-zinc-800/60">
+                        <p className="text-2xl text-center text-gray-500 dark:text-pink-400/90">
                             {title}
                         </p>
                         <ul className="max-w-5xl space-y-6 mx-auto">
                             {items.map(({ skill, percentage }, index) => (
                                 <li key={index} className="flex flex-col gap-2">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm md:text-base font-medium text-gray-800 dark:text-gray-200">
+                                        <span className="text-sm md:text-base font-medium text-gray-800 dark:text-zinc-200">
                                             {skill}
                                         </span>
                                         {percentage && (
-                                            <span className="text-base lg:text-lg font-medium text-gray-700 dark:text-gray-300">
+                                            <span className="text-base lg:text-lg font-medium text-gray-700 dark:text-zinc-400">
                                                 {percentage}%
                                             </span>
                                         )}
@@ -37,7 +40,8 @@ const Skills = () => {
                                             initial={{ width: 0 }}
                                             animate={{ width: `${percentage}%` }}
                                             transition={{ duration: 1, ease: "easeOut" }}
-                                            className="h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"
+                                            className="h-1 bg-gradient-to-r from-pink-600 to-pink-400 
+                                                dark:from-pink-400 dark:to-pink-600 rounded-full"
                                             style={{ maxWidth: "100%" }}
                                         />
                                     )}
@@ -60,8 +64,8 @@ const EssentialSkills = () => {
 
     return (
         <div id="essentialSkills" className="relative flex flex-col items-center justify-center overflow-hidden
-         bg-gray-100 dark:bg-gray-900 gap-10 py-10">
-            <p className="text-4xl font-italiana text-center text-gray-800 dark:text-gray-100">
+         bg-zinc-50 dark:bg-zinc-900 gap-10 py-10">
+            <p className="text-4xl font-italiana text-center text-zinc-800 dark:text-pink-400/90">
                 {t('essentialSkills')}
             </p>
             {[0, 1].map((index) => (
@@ -76,11 +80,12 @@ const EssentialSkills = () => {
                             <div
                                 key={`skill-${item}`}
                                 className="text-sm md:text-base px-6 py-4 
-                                 rounded-xl bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100  
-                                 backdrop-blur-lg bg-opacity-80 dark:bg-opacity-80  
-                                 transition-transform duration-300
-                                 hover:scale-105 hover:bg-gray-200 hover:dark:bg-gray-700  
-                                 hover:text-pink-500 dark:hover:text-pink-400 text-center"
+                                 rounded-xl bg-gray-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100  
+                                 backdrop-blur-lg bg-opacity-80 dark:bg-opacity-90  
+                                 transition-all duration-300
+                                 hover:scale-105 hover:bg-zinc-100 hover:dark:bg-zinc-700  
+                                 hover:text-pink-500 dark:hover:text-pink-300 
+                                 text-center"
                             >
                                 {item}
                             </div>

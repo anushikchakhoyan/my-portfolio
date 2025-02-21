@@ -26,9 +26,9 @@ const Header = () => {
     }, [isMobile]);
 
     return (
-        <header className="fixed z-20 top-0 left-0 right-0 bg-white dark:bg-gray-800">
+        <header className="fixed z-20 top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow">
             <div className="w-full max-w-8xl mx-auto px-4 py-3 flex justify-between lg:justify-center">
-                <Link to="/" className="flex items-center font-bold text-lg lg:text-xl xl:text-2xl font-italiana">
+                <Link to="/" className="flex items-center font-bold text-xl xl:text-2xl font-italiana">
                     {t('im')}
                 </Link>
                 <NavMenu toggle={toggle} />
@@ -49,7 +49,7 @@ const Header = () => {
                         size="icon"
                         variant="ghost"
                         onClick={toggleMenu}
-                        className="flex lg:hidden bg-white dark:bg-white dark:text-gray-800"
+                        className="flex lg:hidden bg-white dark:bg-zinc-700 dark:text-white text-gray-800"
                     >
                         <HamburgerMenuIcon />
                     </Button>

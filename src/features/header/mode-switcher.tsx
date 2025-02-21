@@ -12,7 +12,7 @@ export function ModeSwitcher() {
         <button
             onClick={toggleTheme}
             className="relative flex h-8 w-16 items-center rounded-full transition-all
-                border-1 border-gray-300 dark:border-white bg-gray-100 dark:bg-gray-900"
+                border-1 border-gray-400 dark:border-white bg-gray-100 dark:bg-zinc-800"
         >
             <div
                 className={`flex h-5 w-5 items-center justify-center rounded-full bg-white

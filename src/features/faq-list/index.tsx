@@ -3,6 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@ui/accordion";
 import { SectionsLayout } from "@base/";
+import GeneralTextBlock from "@features/general-text-block";
 
 interface FAQItem {
     title: string,
@@ -19,8 +20,13 @@ const FaqList = () => {
     });
 
     return (
-        <SectionsLayout id="title" title={t('frequentlyAskedQuestions')}>
-            <div className="w-full md:w-2/3 lg:w-1/2 mx-auto px-4 md:px-5">
+        <SectionsLayout id="faq">
+            <GeneralTextBlock
+                title={t("frequentlyAskedQuestions")}
+                subtitle={t("faqSubtitle")}
+                description={t("faqDesc")}
+            />
+            <div className="w-full md:w-2/3 lg:w-1/2 mx-auto px-4 py-8 md:px-5 ">
                 {items.map(({ title, description }: FAQItem) => (
                     <Accordion key={title} type="single" collapsible>
                         <AccordionItem value="item-1">

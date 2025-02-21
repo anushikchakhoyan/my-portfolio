@@ -1,28 +1,29 @@
-import React from "react";
+import * as React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import Header from "@features/header";
-import Home from "@features/home";
+import MainLayout from "@features/layout";
+import Packages from "@features/packages";
 import Seo from "@features/seo";
 
-const IndexPage = () => {
+const PackagesPage = () => {
+  const { t } = useTranslation();
+
   return (
-    <main>
-      <Header />
-      <Home />
-    </main>
+    <MainLayout>
+      <Packages />
+    </MainLayout>
   )
 }
 
 export const Head = () => {
   const { t } = useTranslation()
-  return <Seo title={t("Im")} />
+  return <Seo title={t("packages")} />
 }
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
@@ -34,4 +35,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage
+export default PackagesPage;

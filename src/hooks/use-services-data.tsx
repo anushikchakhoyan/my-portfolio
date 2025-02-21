@@ -46,14 +46,14 @@ export default function useServicesData() {
       hint: t("mentorshipHint"),
       description: t("mentorshipDescription"),
       contactMe: t("mentorshipContact"),
-      image: getImage(data.mentor.childImageSharp.gatsbyImageData),
+      image: getImage(data.collab.childImageSharp.gatsbyImageData),
     },
     {
       title: t("collabTitle"),
       hint: t("collabHint"),
       description: t("collabDescription"),
       contactMe: t("collabContact"),
-      image: getImage(data.collab.childImageSharp.gatsbyImageData),
+      image: getImage(data.mentor.childImageSharp.gatsbyImageData),
     },
   ];
 

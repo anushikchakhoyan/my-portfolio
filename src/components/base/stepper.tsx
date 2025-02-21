@@ -72,19 +72,26 @@ const StepCircle: React.FC<StepCircleProps> = (({ step, isActive, handleStepClic
                 <div
                     className={cn(
                         `w-8 h-8 flex items-center justify-center rounded-full border-2 ml-[1.1rem] md:ml-0
-                        shadow-md text-sm font-bold cursor-pointer transition-all duration-300 relative z-10`,
+                        shadow-md text-sm font-bold cursor-pointer transition-all duration-300 relative z-10
+                        hover:ring-2 hover:ring-pink-200 dark:hover:ring-pink-400/30`,
                         isActive
-                            ?
-                            `bg-white dark:bg-pink-50 text-white shadow-lg scale-110
-                              border-pink-300 dark:border-pink-500`
-                            :
-                            `border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 
-                              text-gray-600 dark:text-gray-300 hover:scale-105 hover:shadow-md`
+                            ? `bg-pink-500 text-zinc-50 border-pink-500 dark:border-pink-400 
+                               shadow-lg scale-110 dark:bg-pink-500`
+                            : `border-zinc-300 dark:border-zinc-600 bg-zinc-50 dark:bg-zinc-800 
+                               text-zinc-600 dark:text-zinc-300 hover:scale-105 hover:shadow-md
+                               hover:bg-zinc-100 dark:hover:bg-zinc-700`
                     )}
                     onClick={handleStepClick}
-                />
+                >
+                    {step.id}
+                </div>
             </TooltipTrigger>
-            <TooltipContent side="top" className="text-xs w-56 text-center p-2 bg-gray-800 text-white rounded-md shadow-lg">
+            <TooltipContent
+                side="top"
+                className="text-xs w-56 text-center p-2 bg-zinc-50 dark:bg-zinc-900 
+                          text-zinc-800 dark:text-zinc-100 rounded-md shadow-lg
+                          border border-zinc-200 dark:border-zinc-700"
+            >
                 {step.description}
             </TooltipContent>
         </Tooltip>
@@ -96,10 +103,10 @@ const StepTitle: React.FC<StepTitleProps> = (({ title, description, even }) => {
     return (
         <div className={cn(
             "md:absolute w-full text-start md:text-center transition-all order-3 ml-8 md:ml-0 mt-8 md:mt-0",
-            even ? "md:-top-36 lg:-top-32 text-gray-700 dark:text-gray-300" : "top-24 text-gray-700 dark:text-gray-300"
+            even ? "md:-top-36 lg:-top-32 text-zinc-700 dark:text-zinc-300" : "top-24 text-zinc-600 dark:text-zinc-400"
         )}>
             <h2 className="text-sm lg:text-base font-medium">{title}</h2>
-            <p className="text-xs lg:text-sm">{description}</p>
+            <p className="text-xs lg:text-sm text-zinc-500 dark:text-zinc-500">{description}</p>
         </div>
     )
 });
@@ -111,18 +118,22 @@ const VerticalConnectorLine: React.FC<VerticalConnectorProps> = (({ even, isActi
         <div
             onClick={handleStepClick}
             className={cn(
-                "md:absolute rounded-full w-0.5 transition-all order-2 -ml-4 mt-8 md:ml-0 md:mt-0",
+                `md:absolute rounded-full w-0.5 transition-all order-2 -ml-4 mt-8 md:ml-0 md:mt-0
+                 hover:opacity-80 cursor-pointer`,
                 even ? "-top-14 h-12" : "top-9 h-12",
-                isActive ? 'bg-pink-300 dark:bg-pink-500' : 'bg-gray-300 dark:bg-gray-500'
-            )} />
+                isActive
+                    ? 'bg-pink-400 dark:bg-pink-500'
+                    : 'bg-zinc-200 dark:bg-zinc-700'
+            )}
+        />
     )
 });
 VerticalConnectorLine.displayName = "VerticalConnectorLine";
 
 const StepperLine: React.FC<{}> = (() => {
     return (
-        <div
-            className="hidden md:block absolute rounded-full w-full h-2 bg-gray-200 dark:bg-gray-500 top-1/2 left-0 -translate-y-1/2 z-0" />
+        <div className="hidden md:block absolute rounded-full w-full h-2 bg-zinc-200 dark:bg-zinc-800 
+                        top-1/2 left-0 -translate-y-1/2 z-0" />
     )
 });
 StepperLine.displayName = "StepperLine";

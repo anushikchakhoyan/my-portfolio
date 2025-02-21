@@ -42,7 +42,7 @@ const ContactUs: React.FC = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-full flex flex-col items-center justify-center gap-10">
+      <div className="py-10 w-full flex flex-col items-center justify-center gap-10">
         <ContactTitle />
         <div className="w-full flex flex-col-reverse md:flex-row items-start justify-center gap-10">
           <ContactForm />

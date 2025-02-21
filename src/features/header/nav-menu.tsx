@@ -22,7 +22,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
     return (
         <NavigationMenu
             className={cn(`max-w-full py-0`,
-                isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start bg-white dark:bg-gray-800",
+                isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start bg-white dark:bg-zinc-900",
                 isMobile && !toggle && 'hidden lg:flex')}>
             <NavigationMenuList className={cn(`flex-row`, isMobile && toggle && "flex-col items-start")}>
                 {navigations.map(({ title, items, intro }: NavigationTypes) => (
@@ -39,23 +39,24 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                             </ul>
                         ) : (
                             <>
-                                <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-1 p-3 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                                <NavigationMenuTrigger className="dark:text-zinc-200">{title}</NavigationMenuTrigger>
+                                <NavigationMenuContent className="dark:bg-zinc-800">
+                                    <ul className="grid gap-1 p-3 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] dark:bg-zinc-800">
                                         {intro && (
                                             <li className="row-span-3">
                                                 <NavigationMenuLink>
                                                     <a
                                                         className="flex h-full w-full select-none flex-col justify-end rounded-md 
-                                                        bg-gray-100 dark:bg-pink-400/20 p-6 no-underline outline-none focus:shadow-md"
+                                                        bg-gray-100 dark:bg-zinc-700/30 p-6 no-underline outline-none 
+                                                        focus:shadow-md dark:hover:bg-zinc-700/40 transition-colors"
                                                         href="/"
                                                     >
-                                                        <span className="font-italiana">A N U S H</span>
+                                                        <span className="font-italiana dark:text-zinc-100">A N U S H</span>
 
-                                                        <div className="mb-1 mt-4 text-base font-medium">
+                                                        <div className="mb-1 mt-4 text-base font-medium dark:text-zinc-300">
                                                             {intro.abbr}
                                                         </div>
-                                                        <p className="text-xs leading-tight text-muted-foreground">
+                                                        <p className="text-xs leading-tight text-muted-foreground dark:text-zinc-400">
                                                             {intro.content}
                                                         </p>
                                                     </a>
@@ -92,13 +93,17 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        `block select-none space-y-1 rounded-md p-3 leading-none no-underline 
+                        outline-none transition-colors hover:bg-zinc-100 hover:text-zinc-900 
+                        focus:bg-zinc-100 focus:text-zinc-900
+                        dark:hover:bg-zinc-700/40 dark:hover:text-zinc-100 
+                        dark:focus:bg-zinc-700/40 dark:focus:text-zinc-100`,
                         className
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                    <div className="text-sm font-medium leading-none dark:text-zinc-200">{title}</div>
+                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground dark:text-zinc-400">
                         {children}
                     </p>
                 </a>
