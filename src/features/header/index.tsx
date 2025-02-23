@@ -1,12 +1,12 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { LanguageSwitcher } from "./language-switcher";
 import { ModeSwitcher } from "./mode-switcher";
 import useIsMobile from "@hooks/use-mobile";
-import { Button } from "@ui/button";
 import { NavMenu } from "./nav-menu";
+import { Button } from "@ui/button";
 import { Link } from "@base/";
 
 const Header = () => {

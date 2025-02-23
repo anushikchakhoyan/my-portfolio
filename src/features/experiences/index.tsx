@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import useExperiencesData from "@hooks/use-experiences-data";
 import { SectionsLayout, CustomSlider, UnderlineText } from "@base/";
+import useExperiencesData from "@hooks/use-experiences-data";
 
 const Experiences = () => {
   const { t } = useTranslation();

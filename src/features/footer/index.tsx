@@ -7,7 +7,7 @@ import { NavigationTypes } from "@lib/types";
 import { Link } from "@base/";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const navigations = useNavigationData();
 
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
             {t('im')}
           </Link>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Empowering your workflow with simplicity.
+            {t('footerQuote')}
           </p>
         </div>
         {navigations.map(({ title, items, intro }: NavigationTypes) => (
@@ -38,7 +38,7 @@ const Footer = () => {
         ))}
       </div>
       <div className="flex flex-col items-center text-center gap-3 py-8">
-        <h4 className="text-base md:text-lg font-bold text-zinc-700 dark:text-zinc-200">Follow Us</h4>
+        <h4 className="text-base md:text-lg font-bold text-zinc-700 dark:text-zinc-200">{t('followUs')}</h4>
         <SocialMedia />
       </div>
       <div className="py-8 text-center border-t border-gray-200 dark:border-gray-700">

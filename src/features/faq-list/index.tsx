@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@ui/accordion";
-import { SectionsLayout } from "@base/";
+
 import GeneralTextBlock from "@features/general-text-block";
+import { SectionsLayout } from "@base/";
 
 interface FAQItem {
     title: string,

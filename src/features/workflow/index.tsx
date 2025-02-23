@@ -3,7 +3,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import GeneralTextBlock from "@features/general-text-block";
 import { SectionsLayout, Stepper } from "@base/";
-import Subscribe from "@features/subscribe";
 import { Step } from "@lib/types";
 
 interface StepperProps {
@@ -39,6 +38,15 @@ const Workflow = () => {
         "careerGuidanceFinalEvaluation",
     ]);
 
+    const collaborationProcessSteps = generateSteps([
+        "projectDiscussion",
+        "communicationSetup",
+        "executionCoordination",
+        "taskDistribution",
+        "testing",
+        "finalization"
+    ])
+
     return (
         <SectionsLayout id="workflow">
             <GeneralTextBlock
@@ -64,8 +72,8 @@ const Workflow = () => {
                 description={t("personalizedMentorshipJourney")}
             />
             <WorkflowSection
-                title={t('mentorshipProcess')}
-                subtitle={t('---')}
+                title={t('mentorshipSteps')}
+                subtitle={t('guidingMentee')}
                 steps={mentorshipProcessSteps}
             />
 
@@ -75,11 +83,10 @@ const Workflow = () => {
                 description={t("transparentAndEffectiveCollaboration")}
             />
             <WorkflowSection
-                title={t('collaboration')}
-                subtitle={t('---')}
-                steps={[]}
+                title={t('collaborationSteps')}
+                subtitle={t('workingOnProject')}
+                steps={collaborationProcessSteps}
             />
-            <Subscribe />
         </SectionsLayout>
     )
 }

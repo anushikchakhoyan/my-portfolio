@@ -7,7 +7,7 @@ const WhatIOffer = () => {
     const { t } = useTranslation();
 
     return (
-        <SectionsLayout id="title" title={t('whatIOffer')}>
+        <SectionsLayout id="title">
             <div className="flex justify-center">
                 <p className="w-full md:w-3/4 p-4 md:p-5"
                     dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }} />

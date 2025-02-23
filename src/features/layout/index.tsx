@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Toaster } from "@ui/toaster";
 
-import Header from "../header";
-import Footer from "../footer";
+import Header from "@features/header";
+import Footer from "@features/footer";
 
 type LayoutTypes = {
   children: React.ReactNode;

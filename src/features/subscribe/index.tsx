@@ -32,11 +32,6 @@ const Subscribe = () => {
           <SocialMedia className="dark:text-zinc-300 hover:dark:text-pink-400" />
           <Button
             variant="outline"
-            className="px-8 py-2 text-zinc-800 dark:text-zinc-100 
-                      border-zinc-300 dark:border-zinc-600
-                      hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600
-                      dark:hover:bg-zinc-800 dark:hover:border-pink-400 dark:hover:text-pink-400
-                      transition-all duration-300"
             onClick={handleSubscribeClick}
           >
             {t("subscribe")}
