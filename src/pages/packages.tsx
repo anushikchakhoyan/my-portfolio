@@ -6,15 +6,11 @@ import MainLayout from "@features/layout";
 import Packages from "@features/packages";
 import Seo from "@features/seo";
 
-const PackagesPage = () => {
-  const { t } = useTranslation();
-
-  return (
-    <MainLayout>
-      <Packages />
-    </MainLayout>
-  )
-}
+const PackagesPage: React.FC = () => (
+  <MainLayout>
+    <Packages />
+  </MainLayout>
+)
 
 export const Head = () => {
   const { t } = useTranslation()

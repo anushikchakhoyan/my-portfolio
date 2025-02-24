@@ -3,9 +3,9 @@ import { MdSunny } from "react-icons/md";
 import { FaStar, FaMoon } from "react-icons/fa";
 
 import { useTheme } from "@contexts/ThemeContext";
-import { THEME_TYPES } from '@lib/constants';
+import { THEME_MODE } from '@lib/constants';
 
-export function ModeSwitcher() {
+const ModeSwitcher: React.FC = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
@@ -16,10 +16,10 @@ export function ModeSwitcher() {
         >
             <div
                 className={`flex h-5 w-5 items-center justify-center rounded-full bg-white
-                         shadow-md transition-all ${theme === THEME_TYPES.dark ? "translate-x-10" : "translate-x-0 ml-1"
+                         shadow-md transition-all ${theme === THEME_MODE.dark ? "translate-x-10" : "translate-x-0 ml-1"
                     }`}
             />
-            {theme === THEME_TYPES.dark ? (
+            {theme === THEME_MODE.dark ? (
                 <div className="flex items-center space-x-1 text-yellow-300">
                     <FaMoon className="h-4 w-4 absolute left-2" />
                     <FaStar className="h-1.5 w-1.5 absolute left-6 top-4" />
@@ -34,3 +34,5 @@ export function ModeSwitcher() {
         </button>
     );
 }
+
+export default ModeSwitcher;

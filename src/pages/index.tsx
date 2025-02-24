@@ -6,7 +6,7 @@ import Header from "@features/header";
 import Home from "@features/home";
 import Seo from "@features/seo";
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <main>
       <Header />

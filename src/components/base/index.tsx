@@ -7,3 +7,4 @@ export { default as UnderlineText } from "./underline-text";
 export { default as Stepper } from "./stepper";
 export { default as AnimatedCounter } from "./animated-counter";
 export { default as CustomSlider } from "./custom-slider";
+export { default as GeneralTextBlock } from "./general-text-block";

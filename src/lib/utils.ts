@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { ISourceOptions, MoveDirection, OutMode } from "@tsparticles/engine";
 
 export function cn(...inputs: ClassValue[]) {
@@ -101,3 +102,12 @@ export const particlesOptions: ISourceOptions = {
     }
   },
 }
+
+export const generateSteps = (stepKeys: string[]) => {
+  const { t } = useTranslation();
+  return stepKeys.map((key, index) => ({
+    id: index + 1,
+    title: t(key),
+    description: t(`${key}Desc`),
+  }));
+};

@@ -12,11 +12,17 @@
   "explore": "Explore",
   "understandMyProcess": "Understand my step-by-step process",
   "whatIOffer": "What We Offer",
-  "discoverTheServices": "Discover the services I provide. \n Find out how I can help your project.",
-  "workflows": "Workflows",
-  "websiteAndMentorship": "Build & Grow with Me. \n I guide you every step of the way.",
+  "discoverTheServices": "Discover the services we provide. \n Find out how we can help your project.",
   "packages": "Packages",
   "exploreMyPricing": "Explore my pricing and packages. \n Choose what fits your needs best.",
+  "services": "Services",
+  "websiteAndMentorship": "Build & Grow with Me. \n We guide you every step of the way.",
+  "websiteCreation": "Website Creation",
+  "buildProfWebsite": "Build a professional website tailored to your needs.",
+  "mentorship": "Mentorship",
+  "expertGuidance": "Get expert guidance to enhance your skills and career.",
+  "collaboration": "Collaboration",
+  "workTogether": "Work together on innovative projects and ideas.",
   "connect": "Connect",
   "makeLearningInteractive": "My goal is to make learning interactive, insightful, and tailored to your growth in the field",
   "contact": "Contact",
@@ -198,5 +204,6 @@
   "--NOTFOUND_STARTED--": "",
   "notFound": "Not Found",
   "--NOTFOUND_ENDED--": "",
-  "--NEWSECTION_STARTED--": ""
+  "--WHY_CHOOSE_US_STARTED--": "",
+  "whyChooseUs": "Why choose us"
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import useNavigationData from "@hooks/use-nav-data";
-import { NavigationTypes } from "@lib/types";
-import useIsMobile from "@hooks/use-mobile";
+import useNavigationData from "@hooks/custom/use-nav-data";
+import { NavigationType } from "@lib/types";
+import useIsMobile from "@hooks/custom/use-mobile";
 import { cn } from "@lib/utils";
 import {
     NavigationMenu,
@@ -14,7 +14,7 @@ import {
     NavigationMenuTrigger,
 } from "@ui/navigation-menu";
 
-export function NavMenu({ toggle }: { toggle: boolean }) {
+const NavMenu: React.FC<{ toggle: boolean }> = ({ toggle }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const navigations = useNavigationData();
@@ -25,7 +25,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
                 isMobile && toggle && "p-4 absolute left-0 top-[60px] items-start w-full justify-start bg-white dark:bg-zinc-900",
                 isMobile && !toggle && 'hidden lg:flex')}>
             <NavigationMenuList className={cn(`flex-row`, isMobile && toggle && "flex-col items-start")}>
-                {navigations.map(({ title, items, intro }: NavigationTypes) => (
+                {navigations.map(({ title, items, intro }: NavigationType) => (
                     <NavigationMenuItem key={title}>
                         {toggle ? (
                             <ul>
@@ -82,6 +82,7 @@ export function NavMenu({ toggle }: { toggle: boolean }) {
         </NavigationMenu>
     )
 }
+export default NavMenu;
 
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,

@@ -6,7 +6,7 @@ import SocialMedia from "@features/social-media";
 import { SectionsLayout } from "@base/";
 import { Button } from "@ui/button";
 
-const Subscribe = () => {
+const Subscribe: React.FC = () => {
   const { t } = useTranslation()
 
   const handleSubscribeClick = () => {

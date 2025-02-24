@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import { SectionsLayout, AnimatedCounter } from "@base/";
-import useRatesData from "@hooks/use-rates-data";
+import useRatesData from "@hooks/custom/use-rates-data";
 
 interface RatesProps {
     limit: [number, number];
 }
 
-const Rates = ({ limit }: RatesProps) => {
+const Rates: React.FC<RatesProps> = ({ limit }) => {
     const rates = useRatesData();
     const [start, end] = limit;
     const ref = useRef(null);

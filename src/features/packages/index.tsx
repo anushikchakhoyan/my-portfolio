@@ -1,55 +1,80 @@
 import * as React from "react";
-import { CheckIcon } from "@radix-ui/react-icons";
+import { GoDotFill } from "react-icons/go";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import GeneralTextBlock from "@features/general-text-block";
+import { GeneralTextBlock } from "@base/";
 import { Button } from "@ui/button";
 import { cn } from "@lib/utils";
 
-const Packages = () => {
+type PlanType = {
+    title: string;
+    feaures: string[];
+    cta: string;
+    popular: boolean;
+}
+
+type PackageType = {
+    title: string;
+    desc: string;
+    plan: PlanType[]
+}
+
+const Packages: React.FC = () => {
     const { t } = useTranslation();
 
-    const packages = [
+    const packages: PackageType[] = [
         {
-            title: t("basicPackage"),
-            price: t(""),
-            features: [
-                t("feature1"),
-                t("feature2"),
-                t("feature3"),
+            title: "Mentorship Plan",
+            desc: "lorem    jytgyugkyu gu",
+            plan: [
+                {
+                    title: "Classic",
+                    feaures: [
+                        t("feature1"),
+                        t("feature2"),
+                        t("feature3"),
+                    ],
+                    cta: t("choose"),
+                    popular: false,
+                },
+                {
+                    title: "Pro",
+                    feaures: [
+                        t("feature1"),
+                        t("feature2"),
+                        t("feature3"),
+                    ],
+                    cta: t("choose"),
+                    popular: true,
+                }
             ],
-            cta: t("choose"),
-            popular: false,
+
         },
         {
-            title: t("proPackage"),
-            price: t(""),
-            features: [
-                t("feature1"),
-                t("feature2"),
-                t("feature3"),
-                t("feature4"),
-                t("feature5"),
+            title: "Collaboration Plan",
+            desc: "lorem    jytgyugkyu gu",
+            plan: [
+                {
+                    title: "Classic",
+                    feaures: [
+                        t("feature1"),
+                        t("feature2"),
+                        t("feature3"),
+                    ],
+                    cta: t("choose"),
+                    popular: false,
+                },
+                {
+                    title: "Pro",
+                    feaures: [
+                        t("feature1"),
+                        t("feature2"),
+                        t("feature3"),
+                    ],
+                    cta: t("choose"),
+                    popular: true,
+                }
             ],
-            cta: t("choose"),
-            popular: true,
-        },
-        {
-            title: t("enterprisePackage"),
-            price: t(""),
-            features: [
-                t("feature1"),
-                t("feature2"),
-                t("feature3"),
-                t("feature4"),
-                t("feature5"),
-                t("feature6"),
-                t("feature7"),
-                t(""),
-                t(""),
-            ],
-            cta: t("choose"),
-            popular: false,
         },
     ];
 
@@ -62,45 +87,40 @@ const Packages = () => {
                 descrptionClasses="max-w-2xl"
             />
             <div className="max-w-7xl mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {packages.map((pkg, index) => (
-                        <div
-                            key={index}
-                            className={cn(
-                                "relative space-y-6 bg-white dark:bg-zinc-700 rounded-lg shadow-lg p-8 transform transition-all duration-300 hover:scale-105",
-                                pkg.popular && "border-1 border-pink-500"
-                            )}
-                        >
-                            {pkg.popular && (
-                                <p className="absolute top-1 right-1 bg-pink-500 text-white text-sm 
-                                font-semibold px-4 py-1 rounded-lg">
-                                    {t("mostPopular")}
-                                </p>
-                            )}
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
-                                {pkg.title}
-                            </h3>
-                            <p className="text-4xl font-bold text-gray-900 dark:text-white text-center">
-                                {pkg.price}
-                            </p>
-                            <ul className="space-y-3 mb-8">
-                                {pkg.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center">
-                                        <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                                        <span className="text-gray-600 dark:text-gray-300">
-                                            {feature}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="text-center absolute bottom-4 left-0 right-0">
-                                <Button className="max-w-xs w-full">
-                                    {pkg.cta}
-                                </Button>
-                            </div>
+                {packages.map(({ plan, title, desc }) => (
+                    <div key={title} className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
+                        <div>
+                            <h3>{title}</h3>
+                            <p>{desc}</p>
                         </div>
-                    ))}
-                </div>
+                        {plan.map((item: PlanType) => (
+                            <div
+                                key={item.title}
+                                className={cn(
+                                    `min-h-96 relative space-y-6 bg-white rounded-lg shadow-sm p-8 
+                                     border border-pink-500/40`,
+                                )}
+                            >
+                                <h2 className="font-italiana text-4xl text-center">{item.title}</h2>
+                                <ul className="space-y-3 mb-8">
+                                    {item.feaures.map((feature: string) => (
+                                        <li key={feature} className="flex items-center">
+                                            <GoDotFill className="w-2 h-2 text-zinc-800 mr-2" />
+                                            <span className="text-gray-600 dark:text-gray-300">
+                                                {feature}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="text-center">
+                                    <Button variant="outline" className="py-5 max-w-32 w-full rounded-3xl">
+                                        {item.cta}
+                                    </Button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </section>
     );

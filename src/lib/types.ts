@@ -1,6 +1,9 @@
-import { THEME_TYPES } from "./constants";
+import { getImage } from "gatsby-plugin-image";
 
-export type Theme = keyof typeof THEME_TYPES;
+import { SERVICES_CATEGORY, THEME_MODE } from "./constants";
+
+export type Theme = keyof typeof THEME_MODE; // "light" | "dark"
+export type Service = (typeof SERVICES_CATEGORY)[keyof typeof SERVICES_CATEGORY];
 
 export type Step = {
     id: number,
@@ -13,7 +16,7 @@ export type IntroType = {
     abbr: string;
 };
 
-export type NavigationTypes = {
+export type NavigationType = {
     title: string,
     intro?: IntroType,
     items: {
@@ -21,4 +24,13 @@ export type NavigationTypes = {
         url: string;
         description: string;
     }[]
+}
+
+export type ServiceType = {
+    id: number;
+    title: string;
+    hint: string;
+    description: string;
+    contactMe: string;
+    image: ReturnType<typeof getImage>;
 }

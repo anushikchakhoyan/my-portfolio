@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { CircleThumb, SectionsLayout } from "@base/";
-import useIsMobile from "@hooks/use-mobile";
+import useIsMobile from "@hooks/custom/use-mobile";
 
 const About: React.FC = () => {
   const { t } = useTranslation();

@@ -1,13 +1,18 @@
 import * as React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import { SectionsLayout } from "@base/";
+import { SectionsLayout, GeneralTextBlock } from "@base/";
 
-const WhatIOffer = () => {
+const WhyChooseUs: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <SectionsLayout id="title">
+        <SectionsLayout id="title" title={t('whyChooseUs')}>
+            <GeneralTextBlock
+                title={t("ourProcess")}
+                subtitle={t("streamlinedWorkflows")}
+                description={t("efficientAndTransparentProcesses")}
+            />
             <div className="flex justify-center">
                 <p className="w-full md:w-3/4 p-4 md:p-5"
                     dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }} />
@@ -21,4 +26,4 @@ const WhatIOffer = () => {
     )
 }
 
-export default WhatIOffer;
+export default WhyChooseUs;

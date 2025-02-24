@@ -14,7 +14,14 @@ export const EMAIL_JS_TEMPLATE_ID = 'template_3xztbsa';
 export const LG_BREAKPOINT = 1024;
 
 
-export const THEME_TYPES = {
+export const THEME_MODE = {
     light: "light",
     dark: "dark",
+} as const;
+
+
+export const SERVICES_CATEGORY = {
+    website: "website",
+    mentorship: "mentorship",
+    collaboration: "collaboration",
 } as const;

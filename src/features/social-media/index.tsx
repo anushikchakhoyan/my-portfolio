@@ -22,7 +22,7 @@ type SocialMediaType = {
     className?: string,
 }
 
-const SocialMedia = ({ iconSize, className }: SocialMediaType) => {
+const SocialMedia: React.FC<SocialMediaType> = ({ iconSize, className }) => {
     const { t } = useTranslation();
 
     return (

@@ -1,9 +1,9 @@
-import { NavigationTypes } from "@lib/types";
+import { NavigationType } from "@lib/types";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 export default function useNavigationData() {
     const { t } = useTranslation();
-    const navigations: NavigationTypes[] = [
+    const navigations: NavigationType[] = [
         {
             title: t("general"),
             intro: {
@@ -26,24 +26,43 @@ export default function useNavigationData() {
         {
             title: t("explore"),
             intro: {
-                abbr: "process/steps",
+                abbr: "overview/offer",
                 content: t("understandMyProcess"),
             },
             items: [
-                {
-                    title: t("whatIOffer"),
-                    url: "/services",
-                    description: t("discoverTheServices")
-                },
-                {
-                    title: t("workflows"),
-                    url: "/workflows",
-                    description: t("websiteAndMentorship"),
-                },
+                // {
+                //     title: t("whatIOffer"),
+                //     url: "/services",
+                //     description: t("discoverTheServices")
+                // },
                 {
                     title: t("packages"),
                     url: "/packages",
                     description: t("exploreMyPricing")
+                },
+            ],
+        },
+        {
+            title: t("services"),
+            intro: {
+                abbr: "process/steps",
+                content: t("websiteAndMentorship"),
+            },
+            items: [
+                {
+                    title: t("websiteCreation"),
+                    url: "/website-creation",
+                    description: t("buildProfWebsite"),
+                },
+                {
+                    title: t("mentorship"),
+                    url: "/mentorship",
+                    description: t("expertGuidance"),
+                },
+                {
+                    title: t("collaboration"),
+                    url: "/collaboration",
+                    description: t("workTogether"),
                 },
             ],
         },

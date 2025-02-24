@@ -3,10 +3,10 @@ import { cn } from "@lib/utils";
 import { motion } from "framer-motion";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import { useSkillsData, useEssentialSkillsData } from "@hooks/use-skills-data";
+import { useSkillsData, useEssentialSkillsData } from "@hooks/custom/use-skills-data";
 import { SectionsLayout } from "@base/";
 
-const Skills = () => {
+const Skills: React.FC = () => {
     const { t } = useTranslation();
     const skillsData = useSkillsData();
 

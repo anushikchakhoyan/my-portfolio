@@ -3,7 +3,7 @@ import { useI18next } from 'gatsby-plugin-react-i18next';
 
 import { Button } from "@ui/button";
 
-export function LanguageSwitcher() {
+const LanguageSwitcher: React.FC = () => {
     const { language, changeLanguage } = useI18next();
 
     const changeLanguageHandler = (e: React.MouseEvent) => {
@@ -24,3 +24,5 @@ export function LanguageSwitcher() {
         />
     )
 }
+
+export default LanguageSwitcher;
