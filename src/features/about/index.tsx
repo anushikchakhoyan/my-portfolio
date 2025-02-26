@@ -21,9 +21,9 @@ const About: React.FC = () => {
   `);
 
   return (
-    <SectionsLayout id="about" className="flex flex-col transition-colors duration-300">
+    <SectionsLayout id="about" className="!py-0">
       <div className="flex-1 w-full gap-6 flex flex-col md:flex-row items-center justify-center
-       bg-zinc-700 dark:bg-zinc-800 py-6 md:p-10">
+       bg-zinc-700 dark:bg-zinc-800 py-6 md:py-10">
         <CircleThumb
           className="static"
           size={isMobile ? "sm" : "md"}

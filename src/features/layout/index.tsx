@@ -13,7 +13,9 @@ const MainLayout: React.FC<LayoutTypes> = ({ className, children }) => {
   return (
     <main className={className}>
       <Header />
-      {children}
+      <section className="pt-20">
+        {children}
+      </section>
       <Footer />
       <Toaster />
     </main>

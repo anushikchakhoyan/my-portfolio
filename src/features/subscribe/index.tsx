@@ -16,7 +16,7 @@ const Subscribe: React.FC = () => {
   return (
     <SectionsLayout
       id="contact"
-      className="my-5 py-16 bg-zinc-50 dark:bg-zinc-800 transition-colors duration-300"
+      className="bg-zinc-50 dark:bg-zinc-800 transition-colors duration-300"
     >
       <div className="flex items-center justify-center">
         <div className="w-full max-w-2xl flex flex-col items-center gap-6 px-4">

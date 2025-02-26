@@ -65,7 +65,7 @@
   "personalizedLearningPlan": "Personalized Learning Plan",
   "personalizedLearningPlanDesc": "Structuring a roadmap tailored to the mentee’s skill level.",
   "guidedPractice": "Guided Practice",
-  "guidedPracticeDesc": "Working on projects, solving coding challenges, code reviews, and best practices.",
+  "guidedPracticeDesc": "Solving coding challenges, code reviews, and best practices.",
   "progressReview": "Progress Review",
   "progressReviewDesc": "Tracking growth, answering questions, and resolving doubts.",
   "careerGuidanceFinalEvaluation": "Career Guidance/Final Evaluation",
@@ -77,7 +77,7 @@
   "communicationSetup": "Communication Setup",
   "communicationSetupDesc": "Establishing clear channels for smooth collaboration.",
   "executionCoordination": "Execution & Coordination",
-  "executionCoordinationDesc": "Establishing task management with regular check-ins and feedback loops. ",
+  "executionCoordinationDesc": "Manage tasks with regular check-ins and feedback.",
   "taskDistribution": "Task Distribution",
   "taskDistributionDesc": "Assigning responsibilities based on expertise.",
   "testing": "Testing & Refinements",
@@ -183,8 +183,8 @@
   "collabContact": "Reach out to discuss your project!",
   "--WHAT_WE_OFFER_ENDED--": "",
   "--QUOTE_STARTED--": "",
-  "visionDescription": "I provide a comprehensive approach to web development, guiding you from concept to completion. My services include <span class='font-medium'>building creative, functional, and user-friendly websites</span> tailored to your needs. Whether you require a <span class='font-medium'>personal portfolio, business website, or an advanced e-commerce platform,</span> I ensure a seamless experience by assisting with design selection, domain setup, and overall project structuring.",
-  "myFocusDescription": "My focus is on crafting websites that are not only visually appealing but also optimized for performance, accessibility, and user engagement.",
+  "visionDescription": "We provide a comprehensive approach to web development, guiding you from concept to completion. Our services include <span class='font-medium'>building creative, functional, and user-friendly websites</span> tailored to your needs. Whether you require a <span class='font-medium'>personal portfolio, business website, or an advanced e-commerce platform,</span> we ensure a seamless experience by assisting with design selection, domain setup, and overall project structuring.",
+  "myFocusDescription": "Our focus is on crafting websites that are not only visually appealing but also optimized for performance, accessibility, and user engagement.",
   "--QUOTE_ENDED--": "",
   "--FOOTER_STARTED--": "",
   "footerQuote": "Empowering your workflow with simplicity.",
@@ -220,5 +220,7 @@
   "openAnyIdea": "Open to Any Idea",
   "openAnyIdeaDesc": "No idea is too big or small. We’re here to collaborate on projects of all kinds, from creative concepts to technical challenges.",
   "freelanceProjects": "Freelance Projects",
-  "freelanceProjectsDesc": "Need a skilled developer for a short-term project? We’re available for freelance work to help you achieve your goals."
+  "freelanceProjectsDesc": "Need a skilled developer for a short-term project? We’re available for freelance work to help you achieve your goals.",
+  "--BENEFITS_ENDED--": "",
+  "--NEW_STARTED--": ""
 }

@@ -11,7 +11,7 @@ const Skills: React.FC = () => {
     const skillsData = useSkillsData();
 
     return (
-        <SectionsLayout id="skills" className="py-16 ">
+        <SectionsLayout id="skills">
             <div className="flex flex-col items-center justify-start gap-10">
                 <Title title={t("topSkills")} />
                 {skillsData.map(({ id, title, items }) => (

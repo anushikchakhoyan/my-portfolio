@@ -36,11 +36,11 @@ const Stepper: React.FC<StepperProps> = ({ steps, className }) => {
 
     return (
         <TooltipProvider>
-            <div className={cn(`w-full flex items-center md:h-96`, className)}>
-                <div className="flex-col md:flex-row relative flex items-center justify-between w-full">
+            <div className={cn(`w-full flex items-center lg:h-96`, className)}>
+                <div className="gap-5 xl:gap-0 flex-col xl:flex-row relative flex items-center justify-between w-full">
                     <StepperLine />
                     {steps.map((step, index) => (
-                        <div key={step.id} className="relative flex items-start md:flex-col md:items-center w-full">
+                        <div key={step.id} className="relative flex items-center xl:flex-col w-full">
                             <StepTitle
                                 title={step.title}
                                 even={index % 2 === 0}
@@ -71,7 +71,7 @@ const StepCircle: React.FC<StepCircleProps> = (({ step, isActive, handleStepClic
             <TooltipTrigger>
                 <div
                     className={cn(
-                        `w-8 h-8 flex items-center justify-center rounded-full border-2 ml-[1.1rem] md:ml-0
+                        `w-8 h-8 flex items-center justify-center rounded-full border-2 mx-[1.1rem] xl:mx-0
                         shadow-md text-sm font-bold cursor-pointer transition-all duration-300 relative z-10
                         hover:ring-2 hover:ring-pink-200 dark:hover:ring-pink-400/30`,
                         isActive
@@ -102,11 +102,13 @@ StepCircle.displayName = "StepCircle";
 const StepTitle: React.FC<StepTitleProps> = (({ title, description, even }) => {
     return (
         <div className={cn(
-            "md:absolute w-full text-start md:text-center transition-all order-3 ml-8 md:ml-0 mt-8 md:mt-0",
-            even ? "md:-top-36 lg:-top-32 text-zinc-700 dark:text-zinc-300" : "top-24 text-zinc-600 dark:text-zinc-400"
+            "xl:absolute w-full text-start xl:text-center transition-all order-3",
+            even
+                ? "-top-32 text-zinc-700 dark:text-zinc-300"
+                : "top-24 text-zinc-600 dark:text-zinc-400"
         )}>
-            <h2 className="text-sm lg:text-base font-medium">{title}</h2>
-            <p className="text-xs lg:text-sm text-zinc-500 dark:text-zinc-500">{description}</p>
+            <h2 className="text-base font-medium">{title}</h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-500">{description}</p>
         </div>
     )
 });
@@ -118,7 +120,7 @@ const VerticalConnectorLine: React.FC<VerticalConnectorProps> = (({ even, isActi
         <div
             onClick={handleStepClick}
             className={cn(
-                `md:absolute rounded-full w-0.5 transition-all order-2 -ml-4 mt-8 md:ml-0 md:mt-0
+                `hidden xl:block absolute rounded-full w-0.5 transition-all order-2
                  hover:opacity-80 cursor-pointer`,
                 even ? "-top-14 h-12" : "top-9 h-12",
                 isActive
@@ -132,7 +134,7 @@ VerticalConnectorLine.displayName = "VerticalConnectorLine";
 
 const StepperLine: React.FC<{}> = (() => {
     return (
-        <div className="hidden md:block absolute rounded-full w-full h-2 bg-zinc-200 dark:bg-zinc-800 
+        <div className="hidden xl:block absolute rounded-full w-full h-2 bg-zinc-200 dark:bg-zinc-800 
                         top-1/2 left-0 -translate-y-1/2 z-0" />
     )
 });

@@ -9,7 +9,7 @@ const Experiences: React.FC = () => {
   const items = useExperiencesData();
 
   return (
-    <SectionsLayout id="experience" className="py-16 bg-white dark:bg-gray-900">
+    <SectionsLayout id="experience" className="bg-white dark:bg-gray-900">
       <Title title={t("experiance")} />
       <UnderlineText
         text={t('experienceDesc')}
@@ -17,7 +17,7 @@ const Experiences: React.FC = () => {
       />
       <CustomSlider
         items={items}
-        className="text-zinc-700 dark:text-zinc-200"
+        className="text-zinc-700 dark:text-zinc-200 lg:my-8"
       />
     </SectionsLayout>
   )

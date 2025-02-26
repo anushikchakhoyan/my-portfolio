@@ -13,7 +13,7 @@ const ServicesSection: React.FC<{ type: Service }> = ({ type }) => {
   const data = useServicesData(type);
 
   return (
-    <SectionsLayout id="services" className="pt-0">
+    <SectionsLayout id="services">
       <ServicesContent {...data} />
     </SectionsLayout>
   )
@@ -27,7 +27,7 @@ const ServicesContent: React.FC<ServiceType> = (
   return (
     <div
       key={id}
-      className="gap-4 py-8 md:py-20 flex flex-col md:flex-row h-3/5"
+      className="gap-4 flex flex-col-reverse md:flex-row h-3/5"
     >
       <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-8">
         <Title title={title} className="md:text-4xl" />

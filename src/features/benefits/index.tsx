@@ -12,7 +12,7 @@ const Benefits: React.FC<{ type: Service }> = ({ type }) => {
     const benefits = useBenefitsData(type);
 
     return (
-        <SectionsLayout id="benefits" className="bg-gold-100 dark:bg-zinc-900 text-center py-16">
+        <SectionsLayout id="benefits" className="bg-gold-100 dark:bg-zinc-900 text-center">
             <Title title={t('benefits')} />
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
                 {benefits.map((item, index) => (

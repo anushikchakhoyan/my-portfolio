@@ -35,11 +35,13 @@ const createWorkflowComponent = ({ titleKey, subtitleKey, stepKeys }: WorkflowCo
 
 const WorkflowSection: React.FC<WorkflowProps> = ({ title, subtitle, steps }) => {
     return (
-        <>
-            <Title title={title} className="text-2xl sm:text-4xl md:text-4xl text-start" />
-            <p className="text-base px-2 py-3">{subtitle}</p>
+        <div className="space-y-8">
+            <div className="space-y-2">
+                <Title title={title} className="text-2xl sm:text-4xl md:text-4xl text-start" />
+                <p className="text-base">{subtitle}</p>
+            </div>
             <Stepper steps={steps} />
-        </>
+        </div>
     )
 };
 WorkflowSection.displayName = "WorkflowSection";

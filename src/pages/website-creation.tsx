@@ -22,6 +22,7 @@ const WebsiteCreationPage: React.FC = () => {
           title={t("websiteWorkflow")}
           subtitle={t("buildYourDreamWebsite")}
           description={t("fromConceptToLaunch")}
+          descrptionClasses="px-4"
         />
         <ServicesSection type={SERVICES_CATEGORY.website} />
         <Workflow type={SERVICES_CATEGORY.website} />

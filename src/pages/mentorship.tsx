@@ -21,6 +21,7 @@ const MentorshipPage: React.FC = () => {
         title={t("mentorshipWorkflow")}
         subtitle={t("guidedGrowth")}
         description={t("personalizedMentorshipJourney")}
+        descrptionClasses="px-4"
       />
       <ServicesSection type={SERVICES_CATEGORY.mentorship} />
       <Workflow type={SERVICES_CATEGORY.mentorship} />
