@@ -22,7 +22,7 @@ export default function useExperiencesData() {
             logo: (
                 <StaticImage
                     className="object-contain"
-                    src="../images/localexpress.png"
+                    src="../../images/localexpress.png"
                     alt="Local Express"
                     placeholder="blurred"
                     onError={(e) => {
@@ -39,7 +39,7 @@ export default function useExperiencesData() {
             logo: (
                 <StaticImage
                     className="object-contain"
-                    src="../images/inspace.jpeg"
+                    src="../../images/inspace.jpeg"
                     alt="Inspace"
                     onError={(e) => {
                         e.currentTarget.src = "/fallback-logo.png";
@@ -55,7 +55,7 @@ export default function useExperiencesData() {
             logo: (
                 <StaticImage
                     className="object-contain"
-                    src="../images/dvld.png"
+                    src="../../images/dvld.png"
                     alt="Dvld"
                     onError={(e) => {
                         e.currentTarget.src = "/fallback-logo.png";

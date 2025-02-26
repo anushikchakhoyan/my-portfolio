@@ -2,7 +2,7 @@ import * as React from "react";
 import { GoDotFill } from "react-icons/go";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import { GeneralTextBlock } from "@base/";
+import { GeneralTextBlock, Title } from "@base/";
 import { Button } from "@ui/button";
 import { cn } from "@lib/utils";
 
@@ -90,7 +90,7 @@ const Packages: React.FC = () => {
                 {packages.map(({ plan, title, desc }) => (
                     <div key={title} className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
                         <div>
-                            <h3>{title}</h3>
+                            <Title title={title} className="text-xl md:text-3xl text-start" />
                             <p>{desc}</p>
                         </div>
                         {plan.map((item: PlanType) => (
@@ -101,7 +101,7 @@ const Packages: React.FC = () => {
                                      border border-pink-500/40`,
                                 )}
                             >
-                                <h2 className="font-italiana text-4xl text-center">{item.title}</h2>
+                                <Title title={item.title} className="text-xl md:text-3xl font-normal" />
                                 <ul className="space-y-3 mb-8">
                                     {item.feaures.map((feature: string) => (
                                         <li key={feature} className="flex items-center">

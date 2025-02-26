@@ -1,4 +1,4 @@
-import { getImage } from "gatsby-plugin-image";
+import { getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 import { SERVICES_CATEGORY, THEME_MODE } from "./constants";
 
@@ -33,4 +33,11 @@ export type ServiceType = {
     description: string;
     contactMe: string;
     image: ReturnType<typeof getImage>;
+}
+
+export type Benefit = {
+    id: number;
+    title: string;
+    desc: string;
+    image: IGatsbyImageData | any;
 }

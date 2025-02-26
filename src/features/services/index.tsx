@@ -1,19 +1,22 @@
 import * as React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { AiFillMessage } from "react-icons/ai";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { Button } from "@ui/button";
 
 import useServicesData from "@hooks/custom/use-services-data";
 import { Service, ServiceType } from "@lib/types";
 
-import { Link, UnderlineText } from "@base/";
+import { Link, SectionsLayout, Title, UnderlineText } from "@base/";
 
 const ServicesSection: React.FC<{ type: Service }> = ({ type }) => {
   const data = useServicesData(type);
 
-  return <ServicesContent {...data} />
+  return (
+    <SectionsLayout id="services" className="pt-0">
+      <ServicesContent {...data} />
+    </SectionsLayout>
+  )
 };
 
 export default ServicesSection;
@@ -27,7 +30,7 @@ const ServicesContent: React.FC<ServiceType> = (
       className="gap-4 py-8 md:py-20 flex flex-col md:flex-row h-3/5"
     >
       <div className="w-full md:w-1/2 px-4 md:px-5 flex items-start flex-col gap-8">
-        <h2 className="text-4xl font-medium">{title}</h2>
+        <Title title={title} className="md:text-4xl" />
         <UnderlineText text={hint} className="max-w-md" />
         <p>{description}</p>
         <Button variant="outline" asChild>

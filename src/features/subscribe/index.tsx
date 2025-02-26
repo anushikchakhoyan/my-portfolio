@@ -23,9 +23,9 @@ const Subscribe: React.FC = () => {
           <h2 className="text-sm font-medium text-pink-600 dark:text-pink-400/90 tracking-wider">
             ⎯ {t("latestNews")}
           </h2>
-          <p className="text-center text-3xl lg:text-4xl font-italiana text-zinc-800 dark:text-zinc-100">
+          <p className="text-center text-xl md:text-3xl lg:text-4xl font-italiana text-zinc-800 dark:text-zinc-100">
             {t('stayInTouch')}{' '}
-            <span className="bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-pink-500 to-pink-700 bg-clip-text text-transparent">
               {t('joinMyMailingList')}
             </span>
           </p>

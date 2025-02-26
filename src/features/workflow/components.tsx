@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { generateSteps } from "@lib/utils";
 import { Step } from "@lib/types";
-import { Stepper } from "@base/";
+import { Stepper, Title } from "@base/";
 
 interface WorkflowProps {
     title: string;
@@ -35,11 +35,11 @@ const createWorkflowComponent = ({ titleKey, subtitleKey, stepKeys }: WorkflowCo
 
 const WorkflowSection: React.FC<WorkflowProps> = ({ title, subtitle, steps }) => {
     return (
-        <div className="space-y-8">
-            <h1 className="text-4xl font-medium font-italiana">{title}</h1>
-            <span className="text-base">{subtitle}</span>
+        <>
+            <Title title={title} className="text-2xl sm:text-4xl md:text-4xl text-start" />
+            <p className="text-base px-2 py-3">{subtitle}</p>
             <Stepper steps={steps} />
-        </div>
+        </>
     )
 };
 WorkflowSection.displayName = "WorkflowSection";

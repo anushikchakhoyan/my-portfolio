@@ -4,12 +4,12 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { SERVICES_CATEGORY } from "@lib/constants";
 
-import { SectionsLayout, GeneralTextBlock } from "@base/";
-import WhyChooseUs from "@features/why-choose-us";
+import { GeneralTextBlock } from "@base/";
 import ServicesSection from "@features/services";
 import Subscribe from "@features/subscribe";
 import Workflow from "@features/workflow";
 import MainLayout from "@features/layout";
+import Benefits from "@features/benefits";
 import Seo from "@features/seo";
 
 const WebsiteCreationPage: React.FC = () => {
@@ -17,7 +17,7 @@ const WebsiteCreationPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <SectionsLayout id={SERVICES_CATEGORY.website}>
+      <React.Suspense fallback={<div>Loading...</div>}>
         <GeneralTextBlock
           title={t("websiteWorkflow")}
           subtitle={t("buildYourDreamWebsite")}
@@ -25,9 +25,10 @@ const WebsiteCreationPage: React.FC = () => {
         />
         <ServicesSection type={SERVICES_CATEGORY.website} />
         <Workflow type={SERVICES_CATEGORY.website} />
-        <WhyChooseUs />
+        <Benefits type={SERVICES_CATEGORY.website} />
+        {/* <WhyChooseUs /> */}
         <Subscribe />
-      </SectionsLayout>
+      </React.Suspense>
     </MainLayout>
   )
 }

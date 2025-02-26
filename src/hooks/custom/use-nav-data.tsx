@@ -30,11 +30,6 @@ export default function useNavigationData() {
                 content: t("understandMyProcess"),
             },
             items: [
-                // {
-                //     title: t("whatIOffer"),
-                //     url: "/services",
-                //     description: t("discoverTheServices")
-                // },
                 {
                     title: t("packages"),
                     url: "/packages",

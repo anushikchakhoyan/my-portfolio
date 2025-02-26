@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { useSkillsData, useEssentialSkillsData } from "@hooks/custom/use-skills-data";
-import { SectionsLayout } from "@base/";
+import { SectionsLayout, Title } from "@base/";
 
 const Skills: React.FC = () => {
     const { t } = useTranslation();
@@ -13,9 +13,7 @@ const Skills: React.FC = () => {
     return (
         <SectionsLayout id="skills" className="py-16 ">
             <div className="flex flex-col items-center justify-start gap-10">
-                <h1 className="text-center text-4xl md:text-5xl font-italiana font-bold dark:text-zinc-100">
-                    {t("topSkills")}
-                </h1>
+                <Title title={t("topSkills")} />
                 {skillsData.map(({ id, title, items }) => (
                     <div key={id} className="w-full bg-zinc-50 dark:bg-zinc-800 rounded-lg lg:shadow-sm p-4 md:p-8 space-y-5 
                         transition-colors duration-300 hover:dark:bg-zinc-800/60">
@@ -65,9 +63,7 @@ const EssentialSkills = () => {
     return (
         <div id="essentialSkills" className="relative flex flex-col items-center justify-center overflow-hidden
          bg-zinc-50 dark:bg-zinc-900 gap-10 py-10">
-            <p className="text-4xl font-italiana text-center text-zinc-800 dark:text-pink-400/90">
-                {t('essentialSkills')}
-            </p>
+            <Title title={t("essentialSkills")} className="md:text-4xl" />
             {[0, 1].map((index) => (
                 <div key={`scroll-container-${index}`} className="w-screen overflow-hidden">
                     <div className={cn(

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import { SectionsLayout, AnimatedCounter } from "@base/";
+import { SectionsLayout, AnimatedCounter, Title } from "@base/";
 import useRatesData from "@hooks/custom/use-rates-data";
 
 interface RatesProps {
@@ -31,7 +31,7 @@ const Rates: React.FC<RatesProps> = ({ limit }) => {
                                 isInView={isInView}
                                 className="text-3xl lg:text-4xl font-medium" />
                         </motion.div>
-                        <p className="text-xl lg:text-2xl font-italiana">{name}</p>
+                        <Title title={name} className="text-2xl md:text-xl lg:text-2xl" />
                         <p className="text-sm text-gray-600 dark:text-zinc-400 mt-1">{description}</p>
                     </div>
                 )).slice(start, end)}

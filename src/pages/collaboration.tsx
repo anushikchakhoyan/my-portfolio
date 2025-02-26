@@ -3,13 +3,14 @@ import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { SERVICES_CATEGORY } from "@lib/constants";
+import { GeneralTextBlock } from "@base/";
 
-import { SectionsLayout, GeneralTextBlock } from "@base/";
 import ServicesSection from "@features/services";
 import WhyChooseUs from "@features/why-choose-us";
 import Subscribe from "@features/subscribe";
 import MainLayout from "@features/layout";
 import Workflow from "@features/workflow";
+import Benefits from "@features/benefits";
 import Seo from "@features/seo";
 
 const CollaborationPage: React.FC = () => {
@@ -17,17 +18,16 @@ const CollaborationPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <SectionsLayout id={SERVICES_CATEGORY.collaboration}>
-        <GeneralTextBlock
-          title={t("collaborationAndCommunication")}
-          subtitle={t("workingTogether")}
-          description={t("transparentAndEffectiveCollaboration")}
-        />
-        <ServicesSection type={SERVICES_CATEGORY.collaboration} />
-        <Workflow type={SERVICES_CATEGORY.collaboration} />
-        <WhyChooseUs />
-        <Subscribe />
-      </SectionsLayout>
+      <GeneralTextBlock
+        title={t("collaborationAndCommunication")}
+        subtitle={t("workingTogether")}
+        description={t("transparentAndEffectiveCollaboration")}
+      />
+      <ServicesSection type={SERVICES_CATEGORY.collaboration} />
+      <Workflow type={SERVICES_CATEGORY.collaboration} />
+      <Benefits type={SERVICES_CATEGORY.collaboration} />
+      <WhyChooseUs />
+      <Subscribe />
     </MainLayout>
   )
 }

@@ -3,13 +3,13 @@ import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import { SERVICES_CATEGORY } from "@lib/constants";
+import { GeneralTextBlock } from "@base/";
 
-import { SectionsLayout, GeneralTextBlock } from "@base/";
-import WhyChooseUs from "@features/why-choose-us";
 import ServicesSection from "@features/services";
 import Subscribe from "@features/subscribe";
 import MainLayout from "@features/layout";
 import Workflow from "@features/workflow";
+import Benefits from "@features/benefits";
 import Seo from "@features/seo";
 
 const MentorshipPage: React.FC = () => {
@@ -17,17 +17,16 @@ const MentorshipPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <SectionsLayout id={SERVICES_CATEGORY.mentorship}>
-        <GeneralTextBlock
-          title={t("mentorshipWorkflow")}
-          subtitle={t("guidedGrowth")}
-          description={t("personalizedMentorshipJourney")}
-        />
-        <ServicesSection type={SERVICES_CATEGORY.mentorship} />
-        <Workflow type={SERVICES_CATEGORY.mentorship} />
-        <WhyChooseUs />
-        <Subscribe />
-      </SectionsLayout>
+      <GeneralTextBlock
+        title={t("mentorshipWorkflow")}
+        subtitle={t("guidedGrowth")}
+        description={t("personalizedMentorshipJourney")}
+      />
+      <ServicesSection type={SERVICES_CATEGORY.mentorship} />
+      <Workflow type={SERVICES_CATEGORY.mentorship} />
+      <Benefits type={SERVICES_CATEGORY.mentorship} />
+      {/* <WhyChooseUs /> */}
+      <Subscribe />
     </MainLayout>
   )
 }

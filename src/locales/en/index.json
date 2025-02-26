@@ -205,5 +205,20 @@
   "notFound": "Not Found",
   "--NOTFOUND_ENDED--": "",
   "--WHY_CHOOSE_US_STARTED--": "",
-  "whyChooseUs": "Why choose us"
+  "whyChooseUs": "Why choose us",
+  "--WHY_CHOOSE_US_ENDED--": "",
+  "--BENEFITS_STARTED--": "",
+  "benefits": "Benefits",
+  "onTimeDelivery": "On-Time Delivery",
+  "onTimeDeliveryDesc": "We ensure efficient teamwork and punctual delivery, so your project stays on track and meets every deadline",
+  "multifunctionalSolutions": "Multifunctional solutions",
+  "multifunctionalSolutionsDesc": "From simple websites to complex platforms, we provide versatile solutions tailored to your unique needs.",
+  "personalizedGuidance": "Personalized Guidance",
+  "personalizedGuidanceDesc": "Learn from experienced professionals who have walked the path, helping you avoid common pitfalls and achieve faster progress.",
+  "availability": "24/7 Availability",
+  "availabilityDesc": "Access support whenever you need it—whether it’s a quick question or in-depth feedback, we’re here for you around the clock.",
+  "openAnyIdea": "Open to Any Idea",
+  "openAnyIdeaDesc": "No idea is too big or small. We’re here to collaborate on projects of all kinds, from creative concepts to technical challenges.",
+  "freelanceProjects": "Freelance Projects",
+  "freelanceProjectsDesc": "Need a skilled developer for a short-term project? We’re available for freelance work to help you achieve your goals."
 }

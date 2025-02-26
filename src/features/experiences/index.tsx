@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import { SectionsLayout, CustomSlider, UnderlineText } from "@base/";
+import { SectionsLayout, CustomSlider, UnderlineText, Title } from "@base/";
 import useExperiencesData from "@hooks/custom/use-experiences-data";
 
 const Experiences: React.FC = () => {
@@ -10,9 +10,7 @@ const Experiences: React.FC = () => {
 
   return (
     <SectionsLayout id="experience" className="py-16 bg-white dark:bg-gray-900">
-      <h1 className="text-4xl md:text-5xl font-italiana font-bold text-center text-zinc-900 dark:text-zinc-100">
-        {t('experiance')}
-      </h1>
+      <Title title={t("experiance")} />
       <UnderlineText
         text={t('experienceDesc')}
         className="max-w-md text-center mx-auto py-4 text-zinc-600 dark:text-zinc-300"
