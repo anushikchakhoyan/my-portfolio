@@ -75,7 +75,7 @@ const SliderArrow: React.FC<SliderArrowProps> = (({ handleClick, children }) => 
             variant="link"
             onClick={handleClick}
             aria-label="Next experience"
-            className="text-xl text-zinc-700 hover:text-pink-600 dark:text-pink-400 dark:hover:text-pink-500"
+            className="text-xl text-zinc-700 hover:text-pink-600 dark:text-pink-400 dark:hover:text-primary"
         >
             {children}
         </Button>
@@ -92,8 +92,8 @@ const SliderDots: React.FC<SliderDotsProps> = (({ items, currentIndex, setCurren
                     onClick={() => setCurrentIndex(index)}
                     className={`w-3 h-3 rounded-full transition-colors
                              ${index === currentIndex
-                            ? "bg-pink-500 dark:bg-pink-400"
-                            : "bg-gray-300 hover:bg-pink-300 dark:bg-zinc-700 dark:hover:bg-pink-400"
+                            ? "bg-primary"
+                            : "bg-gray-300 hover:bg-pink-300 dark:bg-zinc-700 dark:hover:bg-primary"
                         }`}
                     aria-label={`Go to experience ${index + 1}`}
                 />

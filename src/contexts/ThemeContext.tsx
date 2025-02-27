@@ -15,13 +15,14 @@ const ThemeContext = createContext<ThemeContextType>({
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setTheme] = useState<Theme>(THEME_MODE.light);
+    const root = document.documentElement;
 
     useEffect(() => {
         // Check localStorage for saved theme preference
         const storedTheme = localStorage.getItem("theme") as Theme | null;
         if (storedTheme) {
             setTheme(storedTheme);
-            document.documentElement.classList.add(storedTheme);
+            root.classList.add(storedTheme);
         }
     }, []);
 
@@ -30,9 +31,8 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         setTheme(newTheme);
         localStorage.setItem("theme", newTheme);
 
-        // Update the <html> class to apply Tailwind dark mode
-        document.documentElement.classList.remove(THEME_MODE.light, THEME_MODE.dark);
-        document.documentElement.classList.add(newTheme);
+        root.classList.remove(THEME_MODE.light, THEME_MODE.dark);
+        root.classList.add(newTheme);
     };
 
     return (

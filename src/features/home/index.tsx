@@ -44,9 +44,9 @@ const Home: React.FC = () => {
       <div className="flex flex-col gap-4 mx-auto">
         <h1 className="flex items-center justify-center mb-2">
           <span className="text-5xl md:text-9xl font-josefinSans m-0">Port
-            <span className="font-dancingScript text-primary dark:text-pink-600">f</span>olio.
+            <span className="font-dancingScript text-primary">f</span>olio.
           </span>
-          <sup className="text-xl md:text-2xl font-bold font-josefinSans inline-block text-primary dark:text-pink-600">{yearsExperience}</sup>
+          <sup className="text-xl md:text-2xl font-bold font-josefinSans inline-block text-primary">{yearsExperience}</sup>
         </h1>
         <ul className="flex flex-row-wrap gap-4 m-0 px-3">
           {externalLinks.map(({ url, text }) => (

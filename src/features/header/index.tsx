@@ -2,35 +2,25 @@ import React, { useState, useLayoutEffect, useEffect } from "react";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import LanguageSwitcher from "./language-switcher";
-import ColorPicker from "@features/color-picker";
-import ModeSwitcher from "./mode-switcher";
-import useIsMobile from "@hooks/custom/use-mobile";
-import NavMenu from "./nav-menu";
 import { Button } from "@ui/button";
 import { Link } from "@base/";
+
+import useIsMobile from "@hooks/custom/use-mobile";
+import ColorPicker from "@features/color-picker";
+
+import LanguageSwitcher from "./language-switcher";
+import ModeSwitcher from "./mode-switcher";
+import NavMenu from "./nav-menu";
 
 const Header: React.FC = () => {
     const { t } = useTranslation();
     const [toggle, setToggle] = useState(false);
-    const [color, setColor] = useState(
-        localStorage.getItem('selectedColor') || 'pink'
-    );
 
     const isMobile = useIsMobile();
 
     const toggleMenu = () => {
         setToggle((prev: boolean) => !prev);
     }
-
-    useEffect(() => {
-        localStorage.setItem('selectedColor', color);
-        document.documentElement.style.setProperty(
-            '--color-primary',
-            color === 'pink' ? '#EC4899' : color === 'gold' ? '#A27B5C' : '#3B82F6'
-        );
-    }, [color]);
-
 
     useLayoutEffect(() => {
         if (!isMobile) {
@@ -46,7 +36,7 @@ const Header: React.FC = () => {
                 </Link>
                 <NavMenu toggle={toggle} />
                 <div className="flex items-center gap-1 md:gap-2">
-                    <ColorPicker onColorChange={setColor} />
+                    <ColorPicker />
                     <LanguageSwitcher />
                     <ModeSwitcher />
                     {!isMobile && (

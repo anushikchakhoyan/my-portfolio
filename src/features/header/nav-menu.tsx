@@ -95,8 +95,8 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     className={cn(
                         `block select-none space-y-1 rounded-md p-3 leading-none no-underline 
-                        outline-none transition-colors hover:bg-zinc-100 hover:text-zinc-900 
-                        focus:bg-zinc-100 focus:text-zinc-900
+                        outline-none transition-colors hover:bg-zinc-50 hover:text-zinc-900 
+                        focus:bg-zinc-50 focus:text-zinc-900
                         dark:hover:bg-zinc-700/40 dark:hover:text-zinc-100 
                         dark:focus:bg-zinc-700/40 dark:focus:text-zinc-100`,
                         className

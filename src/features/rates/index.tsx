@@ -15,7 +15,7 @@ const Rates: React.FC<RatesProps> = ({ limit }) => {
     const isInView = useInView(ref, { once: false, margin: "-100px" });
 
     return (
-        <SectionsLayout id="rates" className="h-auto bg-zinc-100 dark:bg-zinc-800 flex justify-center">
+        <SectionsLayout id="rates" className="h-auto bg-zinc-50 dark:bg-zinc-800 flex justify-center">
             <div ref={ref} className="flex flex-col items-center justify-center md:flex-row w-full lg:w-5/6 gap-10">
                 {rates.map(({ id, name, rate, description }) => (
                     <div key={id} className="text-center text-gray-900 dark:text-zinc-100">

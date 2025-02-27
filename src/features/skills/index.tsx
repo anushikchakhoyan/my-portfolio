@@ -16,8 +16,8 @@ const Skills: React.FC = () => {
                 <Title title={t("topSkills")} />
                 {skillsData.map(({ id, title, items }) => (
                     <div key={id} className="w-full bg-zinc-50 dark:bg-zinc-800 rounded-lg lg:shadow-sm p-4 md:p-8 space-y-5 
-                        transition-colors duration-300 hover:dark:bg-zinc-800/60">
-                        <p className="text-2xl text-center text-gray-500 dark:text-pink-400/90">
+                        transition-colors duration-300">
+                        <p className="text-2xl text-center text-zinc-800 dark:text-white">
                             {title}
                         </p>
                         <ul className="max-w-5xl space-y-6 mx-auto">
@@ -38,8 +38,7 @@ const Skills: React.FC = () => {
                                             initial={{ width: 0 }}
                                             animate={{ width: `${percentage}%` }}
                                             transition={{ duration: 1, ease: "easeOut" }}
-                                            className="h-1 bg-gradient-to-r from-pink-600 to-pink-400 
-                                                dark:from-pink-400 dark:to-pink-600 rounded-full"
+                                            className="h-1 bg-gradient-to-r from-gray-300 to-primary dark:from-gray-600 dark:to-primary rounded-full"
                                             style={{ maxWidth: "100%" }}
                                         />
                                     )}
@@ -61,34 +60,30 @@ const EssentialSkills = () => {
     const essentialSkills = useEssentialSkillsData();
 
     return (
-        <div id="essentialSkills" className="relative flex flex-col items-center justify-center overflow-hidden
-         bg-zinc-50 dark:bg-zinc-900 gap-10 py-10">
+        <div id="essentialSkills" className="relative flex flex-col items-center justify-center 
+        overflow-hidden gap-10 py-10 bg-zinc-50 dark:bg-gray-900">
             <Title title={t("essentialSkills")} className="md:text-4xl" />
-            {[0, 1].map((index) => (
-                <div key={`scroll-container-${index}`} className="w-screen overflow-hidden">
-                    <div className={cn(
-                        'flex whitespace-nowrap space-x-6',
+            <div className="w-screen overflow-hidden py-5 space-y-5">
+                {[0, 1].map((index) => (
+                    <div key={`scroll-container-${index}`} className={cn(
+                        'flex gap-3 whitespace-nowrap',
                         index % 2 === 0
-                            ? 'animate-scroll-linear-right'
-                            : 'animate-scroll-linear-left'
+                            ? 'animate-scroll-linear-left'
+                            : 'animate-scroll-linear-right'
                     )}>
                         {[...essentialSkills, ...essentialSkills].map((item) => (
                             <div
                                 key={`skill-${item}`}
-                                className="text-sm md:text-base px-6 py-4 
-                                 rounded-xl bg-gray-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100  
-                                 backdrop-blur-lg bg-opacity-80 dark:bg-opacity-90  
-                                 transition-all duration-300
-                                 hover:scale-105 hover:bg-zinc-100 hover:dark:bg-zinc-700  
-                                 hover:text-pink-500 dark:hover:text-pink-300 
-                                 text-center"
+                                className="text-sm md:text-base px-6 py-4 rounded-2xl
+                                bg-white hover:bg-primary text-zinc-900 hover:text-white 
+                                transition-all duration-300 hover:scale-105 text-center"
                             >
                                 {item}
                             </div>
                         ))}
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }

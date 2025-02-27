@@ -39,7 +39,7 @@ const About: React.FC = () => {
       </div>
       <div className="flex-1 flex items-center justify-center py-12 px-4">
         <div className="w-full md:w-1/2 lg:w-2/4 flex flex-col items-center gap-6">
-          <span className="text-xs font-semibold text-pink-500 dark:text-pink-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary dark:text-pink-400 uppercase tracking-widest">
             {t("welcome")}
           </span>
 

@@ -25,11 +25,11 @@ const Subscribe: React.FC = () => {
           </h2>
           <p className="text-center text-xl md:text-3xl lg:text-4xl font-italiana text-zinc-800 dark:text-zinc-100">
             {t('stayInTouch')}{' '}
-            <span className="bg-gradient-to-r from-pink-500 to-pink-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-pink-700 bg-clip-text text-transparent">
               {t('joinMyMailingList')}
             </span>
           </p>
-          <SocialMedia className="dark:text-zinc-300 hover:dark:text-pink-400" />
+          <SocialMedia className="dark:text-zinc-300 hover:dark:text-primary" />
           <Button
             variant="outline"
             onClick={handleSubscribeClick}

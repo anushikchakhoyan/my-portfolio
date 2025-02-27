@@ -98,7 +98,7 @@ const Packages: React.FC = () => {
                                 key={item.title}
                                 className={cn(
                                     `min-h-96 relative space-y-6 bg-white rounded-lg shadow-sm p-8 
-                                     border border-pink-500/40`,
+                                     border border-primary/40`,
                                 )}
                             >
                                 <Title title={item.title} className="text-xl md:text-3xl font-normal" />

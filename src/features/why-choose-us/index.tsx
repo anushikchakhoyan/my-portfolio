@@ -7,7 +7,7 @@ const WhyChooseUs: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <SectionsLayout id="title" title={t('whyChooseUs')}>
+        <SectionsLayout id="title">
             <GeneralTextBlock
                 title={t("ourProcess")}
                 subtitle={t("streamlinedWorkflows")}

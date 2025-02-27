@@ -100,6 +100,7 @@ const ContactForm: React.FC = () => {
                             type="submit"
                             disabled={isSubmitting}
                             className="mt-4"
+                            variant="secondary"
                         >
                             {isSubmitting ? t("submitting") : t("send")}
                         </Button>

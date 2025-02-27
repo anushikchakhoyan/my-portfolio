@@ -33,7 +33,7 @@ const SocialMedia: React.FC<SocialMediaType> = ({ iconSize, className }) => {
                         <TooltipTrigger asChild>
                             <Link to={url}>
                                 <Icon
-                                    className={cn("text-2xl text-zinc-600 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400", iconSize)} />
+                                    className={cn("text-2xl text-zinc-600 dark:text-gray-300 hover:text-primary dark:hover:text-pink-400", iconSize)} />
                             </Link>
                         </TooltipTrigger>
                         <TooltipContent>

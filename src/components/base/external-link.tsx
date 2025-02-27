@@ -13,7 +13,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ text, to, Icon = FiArrowUpR
   <Button
     variant="link"
     className="border border-gray-300 dark:border-gray-500 rounded-3xl transition-colors 
-               hover:border-pink-500 dark:hover:border-gray-700 group dark:hover:bg-white">
+               hover:border-p dark:hover:border-gray-700 group dark:hover:bg-white">
     <a
       href={to}
       target="_blank"
@@ -24,7 +24,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ text, to, Icon = FiArrowUpR
       {text}
       <Icon size={18}
         className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5
-         group-hover:text-pink-500 dark:group-hover:text-pink-500" />
+         group-hover:text-primary dark:group-hover:text-primary" />
     </a>
   </Button>
 );

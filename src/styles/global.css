@@ -10,7 +10,8 @@
         --card-foreground: 222.2 84% 4.9%;
         --popover: 0 0% 100%;
         --popover-foreground: 222.2 84% 4.9%;
-        --primary: 222.2 47.4% 11.2%;
+        --primary: 334.65 27.84% 50%;
+        /* pink-500 */
         --primary-foreground: 210 40% 98%;
         --secondary: 210 40% 96.1%;
         --secondary-foreground: 222.2 47.4% 11.2%;
@@ -46,7 +47,8 @@
         --card-foreground: 210 40% 98%;
         --popover: 0 0% 15.69%;
         --popover-foreground: 210 40% 98%;
-        --primary: 210 40% 98%;
+        --primary: 335.81deg 28.18% 43.14%;
+        /* pink-600 */
         --primary-foreground: 222.2 47.4% 11.2%;
         --secondary: 217.2 32.6% 17.5%;
         --secondary-foreground: 210 40% 98%;
@@ -84,22 +86,3 @@
         @apply bg-background text-foreground font-josefinSans;
     }
 }
-
-/* :root {
-    --color-primary: #A27B5C;
-}
-
-.bg-primary {
-    background-color: var(--color-primary);
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-    }
-  body {
-    @apply bg-background text-foreground;
-    }
-} */

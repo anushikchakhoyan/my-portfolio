@@ -7,11 +7,14 @@ import React from "react";
 
 import "./src/styles/global.css";
 import { ThemeProvider } from "./src/contexts/ThemeContext";
+import { ColorProvider } from "./src/contexts/ColorContext";
 
 export const wrapRootElement = ({ element }: { element: React.ReactNode }) => {
     return (
         <ThemeProvider>
-            {element}
+            <ColorProvider>
+                {element}
+            </ColorProvider>
         </ThemeProvider>
     );
 };

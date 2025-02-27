@@ -29,7 +29,7 @@ const ContactUs: React.FC = () => {
   const coverImage = getImage(data.coverImage) as IGatsbyImageData;
 
   return (
-    <SectionsLayout id="contact" title={""} className="space-y-10">
+    <SectionsLayout id="contact" className="space-y-10 !py-0">
       <div className="relative h-96 w-full flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/45 z-10 flex items-end justify-center">
           <h2 className="text-4xl text-white font-bold py-20 uppercase font-italiana">
@@ -91,7 +91,7 @@ const ContactTitle: React.FC<{}> = (() => {
         <Link to="/faq">
           <UnderlineText
             text={`${t("here")}!`}
-            className="inline-block text-sm text-pink-700"
+            className="inline-block text-sm text-primary"
           />
         </Link>
       </h5>
