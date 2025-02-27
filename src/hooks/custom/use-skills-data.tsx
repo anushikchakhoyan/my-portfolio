@@ -47,7 +47,7 @@ export function useEssentialSkillsData() {
         "Lighthouse",
         "SEO Best Practices",
         "Agile Methodologies",
-        "Version Control (Git, GitHub)"
+        "Version Control (Git, GitHub)",
     ]
 
     return items;

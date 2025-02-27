@@ -13,12 +13,10 @@ export const EMAIL_JS_SERVICE_ID = 'service_dta8fla';
 export const EMAIL_JS_TEMPLATE_ID = 'template_3xztbsa';
 export const LG_BREAKPOINT = 1024;
 
-
 export const THEME_MODE = {
     light: "light",
     dark: "dark",
 } as const;
-
 
 export const SERVICES_CATEGORY = {
     website: "website",

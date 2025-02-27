@@ -73,9 +73,9 @@ const StepCircle: React.FC<StepCircleProps> = (({ step, isActive, handleStepClic
                     className={cn(
                         `w-8 h-8 flex items-center justify-center rounded-full border-2 mx-[1.1rem] xl:mx-0
                         shadow-md text-sm font-bold cursor-pointer transition-all duration-300 relative z-10
-                        hover:ring-2 hover:ring-pink-200 dark:hover:ring-pink-400/30`,
+                        hover:ring-2 hover:ring-primary-200 dark:hover:ring-primary-400/30`,
                         isActive
-                            ? `bg-primary text-zinc-50 border-primary dark:border-pink-400 
+                            ? `bg-primary text-zinc-50 border-primary dark:border-primary-400 
                                shadow-lg scale-110`
                             : `border-zinc-300 dark:border-zinc-600 bg-zinc-50 dark:bg-zinc-800 
                                text-zinc-600 dark:text-zinc-300 hover:scale-105 hover:shadow-md
@@ -124,7 +124,7 @@ const VerticalConnectorLine: React.FC<VerticalConnectorProps> = (({ even, isActi
                  hover:opacity-80 cursor-pointer`,
                 even ? "-top-14 h-12" : "top-9 h-12",
                 isActive
-                    ? 'bg-pink-400 dark:bg-primary'
+                    ? 'bg-primary-400 dark:bg-primary'
                     : 'bg-zinc-200 dark:bg-zinc-700'
             )}
         />

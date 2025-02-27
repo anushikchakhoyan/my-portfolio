@@ -41,7 +41,17 @@ const config: Config = {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					50: 'hsl(var(--primary-50))',
+					100: 'hsl(var(--primary-100))',
+					200: 'hsl(var(--primary-200))',
+					300: 'hsl(var(--primary-300))',
+					400: 'hsl(var(--primary-400))',
+					500: 'hsl(var(--primary-500))',
+					600: 'hsl(var(--primary-600))',
+					700: 'hsl(var(--primary-700))',
+					800: 'hsl(var(--primary-800))',
+					900: 'hsl(var(--primary-900))',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -68,31 +78,8 @@ const config: Config = {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				gray: {
-					'900': '#171717', //
+					'900': '#171717',
 				},
-				// pink: {
-				// 	'50': '#fdf2f6',
-				// 	'100': '#f8dae4',
-				// 	'200': '#f2b9cf',
-				// 	'300': '#eb98b9',
-				// 	'400': '#e479a3',
-				// 	'500': '#A35C7A',  // Base color
-				// 	'600': '#8d4f68',
-				// 	'700': '#763f55',
-				// 	'800': '#5e3244',
-				// 	'900': '#472532'
-				// },
-				// gold: {
-				// 	"100": "#e7e7e7",
-				// 	"200": "#EADBD0",
-				// 	"300": "#DFC9B9",
-				// 	"400": "#D4B7A2",
-				// 	"500": "#A27B5C", // Base color
-				// 	"600": "#8A664D",
-				// 	"700": "#72513E",
-				// 	"800": "#5A3C2F",
-				// 	"900": "#422720"
-				// },
 				zinc: {
 					50: "#fafafa"
 				},

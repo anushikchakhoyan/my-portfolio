@@ -71,9 +71,9 @@ const EssentialSkills = () => {
                             ? 'animate-scroll-linear-left'
                             : 'animate-scroll-linear-right'
                     )}>
-                        {[...essentialSkills, ...essentialSkills].map((item) => (
+                        {[...essentialSkills, ...essentialSkills].map((item, innerIndex) => (
                             <div
-                                key={`skill-${item}`}
+                                key={`skill-${item}-${index}-${innerIndex}`}
                                 className="text-sm md:text-base px-6 py-4 rounded-2xl
                                 bg-white hover:bg-primary text-zinc-900 hover:text-white 
                                 transition-all duration-300 hover:scale-105 text-center"

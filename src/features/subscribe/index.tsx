@@ -20,12 +20,12 @@ const Subscribe: React.FC = () => {
     >
       <div className="flex items-center justify-center">
         <div className="w-full max-w-2xl flex flex-col items-center gap-6 px-4">
-          <h2 className="text-sm font-medium text-pink-600 dark:text-pink-400/90 tracking-wider">
+          <h2 className="text-sm font-medium text-primary-600 dark:text-primary-400/90 tracking-wider">
             ⎯ {t("latestNews")}
           </h2>
           <p className="text-center text-xl md:text-3xl lg:text-4xl font-italiana text-zinc-800 dark:text-zinc-100">
             {t('stayInTouch')}{' '}
-            <span className="bg-gradient-to-r from-primary to-pink-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">
               {t('joinMyMailingList')}
             </span>
           </p>

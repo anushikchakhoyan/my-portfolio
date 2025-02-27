@@ -16,7 +16,7 @@ const CircleThumb: React.FC<CircleThumbTypes> = ({
   children,
   size = "md",
   position = "topLeft",
-  color = "bg-pink-400",
+  color = "bg-primary-400",
   bgImage,
 }) => {
   const sizeOptions = {

@@ -23,7 +23,7 @@ const About: React.FC = () => {
   return (
     <SectionsLayout id="about" className="!py-0">
       <div className="flex-1 w-full gap-6 flex flex-col md:flex-row items-center justify-center
-       bg-zinc-700 dark:bg-zinc-800 py-6 md:py-10">
+       bg-zinc-50 dark:bg-zinc-800 py-6 md:py-10">
         <CircleThumb
           className="static"
           size={isMobile ? "sm" : "md"}
@@ -31,20 +31,20 @@ const About: React.FC = () => {
 
         <div className="space-y-4 text-center">
           <h2 className="text-center text-3xl md:text-5xl xl:text-6xl font-italiana 
-           text-gray-100 dark:text-pink-50 tracking-wide whitespace-break-spaces">
+           text-gray-800 dark:text-zinc-50 tracking-wide whitespace-break-spaces">
             {t("itsMe")}
           </h2>
-          <p className="text-sm md:text-base text-gray-400 dark:text-gray-300 whitespace-break-spaces">{t('description1')}</p>
+          <p className="text-sm md:text-base text-zinc-600 dark:text-gray-300 whitespace-break-spaces">{t('description1')}</p>
         </div>
       </div>
       <div className="flex-1 flex items-center justify-center py-12 px-4">
         <div className="w-full md:w-1/2 lg:w-2/4 flex flex-col items-center gap-6">
-          <span className="text-xs font-semibold text-primary dark:text-pink-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary dark:text-primary-400 uppercase tracking-widest">
             {t("welcome")}
           </span>
 
           <div className="relative group">
-            <div className="absolute inset-0 bg-pink-100/30 dark:bg-pink-600/20 transform 
+            <div className="absolute inset-0 bg-primary-100/30 dark:bg-primary-600/20 transform 
             -skew-y-2 scale-105 group-hover:scale-110 transition-all duration-300" />
             <p
               className="relative text-center text-2xl lg:text-3xl xl:text-4xl font-italiana 

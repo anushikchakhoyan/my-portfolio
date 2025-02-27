@@ -35,7 +35,7 @@ const ServicesContent: React.FC<ServiceType> = (
         <p>{description}</p>
         <Button variant="outline" asChild>
           <Link to="/contact-us" className="flex items-center gap-2">
-            <AiFillMessage className="text-pink-400" /> {contactMe}
+            <AiFillMessage className="text-primary-400" /> {contactMe}
           </Link>
         </Button>
       </div>
