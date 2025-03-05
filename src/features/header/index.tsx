@@ -36,9 +36,10 @@ const Header: React.FC = () => {
                 </Link>
                 <NavMenu toggle={toggle} />
                 <div className="flex items-center gap-1 md:gap-2">
-                    <ColorPicker />
                     <LanguageSwitcher />
+                    <ColorPicker />
                     <ModeSwitcher />
+
                     {!isMobile && (
                         <Link to="/contact-us">
                             <Button variant="outline">

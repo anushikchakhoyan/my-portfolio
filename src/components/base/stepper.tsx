@@ -108,7 +108,7 @@ const StepTitle: React.FC<StepTitleProps> = (({ title, description, even }) => {
                 : "top-24 text-zinc-600 dark:text-zinc-400"
         )}>
             <h2 className="text-base font-medium">{title}</h2>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500">{description}</p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-500 whitespace-break-spaces">{description}</p>
         </div>
     )
 });

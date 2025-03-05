@@ -35,6 +35,9 @@
       "@contexts/*": [
         "src/contexts/*"
       ],
+      "@hocs/*": [
+        "src/hocs/*"
+      ],
     },
   },
   "include": [

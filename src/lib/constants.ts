@@ -23,3 +23,8 @@ export const SERVICES_CATEGORY = {
     mentorship: "mentorship",
     collaboration: "collaboration",
 } as const;
+
+export const LANGUAGE = {
+    en: "en",
+    hy: "hy",
+} as const;

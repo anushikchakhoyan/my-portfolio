@@ -69,6 +69,7 @@ const config: GatsbyConfig = {
           `Josefin Sans\:400,700`,
           `Dancing Script\:400,700`,
           `Italiana\:400`,
+          `Noto Serif Armenian\:100,200,300,400,500,600,700,800,900`
         ],
         display: 'swap',
       },

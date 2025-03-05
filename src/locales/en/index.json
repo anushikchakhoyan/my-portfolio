@@ -48,7 +48,7 @@
   "fromConceptToLaunch": "From concept to launch, we guide you through every step.",
   "buildingWebsite": "Building a Website for a Client",
   "workingWithClient": "Working with a Client: Steps & Process",
-  "discoveryConsultation": "Discovery & Consultation",
+  "discoveryConsultation": "Introduction & Consultation",
   "discoveryConsultationDesc": "Understanding the client’s vision, goals, and project requirements.",
   "planningStrategy": "Planning & Strategy",
   "planningStrategyDesc": "Creating a roadmap, defining the tech stack, and setting timelines.",
@@ -222,5 +222,13 @@
   "freelanceProjects": "Freelance Projects",
   "freelanceProjectsDesc": "Need a skilled developer for a short-term project? We’re available for freelance work to help you achieve your goals.",
   "--BENEFITS_ENDED--": "",
-  "--NEW_STARTED--": ""
+  "--COLORS_STARTED--": "",
+  "currentTheme": "Current Theme",
+  "currentThemeDescription": "This theme is applied across your site.",
+  "pink": "A playful blend of warmth and creativity.",
+  "gold": "A touch of elegance with a timeless glow.",
+  "green": "Refreshing, balanced, and full of life.",
+  "blue": "Calm, confident, and effortlessly cool.",
+  "purple": "A royal mix of mystery and imagination.",
+  "--COLORS_ENDED--": ""
 }

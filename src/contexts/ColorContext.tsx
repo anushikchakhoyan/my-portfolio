@@ -85,10 +85,10 @@ export const ColorProvider = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export const useTheme = () => {
+export const useColor = () => {
     const context = useContext(ColorContext);
     if (!context) {
-        throw new Error("useTheme must be used within a ColorProvider");
+        throw new Error("useColor must be used within a ColorProvider");
     }
     return context;
 };

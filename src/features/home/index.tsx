@@ -42,7 +42,7 @@ const Home: React.FC = () => {
   return (
     <SectionsLayout id="main" className="h-[calc(100svh-theme(spacing.12))] flex flex-col z-10 items-center justify-center">
       <div className="flex flex-col gap-4 mx-auto">
-        <h1 className="flex items-center justify-center mb-2">
+        <h1 className="flex items-center justify-center mb-2 text-zinc-800 dark:text-zinc-100">
           <span className="text-5xl md:text-9xl font-josefinSans m-0">Port
             <span className="font-dancingScript text-primary">f</span>olio.
           </span>

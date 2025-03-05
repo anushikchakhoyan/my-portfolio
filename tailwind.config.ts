@@ -31,6 +31,9 @@ const config: Config = {
 				italiana: [
 					'Italiana',
 					'sans-serif'
+				],
+				armenian: [
+					'Noto Serif Armenian', "serif"
 				]
 			},
 			colors: {
