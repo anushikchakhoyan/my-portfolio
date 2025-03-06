@@ -23,25 +23,19 @@ export default function useNavigationData() {
                 },
             ],
         },
-        {
-            title: t("explore"),
-            intro: {
-                abbr: "overview/offer",
-                content: t("understandMyProcess"),
-            },
-            items: [
-                {
-                    title: t("packages"),
-                    url: "/packages",
-                    description: t("exploreMyPricing")
-                },
-            ],
-        },
+        // {
+        //     title: t("explore"),
+        //     intro: {
+        //         abbr: "overview/offer",
+        //         content: t("understandMyProcess"),
+        //     },
+        //     items: [],
+        // },
         {
             title: t("services"),
             intro: {
                 abbr: "process/steps",
-                content: t("websiteAndMentorship"),
+                content: t('makeLearningInteractive'),
             },
             items: [
                 {
@@ -64,8 +58,8 @@ export default function useNavigationData() {
         {
             title: t("connect"),
             intro: {
-                content: t('makeLearningInteractive'),
-                abbr: 'web/guide'
+                abbr: 'guide/offer',
+                content: t("websiteAndMentorship"),
             },
             items: [
                 {
@@ -74,10 +68,15 @@ export default function useNavigationData() {
                     description: t("getInTouchForCollaborations")
                 },
                 {
-                    title: t("blog"),
-                    url: "/blog",
-                    description: t("readInsightsAndArticles")
+                    title: t("packages"),
+                    url: "/packages",
+                    description: t("exploreMyPricing")
                 },
+                // {
+                //     title: t("blog"),
+                //     url: "/blog",
+                //     description: t("readInsightsAndArticles")
+                // },
             ],
         },
     ];

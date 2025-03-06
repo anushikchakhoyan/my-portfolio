@@ -7,21 +7,12 @@ const WhyChooseUs: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <SectionsLayout id="title">
+        <SectionsLayout id="whyChooseUs">
             <GeneralTextBlock
                 title={t("ourProcess")}
-                subtitle={t("streamlinedWorkflows")}
-                description={t("efficientAndTransparentProcesses")}
+                subtitle={t("whyChooseUs")}
+                description={t("whyChooseUsDesc")}
             />
-            <div className="flex justify-center">
-                <p className="w-full md:w-3/4 p-4 md:p-5"
-                    dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }} />
-            </div>
-            <div className="flex justify-end">
-                <p className="w-full md:w-1/2 p-4 md:p-5">
-                    {t('myFocusDescription')}
-                </p>
-            </div>
         </SectionsLayout>
     )
 }

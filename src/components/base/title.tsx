@@ -8,7 +8,7 @@ type TitleProps = {
 
 const Title: React.FC<TitleProps> = ({ title, className }) => (
     <h1 className={cn(
-        `text-center tracking-wide whitespace-break-spaces text-4xl md:text-5xl font-italiana font-bold dark:text-zinc-100
+        `text-center tracking-wide whitespace-break-spaces text-3xl md:text-4xl font-italiana font-bold dark:text-zinc-100
          ${className}`
     )}>
         {title}

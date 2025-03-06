@@ -6,7 +6,7 @@ interface ExperiencesTypes {
     id: number;
     company: string;
     role: string;
-    duration: string;
+    duration?: string;
     logo: React.ReactNode;
 }
 
@@ -18,7 +18,7 @@ export default function useExperiencesData() {
             id: 1,
             company: "Local Express",
             role: "Middle Frontend Developer",
-            duration: t("duration1", { start: 2023, end: 2025 }),
+            // duration: t("duration1", { start: 2023, end: 2025 }),
             logo: (
                 <StaticImage
                     className="object-contain"
@@ -35,7 +35,7 @@ export default function useExperiencesData() {
             id: 2,
             company: "InSpace",
             role: "Frontend / UI Developer",
-            duration: t("duration2", { start: 2021, end: 2023 }),
+            // duration: t("duration2", { start: 2021, end: 2023 }),
             logo: (
                 <StaticImage
                     className="object-contain"
@@ -51,7 +51,7 @@ export default function useExperiencesData() {
             id: 3,
             company: "Develandoo",
             role: "Frontend Developer",
-            duration: t("duration3", { start: 2018, end: 2021 }),
+            // duration: t("duration3", { start: 2018, end: 2021 }),
             logo: (
                 <StaticImage
                     className="object-contain"

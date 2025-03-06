@@ -41,7 +41,6 @@
   "workingTogether": "Working Together",
   "transparentAndEffectiveCollaboration": "Transparent and effective collaboration to ensure your vision is realized.",
   "ourProcess": "Our Process",
-  "streamlinedWorkflows": "Streamlined Workflows",
   "efficientAndTransparentProcesses": "Efficient and transparent processes to bring your ideas to life.",
   "websiteWorkflow": "Website Workflow",
   "buildYourDreamWebsite": "Build Your Dream Website",
@@ -86,6 +85,7 @@
   "finalizationDesc": "Reviewing outcomes, sharing insights, and discussing future opportunities.",
   "--WORKFLOWS_ENDED--": "",
   "--FAQ_STARTED--": "",
+  "here": "here",
   "frequentlyAskedQuestions": "Frequently Asked Questions (FAQ)",
   "faqSubtitle": "Find answers to common questions \n about our platform, features, and services.",
   "faqDesc": "Here are some common questions about my mentorship, my work, and how to get in touch. Whether you're curious about my working process, the tools I use, or how to collaborate, you'll find the answers here.",
@@ -130,7 +130,6 @@
   "ongoingProjectsDescription": "Active projects currently in development",
   "--RATE_ENDED--": "",
   "--SKILLS_STARTED--": "",
-  "topSkills": "Top Skills",
   "checkOutCoreSkills": "Core & Technical Skills",
   "essentialSkills": "Essential Skills",
   "--SKILLS_ENDED--": "",
@@ -206,6 +205,7 @@
   "--NOTFOUND_ENDED--": "",
   "--WHY_CHOOSE_US_STARTED--": "",
   "whyChooseUs": "Why choose us",
+  "whyChooseUsDesc": "Our team is made up of professional specialists. We regularly improve our skills, develop, master new tools and technologies.",
   "--WHY_CHOOSE_US_ENDED--": "",
   "--BENEFITS_STARTED--": "",
   "benefits": "Benefits",
@@ -230,5 +230,10 @@
   "green": "Refreshing, balanced, and full of life.",
   "blue": "Calm, confident, and effortlessly cool.",
   "purple": "A royal mix of mystery and imagination.",
-  "--COLORS_ENDED--": ""
+  "--COLORS_ENDED--": "",
+  "--MISSION_STARTED--": "",
+  "visionTitle": "Our Vision",
+  "visionDesc": "To create a world where innovation and creativity empower individuals and communities to achieve their fullest potential.",
+  "missionTitle": "Our Mission",
+  "missionDesc": "To inspire, innovate, and deliver solutions that simplify complexity, drive progress, and make a meaningful impact in the lives of others."
 }

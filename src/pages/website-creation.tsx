@@ -27,7 +27,6 @@ const WebsiteCreationPage: React.FC = () => {
         <ServicesSection type={SERVICES_CATEGORY.website} />
         <Workflow type={SERVICES_CATEGORY.website} />
         <Benefits type={SERVICES_CATEGORY.website} />
-        {/* <WhyChooseUs /> */}
         <Subscribe />
       </React.Suspense>
     </MainLayout>

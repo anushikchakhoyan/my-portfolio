@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <Link to="/" className="flex items-center font-semibold tracking-wide text-2xl font-italiana">
             {t('im')}
           </Link>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 whitespace-break-spaces">
             {t('footerQuote')}
           </p>
         </div>

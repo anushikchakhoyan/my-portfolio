@@ -37,7 +37,7 @@ const About: React.FC = () => {
           <p className="text-sm md:text-base text-zinc-600 dark:text-gray-300 whitespace-break-spaces">{t('description1')}</p>
         </div>
       </div>
-      <div className="flex-1 flex items-center justify-center py-12 px-4">
+      <div className="flex-1 flex items-center justify-center py-16 px-4">
         <div className="w-full md:w-1/2 lg:w-2/4 flex flex-col items-center gap-6">
           <span className="text-xs font-semibold text-primary dark:text-primary-400 uppercase tracking-widest">
             {t("welcome")}

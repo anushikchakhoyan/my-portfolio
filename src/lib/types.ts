@@ -67,3 +67,16 @@ export const DEFAULT_COLOR: Hsl = {
     saturation: 27.84,
     lightness: 50,
 };
+
+export const DEFAULT_SECONDARY_COLOR: Hsl = {
+    hue: 246,
+    saturation: 63,
+    lightness: 71
+};
+
+export type Color = {
+    name: string;
+    desc: string;
+    primary: Hsl;
+    secondary: Hsl;
+}

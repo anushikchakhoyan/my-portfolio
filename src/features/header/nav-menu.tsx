@@ -47,8 +47,8 @@ const NavMenu: React.FC<{ toggle: boolean }> = ({ toggle }) => {
                                                 <NavigationMenuLink>
                                                     <a
                                                         className="flex h-full w-full select-none flex-col justify-end rounded-md 
-                                                        bg-gray-100 dark:bg-zinc-700/30 p-6 no-underline outline-none 
-                                                        focus:shadow-md dark:hover:bg-zinc-700/40 transition-colors"
+                                                        bg-gray-100 hover:bg-secondary/40 dark:bg-zinc-700/30 dark:hover:bg-secondary/40
+                                                        p-6 no-underline outline-none focus:shadow-md transition-colors"
                                                         href="/"
                                                     >
                                                         <span className="font-italiana dark:text-zinc-100">A N U S H</span>
@@ -95,10 +95,8 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     className={cn(
                         `block select-none space-y-1 rounded-md p-3 leading-none no-underline 
-                        outline-none transition-colors hover:bg-zinc-50 hover:text-zinc-900 
-                        focus:bg-zinc-50 focus:text-zinc-900
-                        dark:hover:bg-zinc-700/40 dark:hover:text-zinc-100 
-                        dark:focus:bg-zinc-700/40 dark:focus:text-zinc-100`,
+                        outline-none transition-colors hover:bg-secondary/20 hover:text-zinc-900
+                       focus:text-zinc-900 dark:hover:text-zinc-100 `,
                         className
                     )}
                     {...props}
