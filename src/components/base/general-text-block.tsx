@@ -9,10 +9,11 @@ interface GeneralTextBlockProps {
     subtitle: string;
     description: string;
     descrptionClasses?: string;
+    children?: React.ReactNode
 }
 
 const GeneralTextBlock: React.FC<GeneralTextBlockProps> = ({
-    title, subtitle, description, descrptionClasses
+    title, subtitle, description, descrptionClasses, children
 }) => {
 
     return (
@@ -23,6 +24,7 @@ const GeneralTextBlock: React.FC<GeneralTextBlockProps> = ({
                 <p className={cn(`text-center text-sm max-w-lg whitespace-break-spaces`, descrptionClasses)}>
                     {description}
                 </p>
+                {children}
             </div>
         </div>
     );

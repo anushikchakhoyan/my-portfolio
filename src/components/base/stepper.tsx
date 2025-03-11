@@ -3,6 +3,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@ui/to
 
 import { cn } from "@lib/utils";
 import { Step } from "@lib/types";
+import { useI18next } from "gatsby-plugin-react-i18next";
+import { LANGUAGE } from "@lib/constants";
 
 interface StepCircleProps {
     step: Step;
@@ -29,6 +31,7 @@ interface StepperProps {
 
 const Stepper: React.FC<StepperProps> = ({ steps, className }) => {
     const [activeStep, setActiveStep] = useState(1);
+    const { language } = useI18next();
 
     const onStepClick = (stepId: number) => {
         setActiveStep(stepId);
@@ -46,11 +49,13 @@ const Stepper: React.FC<StepperProps> = ({ steps, className }) => {
                                 even={index % 2 === 0}
                                 description={step.description}
                             />
-                            <VerticalConnectorLine
-                                even={index % 2 === 0}
-                                isActive={step.id <= activeStep}
-                                handleStepClick={() => onStepClick(step.id)}
-                            />
+                            {language === LANGUAGE.en && (
+                                <VerticalConnectorLine
+                                    even={index % 2 === 0}
+                                    isActive={step.id <= activeStep}
+                                    handleStepClick={() => onStepClick(step.id)}
+                                />
+                            )}
                             <StepCircle
                                 step={step}
                                 isActive={step.id <= activeStep}
@@ -104,8 +109,8 @@ const StepTitle: React.FC<StepTitleProps> = (({ title, description, even }) => {
         <div className={cn(
             "xl:absolute w-full text-start xl:text-center transition-all order-3",
             even
-                ? "-top-32 text-zinc-700 dark:text-zinc-300"
-                : "top-24 text-zinc-600 dark:text-zinc-400"
+                ? "-top-28 text-zinc-700 dark:text-zinc-300"
+                : "top-16 text-zinc-600 dark:text-zinc-400"
         )}>
             <h2 className="text-base font-medium">{title}</h2>
             <p className="text-sm text-zinc-500 dark:text-zinc-500 whitespace-break-spaces">{description}</p>
@@ -122,7 +127,7 @@ const VerticalConnectorLine: React.FC<VerticalConnectorProps> = (({ even, isActi
             className={cn(
                 `hidden xl:block absolute rounded-full w-0.5 transition-all order-2
                  hover:opacity-80 cursor-pointer`,
-                even ? "-top-14 h-12" : "top-9 h-12",
+                even ? "-top-7 h-6 rtgrtgrtgr" : "top-9 h-6",
                 isActive
                     ? 'bg-primary-400 dark:bg-primary'
                     : 'bg-zinc-200 dark:bg-zinc-700'

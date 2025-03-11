@@ -10,17 +10,17 @@ export default function useServicesData(type: Service) {
 
   const data = useStaticQuery(graphql`
     query {
-      mentor: file(relativePath: { eq: "mentor.jpg" }) {
+      mentor: file(relativePath: { eq: "services/mentor.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH)
         }
       }
-      websiteCreation: file(relativePath: { eq: "website.jpg" }) {
+      websiteCreation: file(relativePath: { eq: "services/website.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH)
         }
       }
-      collab: file(relativePath: { eq: "collab.jpg" }) {
+      collab: file(relativePath: { eq: "services/collab.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH)
         }

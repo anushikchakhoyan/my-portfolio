@@ -42,9 +42,9 @@ const ContactUs: React.FC = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="py-10 w-full flex flex-col items-center justify-center gap-10">
+      <div className="py-10 w-full flex flex-col items-center justify-center gap-10 max-w-6xl mx-auto">
         <ContactTitle />
-        <div className="w-full flex flex-col-reverse md:flex-row items-start justify-center gap-10">
+        <div className="w-full flex flex-col md:flex-row items-start justify-center gap-10">
           <ContactForm />
           <ContactInfo />
         </div>
@@ -59,7 +59,10 @@ const ContactInfo: React.FC<{}> = (() => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full md:w-1/3 flex flex-col gap-6 lg:px-20">
+    <div className="w-full md:w-1/2 flex flex-col gap-6 lg:px-4">
+      <p className="text-base font-medium">
+        {t("getBackToYouSoon")}
+      </p>
       <div>
         <p className="text-base uppercase text-gray-900 dark:text-white font-medium">{t("email")}</p>
         <p className="text-base text-gray-600 dark:text-gray-300 font-light">
@@ -86,6 +89,9 @@ const ContactTitle: React.FC<{}> = (() => {
 
   return (
     <>
+      <h3 className="text-xl lg:text-3xl font-italiana max-w-4xl text-center">
+        {t("contactDescription")}
+      </h3>
       <h5 className="max-w-sm text-sm font-medium text-center space-x-1">
         <span>{t("haveQuestions")}</span>
         <Link to="/faq">
@@ -95,12 +101,6 @@ const ContactTitle: React.FC<{}> = (() => {
           />
         </Link>
       </h5>
-      <h3 className="text-3xl font-italiana max-w-xl text-center">
-        {t("haveSomethingShare")} {t("contactDescription")}
-        <span className="block text-base py-5 font-medium">
-          {t("getBackToYouSoon")}
-        </span>
-      </h3>
     </>
   )
 });

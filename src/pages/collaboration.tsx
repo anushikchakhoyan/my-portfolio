@@ -15,6 +15,7 @@ import Seo from "@features/seo";
 
 const CollaborationPage: React.FC = () => {
   const { t } = useTranslation();
+  const type = SERVICES_CATEGORY.collaboration;
 
   return (
     <MainLayout>
@@ -24,9 +25,9 @@ const CollaborationPage: React.FC = () => {
         description={t("transparentAndEffectiveCollaboration")}
         descrptionClasses="px-4"
       />
-      <ServicesSection type={SERVICES_CATEGORY.collaboration} />
-      <Workflow type={SERVICES_CATEGORY.collaboration} />
-      <Benefits type={SERVICES_CATEGORY.collaboration} />
+      <ServicesSection type={type} />
+      <Workflow type={type} />
+      <Benefits type={type} />
       <WhyChooseUs />
       <Subscribe />
     </MainLayout>

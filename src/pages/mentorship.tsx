@@ -14,6 +14,7 @@ import Seo from "@features/seo";
 
 const MentorshipPage: React.FC = () => {
   const { t } = useTranslation();
+  const type = SERVICES_CATEGORY.mentorship;
 
   return (
     <MainLayout>
@@ -23,10 +24,9 @@ const MentorshipPage: React.FC = () => {
         description={t("personalizedMentorshipJourney")}
         descrptionClasses="px-4"
       />
-      <ServicesSection type={SERVICES_CATEGORY.mentorship} />
-      <Workflow type={SERVICES_CATEGORY.mentorship} />
-      <Benefits type={SERVICES_CATEGORY.mentorship} />
-      {/* <WhyChooseUs /> */}
+      <ServicesSection type={type} />
+      <Workflow type={type} />
+      <Benefits type={type} />
       <Subscribe />
     </MainLayout>
   )

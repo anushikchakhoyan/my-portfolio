@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="w-full md:w-1/2 lg:w-2/5">
+        <div className="w-full md:w-1/2">
             <Formik
                 onSubmit={handleSubmit}
                 initialValues={initialValues}
