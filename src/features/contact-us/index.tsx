@@ -6,6 +6,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { UnderlineText, SectionsLayout } from "@base/";
 import SocialMedia from "@features/social-media";
 import ContactForm from "./form";
+import { EMAIL, PHONE } from "@lib/constants";
 
 const ContactUs: React.FC = () => {
   const { t } = useTranslation();
@@ -65,19 +66,19 @@ const ContactInfo: React.FC<{}> = (() => {
       </p>
       <div>
         <p className="text-base uppercase text-gray-900 dark:text-white font-medium">{t("email")}</p>
-        <p className="text-base text-gray-600 dark:text-gray-300 font-light">
-          anush.chakhoyan.work@gmail.com
+        <p className="text-base font-medium text-gray-600 dark:text-gray-300">
+          {EMAIL}
         </p>
       </div>
       <div>
         <p className="text-base uppercase text-gray-900 dark:text-white font-medium">{t("phone")}</p>
-        <p className="text-base text-gray-600 dark:text-gray-300 font-light">094 00 00 00</p>
+        <p className="text-base font-medium text-gray-600 dark:text-gray-300">{PHONE}</p>
       </div>
       <div>
         <p className="text-base uppercase text-gray-900 dark:text-white font-medium">
           {t("social")}
         </p>
-        <SocialMedia iconSize="text-base" className="gap-4" />
+        <SocialMedia iconSize="text-lg" className="gap-4" />
       </div>
     </div>
   )

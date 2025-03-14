@@ -9,3 +9,6 @@ export { default as AnimatedCounter } from "./animated-counter";
 export { default as CustomSlider } from "./custom-slider";
 export { default as GeneralTextBlock } from "./general-text-block";
 export { default as Title } from "./title";
+export { default as SelectField } from "./select-field";
+export { default as InputField } from "./input-field";
+export { default as PhoneField } from "./phone-field";
