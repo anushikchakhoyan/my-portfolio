@@ -12,7 +12,7 @@ type PhoneProps = {
 
 const PhoneField: React.FC<PhoneProps> = ({ name, label, ...props }) => {
     const { setFieldValue } = useFormikContext();
-    const [field, meta, helpers] = useField(name);
+    const [field, meta] = useField(name);
 
     const handleChange = (value: any) => {
         setFieldValue(field.name, value);
@@ -24,6 +24,7 @@ const PhoneField: React.FC<PhoneProps> = ({ name, label, ...props }) => {
                 {...field}
                 {...props}
                 international
+                autoComplete="off"
                 defaultCountry="AM"
                 withCountryCallingCode
                 onChange={handleChange}

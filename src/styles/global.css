@@ -92,5 +92,5 @@
 
 .PhoneInputInput {
     outline: none;
-    background-color: transparent;
+    background-color: transparent !important;
 }
