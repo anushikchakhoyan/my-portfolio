@@ -10,7 +10,7 @@ const UnderlineText: React.FC<UnderlineTextTypes> = ({ text, className }) => {
 
   return (
     <p className={cn(
-      `text-gray-700 dark:text-primary-400 text-base font-medium
+      `text-primary dark:text-primary-300 text-base font-medium
       transition-colors duration-200 ease-in-out underline ${className}`
     )}>
       {text}

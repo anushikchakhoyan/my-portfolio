@@ -9,9 +9,6 @@ import useWebsiteTypeaData from "@hooks/custom/use-website-types-data";
 import { SectionsLayout } from "@base/";
 import { cn } from "@lib/utils";
 
-import coverImage from "@images/types/cover.jpg";
-import { motion } from "framer-motion";
-
 const WebsiteTypes: React.FC = () => {
     const { t } = useTranslation();
     const websites = useWebsiteTypeaData();

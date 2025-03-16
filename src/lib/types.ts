@@ -80,3 +80,9 @@ export type Color = {
     primary: Hsl;
     secondary: Hsl;
 }
+
+export type Info = {
+    title?: string | any;
+    description?: string | any;
+    items?: string[];
+}

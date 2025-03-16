@@ -112,7 +112,7 @@
   "--FAQ_ENDED--": "",
   "--ABOUT_STARTED--": "",
   "itsMe": "I'm Anush \n a front-end engineer",
-  "description1": "A dedicated developer with a strong background in building modern,\n efficient, and user-friendly web applications.",
+  "description1": "A passionate developer specializing in crafting modern, efficient, and user-friendly web applications. With a strong foundation in front-end technologies, I bring creativity and precision to every project, ensuring seamless user experiences and high-performance solutions.",
   "welcome": "Welcome to anushchakhoyan.com",
   "whereSimplicityIsKey": "a place where simplicity drives success, business is built with purpose, and every detail matters.",
   "aboutPurposeOfWork": "Every project is crafted with purpose, every detail refined with care, and every idea brought to life with clarity. Join me in building meaningful digital experiences that inspire and empower.",
@@ -260,5 +260,32 @@
   "govWebsite": "Government Agency Website",
   "govWebsiteDesc": "A site providing official and public information.",
   "customWebsite": "Custom Websites",
-  "customWebsiteDesc": "Tailor-made solutions for unique requirements."
+  "customWebsiteDesc": "Tailor-made solutions for unique requirements.",
+  "--WEBSITE_TYPES_ENDED--": "",
+  "--MENTORSHIP_PLAN_STARTED--": "",
+  "whatIsMentorshipTitle": "What is Mentorship?",
+  "whatIsMentorshipDescription": "Mentorship is a process of exchanging experience, knowledge, and advice, where the mentor, as a guide, helps the mentee develop skills, solve problems, and achieve goals.",
+  "mentorshipProgramTitle": "What is the Mentoring Program?",
+  "mentorshipProgramDescription": "The mentorship program is designed to support the professional and personal development of individuals. It is based on the interaction between experienced professionals (mentors) and students or career starters (mentees). \n\nThe program aims to help participants develop their skills, discover their potential, and achieve their career and life goals.",
+  "whoCanParticipateTitle": "Who Can Participate?",
+  "whoCanParticipateItems": [
+    "Career starters who want to build a successful career in technology",
+    "Individuals over 14 years old who want to develop their skills, specialize and reach new career heights",
+    "Experienced professionals who want to share their knowledge and help others"
+  ],
+  "goalsTitle": "What is the purpose of the mentorship program?",
+  "goalsItems": [
+    "Knowledge Transfer",
+    "Skill Development",
+    "Personal Support",
+    "Career Support"
+  ],
+  "mentorshipProgramBenefitsTitle": "What are the program benefits?",
+  "mentorshipProgramBenefitsItems": [
+    "<span style='color:  hsl(var(--primary));'>Personalized Guidance.</span> Each participant receives a personalized plan based on their goals and needs.",
+    "<span style='color:  hsl(var(--primary));'>Experienced Mentors.</span> The program includes support from experienced professionals who will share their knowledge and experience.",
+    "<span style='color:  hsl(var(--primary));'>Practical Projects.</span> Participants will work on projects, gaining practical experience.",
+    "<span style='color:  hsl(var(--primary));'>Network Expansion.</span> The program provides an opportunity to meet industry experts and expand your professional network."
+  ],
+  "callToAction": "This program is designed to unlock your potential and help you achieve success. If you wish to participate or learn more, contact us."
 }

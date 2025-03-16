@@ -33,9 +33,9 @@ const ServicesContent: React.FC<ServiceType> = (
         <Title title={title} className="md:text-4xl" />
         <UnderlineText text={hint} className="max-w-md" />
         <p>{description}</p>
-        <Button variant="outline" asChild>
+        <Button asChild>
           <Link to="/contact-us" className="flex items-center gap-2">
-            <AiFillMessage className="text-primary-400" /> {contactMe}
+            <AiFillMessage /> {contactMe}
           </Link>
         </Button>
       </div>

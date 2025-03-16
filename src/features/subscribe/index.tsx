@@ -6,7 +6,7 @@ import SocialMedia from "@features/social-media";
 import { SectionsLayout } from "@base/";
 import { Button } from "@ui/button";
 
-const Subscribe: React.FC = () => {
+const Subscribe: React.FC<{ text?: string | any }> = ({ text }) => {
   const { t } = useTranslation()
 
   const handleSubscribeClick = () => {
@@ -24,17 +24,21 @@ const Subscribe: React.FC = () => {
             ⎯ {t("latestNews")}
           </h2>
           <p className="text-center text-xl md:text-3xl lg:text-4xl font-italiana text-zinc-800 dark:text-zinc-100">
-            {t('stayInTouch')}{' '}
-            <span className="bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">
-              {t('joinMyMailingList')}
-            </span>
+            {text ? text : (
+              <>
+                {t('stayInTouch')}{' '}
+                <span className="bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">
+                  {t('joinMyMailingList')}
+                </span>
+              </>
+            )}
           </p>
           <SocialMedia className="dark:text-zinc-300 hover:dark:text-primary" />
           <Button
             variant="outline"
             onClick={handleSubscribeClick}
           >
-            {t("subscribe")}
+            {t("contact")}
           </Button>
         </div>
       </div>
