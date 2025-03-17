@@ -30,7 +30,7 @@ const Rates: React.FC<RatesProps> = ({ limit }) => {
                                 <AnimatedCounter
                                     target={rate}
                                     isInView={isInView}
-                                    className="text-3xl lg:text-4xl font-medium" />
+                                    className="text-3xl lg:text-4xl font-medium text-primary dark:text-primary-300" />
                             </motion.div>
                             <Title title={name} className="text-2xl md:text-xl lg:text-2xl" />
                             <p className="text-sm text-gray-600 dark:text-zinc-400 mt-1">{description}</p>

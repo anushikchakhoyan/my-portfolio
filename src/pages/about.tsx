@@ -16,8 +16,8 @@ const AboutPage: React.FC = () => {
   return (
     <MainLayout>
       <About />
-      <Rates limit={[0, 3]} />
       <VisionMission />
+      <Rates limit={[0, 3]} />
       <Skills />
       <EssentialSkills />
       {/* <Experiences /> */}

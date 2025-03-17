@@ -11,7 +11,7 @@ const Skills: React.FC = () => {
     const skillsData = useSkillsData();
 
     return (
-        <SectionsLayout id="skills" className="p-0">
+        <SectionsLayout id="skills" className="lg:p-0">
             <div className="flex flex-col items-center justify-start gap-10">
                 <Title title={t("essentialSkills")} />
                 <p className="text-xl text-center font-medium text-zinc-800 dark:text-white">

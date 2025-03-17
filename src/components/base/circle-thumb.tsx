@@ -15,26 +15,19 @@ const CircleThumb: React.FC<CircleThumbTypes> = ({
   className,
   children,
   size = "md",
-  position = "topLeft",
   color = "bg-primary-400",
   bgImage,
 }) => {
   const sizeOptions = {
     sm: "w-[200px] h-[200px]",
     md: "w-[300px] h-[300px]",
-    lg: "w-[450px] h-[450px]"
-  }
-
-  const positionOptions = {
-    topLeft: "left-0 top-0",
-    centerLeft: "left-[15%] top-[50%]",
-    bottomRight: "right-0 bottom-0"
+    lg: "w-[400px] h-[400px]"
   }
 
   return (
     <div
-      className={cn(`absolute overflow-hidden z-10 rounded-[62%_47%_82%_35%/45%_45%_80%_66%] animate-slider-shape`,
-        sizeOptions[size], positionOptions[position], color, className)}
+      className={cn(`absolute top-0 left-0 overflow-hidden z-10 rounded-[62%_47%_82%_35%/45%_45%_80%_66%] animate-slider-shape`,
+        sizeOptions[size], color, className)}
     >
       {bgImage ? (
         <GatsbyImage

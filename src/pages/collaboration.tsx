@@ -27,8 +27,8 @@ const CollaborationPage: React.FC = () => {
       />
       <ServicesSection type={type} />
       <Workflow type={type} />
-      <Benefits type={type} />
       <WhyChooseUs />
+      <Benefits type={type} />
       <Subscribe />
     </MainLayout>
   )

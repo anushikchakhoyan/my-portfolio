@@ -24,10 +24,10 @@ const VisionMission = () => {
         <SectionsLayout id="mission">
             <div className="gap-6 flex flex-col md:flex-row justify-center mx-auto lg:w-5/6">
                 {data.map(({ title, desc, Icon }) => (
-                    <div key={title} className="px-8 py-16 space-y-6 rounded-lg bg-secondary/30">
+                    <div key={title} className="px-8 py-16 space-y-6 rounded-lg bg-primary-100/20 dark:bg-primary-600/20">
                         <div className="flex flex-col items-start gap-1 text-zinc-800 dark:text-white">
                             <Icon className="w-8 h-8" />
-                            <h2 className="text-2xl font-bold">
+                            <h2 className="text-2xl font-medium tracking-wider">
                                 {title}
                             </h2>
                         </div>
