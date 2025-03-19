@@ -12,3 +12,4 @@ export { default as Title } from "./title";
 export { default as SelectField } from "./select-field";
 export { default as InputField } from "./input-field";
 export { default as PhoneField } from "./phone-field";
+export { default as CoverSection } from "./cover";

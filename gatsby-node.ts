@@ -18,3 +18,19 @@ export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({ act
     },
   });
 };
+
+// exports.createPages = ({ actions }) => {
+//   const { createPage } = actions;
+
+//   const languages = ['en', 'hy'];
+
+//   languages.forEach((lang) => {
+//     createPage({
+//       path: `/${lang}/404/`,
+//       component: path.resolve('./src/templates/404-template.tsx'),
+//       context: {
+//         language: lang,
+//       },
+//     });
+//   });
+// };

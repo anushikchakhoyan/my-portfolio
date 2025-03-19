@@ -9,7 +9,7 @@ const WhatWeDo: React.FC = () => {
     return (
         <SectionsLayout id="about-what-we-do" className="flex items-center justify-center md:!pt-40 px-4">
             <div className="w-full lg:w-1/2 xl:w-2/4 flex flex-col items-center gap-6">
-                <p className="text-md text-center font-semibold text-primary dark:text-primary-300 uppercase tracking-widest">
+                <p className="text-md text-center font-medium text-primary-900 dark:text-zinc-50 uppercase tracking-widest">
                     {t("welcome")}
                 </p>
                 <div className="relative group">

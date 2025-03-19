@@ -7,7 +7,6 @@ import VisionMission from "@features/vision-mission";
 import WhyChooseUs from "@features/why-choose-us";
 import Subscribe from "@features/subscribe";
 import MainLayout from "@features/layout";
-import Skills from "@features/skills";
 import About from "@features/about";
 import Rates from "@features/rates";
 import Seo from "@features/seo";
@@ -18,8 +17,8 @@ const AboutPage: React.FC = () => {
       <About />
       <VisionMission />
       <Rates limit={[0, 3]} />
-      <Skills />
       <EssentialSkills />
+      {/* <Skills /> */}
       {/* <Experiences /> */}
       <WhyChooseUs />
       <Rates limit={[3, 5]} />

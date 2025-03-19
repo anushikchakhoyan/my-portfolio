@@ -80,7 +80,8 @@ const config: GatsbyConfig = {
         localeJsonSourceName: `locales`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `hy`],
         defaultLanguage: `en`,
-        siteUrl: `http://localhost:8000/`,
+        generateDefaultLanguagePage: true,
+        siteUrl: `http://localhost:8000`,
         trailingSlash: 'always',
         i18nextOptions: {
           fallbackLng: `en`,
@@ -90,19 +91,26 @@ const config: GatsbyConfig = {
           keySeparator: false,
           nsSeparator: false
         },
+        redirect: true,
         pages: [
           {
-            matchPath: '/:lang?/blog/:uid',
+            matchPath: '/:lang?/404',
+            getLanguageFromPath: true
+          },
+          {
+            matchPath: '/:lang?/:uid',
             getLanguageFromPath: true,
             excludeLanguages: ['es']
           },
-          {
-            matchPath: '/preview',
-            languages: ['en']
-          }
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/en/404/`, `/hy/404/`, `/404.html`],
+      },
+    },
   ],
 }
 

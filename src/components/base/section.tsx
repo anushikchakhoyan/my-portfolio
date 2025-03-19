@@ -10,9 +10,9 @@ type LayoutTypes = {
 
 const SectionsLayout: React.FC<LayoutTypes> = ({ children, className, id, ...props }) => {
   return (
-    <section id={id} className={cn("w-full max-w-8xl rounded-lg mx-auto px-4 py-12 lg:py-16", className)} {...props}>
+    <article id={id} className={cn("w-full max-w-8xl rounded-lg mx-auto px-4 py-12 lg:py-16", className)} {...props}>
       {children}
-    </section>
+    </article>
   )
 }
 

@@ -27,7 +27,7 @@ const Subscribe: React.FC<{ text?: string | any }> = ({ text }) => {
             {text ? text : (
               <>
                 {t('stayInTouch')}{' '}
-                <span className="bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary-400 to-primary-500 dark:from-primary-100 dark:to-primary-300 bg-clip-text text-transparent">
                   {t('joinMyMailingList')}
                 </span>
               </>
