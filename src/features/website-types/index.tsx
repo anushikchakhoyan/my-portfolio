@@ -35,8 +35,10 @@ const WebsiteTypes: React.FC = () => {
                 {websites.map(({ key, descKey, img }, index) => (
                     <SwiperSlide key={key} className={cn(`px-8 gap-6 xl:gap-4 rounded-lg
                    flex flex-col-reverse lg:flex-row items-center justify-center`,
-                        index % 2 === 0 ? 'bg-zinc-50 dark:bg-zinc-700' : 'bg-zinc-200 dark:bg-zinc-800')}
-                    >
+                        index % 2 === 0
+                            ? 'bg-gradient-to-r from-white to-primary/10 dark:from-zinc-800 dark:to-zinc-900'
+                            : 'bg-gradient-to-r from-white to-secondary/30 dark:from-zinc-900 dark:to-zinc-800'
+                    )}>
                         <div className="w-4/5 lg:w-5/12 xl:w-1/2">
                             <GatsbyImage
                                 image={img}

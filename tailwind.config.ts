@@ -64,6 +64,10 @@ const config: Config = {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -159,6 +163,14 @@ const config: Config = {
 						transform: 'translateX(-100%)'
 					}
 				},
+				'shimmer': {
+					'0%': {
+						backgroundPosition: '-1200px 0'
+					},
+					'100%': {
+						backgroundPosition: '1200px 0'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -166,7 +178,11 @@ const config: Config = {
 				'slider-shape': 'slider-shape 5s linear infinite',
 				'scroll-linear-right': 'scroll-linear-right 80s linear infinite',
 				'scroll-linear-left': 'scroll-linear-left 80s linear infinite',
-			}
+				'shimmer': 'shimmer 2.2s linear infinite',
+			},
+			backgroundImage: {
+				shimmer: "linear-gradient(to left, hsl(var(--primary) / 7%) 8%, hsl(var(--primary) / 15%) 18%, hsl(var(--primary) / 7%) 33%)",
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

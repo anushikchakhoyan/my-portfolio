@@ -30,9 +30,6 @@ const MentorshipPage: React.FC = () => {
       <Workflow type={type} />
       <InfoBlock type={type} />
       <Benefits type={type} />
-      {/* Տիգրանը, ավելի քան վեց տարվա փորձառությամբ full-stack ծրագրավորող լինելով, 
-      հարուստ գործնական գիտելիքներ է բերում լսարան: Արմենը նվիրված է Front End-ի զարգացման 
-      առաջխաղացմանը և հզորացնելու գործընկեր ծրագրավորողներին ամբողջ աշխարհում:  */}
       <Subscribe text={t('callToAction')} />
     </MainLayout>
   )

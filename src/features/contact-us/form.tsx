@@ -1,6 +1,8 @@
 import * as Yup from "yup";
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLocation } from "@reach/router";
+import { IoWarning } from "react-icons/io5";
 import { Form, Formik, FormikHelpers } from "formik";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useTranslation } from "gatsby-plugin-react-i18next";
@@ -12,6 +14,7 @@ import { Textarea } from "@ui/textarea";
 import { Button } from "@ui/button";
 
 import "react-phone-number-input/style.css";
+import { Alert, AlertDescription, AlertTitle } from "@ui/alert";
 
 type SubscribeTypes = {
     email: string;
@@ -23,8 +26,15 @@ type SubscribeTypes = {
 
 const ContactForm: React.FC = () => {
     const { t } = useTranslation();
-    const { toast } = useToast()
-    const initialValues: SubscribeTypes = { email: "", phone: "", name: "", message: "", service: "" };
+    const { toast } = useToast();
+
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const selectedPlan = queryParams.get("plan");
+    const userEmail = queryParams.get("email");
+    const selectedService = queryParams.get("service");
+
+    const [showAlert, setShowAlert] = useState(!!selectedPlan);
 
     const validationSchema = Yup.object().shape({
         name: Yup.string().required(t("requiredField") as string),
@@ -54,7 +64,8 @@ const ContactForm: React.FC = () => {
                     email: values.email,
                     phone: values.phone,
                     message: values.message,
-                    service: values.service
+                    service: values.service,
+                    plan: selectedPlan || "N/A"
                 },
                 EMAIL_JS_PUBLIC_KEY
             );
@@ -66,6 +77,7 @@ const ContactForm: React.FC = () => {
                     description: t('emailSentDesc'),
                 })
                 resetForm();
+                setShowAlert(false);
             }
         } catch (error) {
             console.error("EmailJS error:", error);
@@ -79,9 +91,29 @@ const ContactForm: React.FC = () => {
         }
     };
 
+    const initialValues: SubscribeTypes = {
+        email: userEmail || "",
+        phone: "",
+        name: "",
+        message: selectedPlan ? (
+            `${t('additionalDetailsPrompt', { plan: selectedPlan })}`
+        ) : "",
+        service: selectedService || ""
+    };
+
     return (
         <div className="w-full md:w-1/2">
+            {showAlert && (
+                <Alert variant="warning" className="mb-5">
+                    <IoWarning className="h-8 w-8" />
+                    <AlertTitle>{t("warningOfPlanTitle")}</AlertTitle>
+                    <AlertDescription>
+                        {t('warningOfPlanDesc')}
+                    </AlertDescription>
+                </Alert>
+            )}
             <Formik
+                enableReinitialize
                 onSubmit={handleSubmit}
                 initialValues={initialValues}
                 validationSchema={validationSchema}

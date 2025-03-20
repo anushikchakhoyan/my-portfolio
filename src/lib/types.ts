@@ -86,3 +86,17 @@ export type Info = {
     description?: string | any;
     items?: string[];
 }
+
+
+export type PlanType = {
+    title: string;
+    features: string[];
+    popular: boolean;
+}
+
+export type PackageType = {
+    title: string;
+    desc: string;
+    plan: PlanType[]
+    service: Service;
+}
