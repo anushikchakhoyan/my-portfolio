@@ -4,7 +4,7 @@ import { generateHSLShades } from '@lib/utils';
 
 type ColorState = {
     primary: Hsl;
-    secondary?: Hsl,
+    secondary: Hsl,
     shades: ColorShades
 };
 
@@ -12,7 +12,7 @@ type ColorAction = {
     type: 'SET_PRIMARY_COLOR';
     payload: {
         primary: Hsl,
-        secondary?: Hsl,
+        secondary: Hsl,
     }
 }
 

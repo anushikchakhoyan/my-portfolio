@@ -78,7 +78,7 @@ export type Color = {
     name: string;
     desc: string;
     primary: Hsl;
-    secondary?: Hsl;
+    secondary: Hsl;
 }
 
 export type Info = {

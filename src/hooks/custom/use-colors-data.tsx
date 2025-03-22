@@ -49,12 +49,6 @@ export default function useColorsData() {
             secondary: { hue: 45, saturation: 50, lightness: 80 },
         },
         {
-            name: 'mauve',
-            desc: t("mauve"),
-            primary: { hue: 300, saturation: 30, lightness: 50 },
-            secondary: { hue: 300, saturation: 20, lightness: 75 },
-        },
-        {
             name: 'slate',
             desc: t("slate"),
             primary: { hue: 337.13, saturation: 100, lightness: 31.37 },

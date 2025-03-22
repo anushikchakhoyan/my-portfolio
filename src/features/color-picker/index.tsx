@@ -16,10 +16,10 @@ const ColorPicker = () => {
     const { state, dispatch } = useColor();
     const colorsSet = useColorsData();
 
-    const handleColorChange = useCallback((colorSet: Color) => {
+    const handleColorChange = useCallback((color: Color) => {
         dispatch({
             type: "SET_PRIMARY_COLOR",
-            payload: { primary: colorSet.primary, secondary: colorSet.secondary }
+            payload: { primary: color.primary, secondary: color.secondary }
         });
     }, [dispatch]);
 
@@ -27,12 +27,11 @@ const ColorPicker = () => {
         <Popover>
             <PopoverTrigger className="flex items-center">
                 <Button
-                    className="h-8 w-8 p-0 shadow-none bg-gray-100 dark:bg-zinc-800
-                     text-black hover:text-white dark:text-white
-                     rounded-full transition-all duration-300
-                     hover:border-1 border-gray-400 hover:scale-110"
+                    className="h-8 w-8 p-0 group shadow-none rounded-full transition-all duration-300
+                     bg-gray-100 hover:bg-white dark:bg-zinc-800 
+                       border border-white hover:border-primary/50 hover:scale-105"
                     aria-label="Switch Color">
-                    <FaPaintRoller />
+                    <FaPaintRoller className="text-zinc-800  dark:text-white group-hover:text-primary" />
                 </Button>
             </PopoverTrigger>
             <PopoverContent className="p-4 max-w-2xl !w-full">
@@ -47,7 +46,8 @@ const ColorPicker = () => {
                                 key={color.name}
                                 className={cn(`p-2 group rounded flex items-center justify-between gap-4 cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-700`,
                                     {
-                                        "bg-zinc-50 dark:bg-zinc-700 border border-zinc-300 animate-shimmer bg-shimmer bg-[length:1200px_100%]": currentTheme,
+                                        "dark:bg-zinc-700 border border-zinc-100 animate-shimmer bg-shimmer bg-[length:1200px_100%]":
+                                            currentTheme,
                                     })}
                                 aria-label={`Select ${color.name} color`}
                                 onClick={() => handleColorChange(color)}>

@@ -182,6 +182,7 @@ const config: Config = {
 			},
 			backgroundImage: {
 				shimmer: "linear-gradient(to left, hsl(var(--primary) / 7%) 8%, hsl(var(--primary) / 15%) 18%, hsl(var(--primary) / 7%) 33%)",
+				'shimmer-gray': "linear-gradient(to left, hsl(var(--secondary) / 7%) 8%, hsl(var(--secondary) / 15%) 18%, hsl(var(--secondary) / 7%) 33%)",
 			},
 		}
 	},
