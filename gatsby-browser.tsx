@@ -18,3 +18,24 @@ export const wrapRootElement = ({ element }: { element: React.ReactNode }) => {
         </ThemeProvider>
     );
 };
+
+/**
+ * This is a workaround solution I've used while the issue is addressed in Gatsby:
+ *
+ * See: https://github.com/gatsbyjs/gatsby/issues/38201
+ */
+export const shouldUpdateScroll = ({ routerProps: { location }, getSavedScrollPosition }) => {
+    window.history.scrollRestoration = 'manual';
+    const currentPosition = getSavedScrollPosition(location, location.key);
+    if (!currentPosition) {
+        window.scrollTo(0, 0);
+    } else {
+        window.setTimeout(() => {
+            window.requestAnimationFrame(() => {
+                window.scrollTo(...currentPosition);
+            });
+        }, 0);
+    }
+
+    return false;
+};
