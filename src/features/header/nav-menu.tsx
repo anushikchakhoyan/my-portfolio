@@ -47,16 +47,16 @@ const NavMenu: React.FC<{ toggle: boolean }> = ({ toggle }) => {
                                                 <NavigationMenuLink>
                                                     <a
                                                         className="flex h-full w-full select-none flex-col justify-end rounded-md 
-                                                        bg-gray-100 hover:bg-secondary/40 dark:bg-zinc-700/30 dark:hover:bg-secondary/40
+                                                        bg-primary-400 hover:bg-primary/90 dark:bg-primary/50 hover:dark:bg-primary/40
                                                         p-6 no-underline outline-none focus:shadow-md transition-colors"
                                                         href="/"
                                                     >
-                                                        <span className="font-italiana dark:text-zinc-100">A N U S H</span>
+                                                        <span className="pt-5 font-italiana text-2xl text-white font-bold uppercase tracking-widest">Anush</span>
 
-                                                        <div className="mb-1 mt-4 text-base font-medium dark:text-zinc-300">
+                                                        <div className="pb-1 pt-4 text-sm font-medium text-white">
                                                             {intro.abbr}
                                                         </div>
-                                                        <p className="text-xs leading-tight text-muted-foreground dark:text-zinc-400">
+                                                        <p className="text-xs leading-tight text-white">
                                                             {intro.content}
                                                         </p>
                                                     </a>
@@ -95,8 +95,7 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     className={cn(
                         `block select-none space-y-1 rounded-md p-3 leading-none no-underline 
-                        outline-none transition-colors hover:bg-secondary/20 hover:text-zinc-900
-                       focus:text-zinc-900 dark:hover:text-zinc-100 `,
+                        outline-none transition-colors hover:bg-gray-50 hover:dark:bg-zinc-700/30`,
                         className
                     )}
                     {...props}

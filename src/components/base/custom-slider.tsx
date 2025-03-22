@@ -44,7 +44,7 @@ const CustomSlider: React.FC<SliderProps> = ({ items, className }) => {
     return (
         <>
             <div className={cn(`mx-auto flex items-center justify-between w-full max-w-3xl p-8
-                           bg-zinc-50 dark:bg-secondary/30 rounded-lg shadow-sm`, className)}>
+                           bg-zinc-50 dark:bg-primary/30 rounded-lg shadow-sm`, className)}>
                 <SliderArrow handleClick={prevSlide}>
                     <IoChevronBackOutline />
                 </SliderArrow>

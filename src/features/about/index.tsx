@@ -8,6 +8,7 @@ import WhatWeDo from "./whatWeDo";
 import Heading from "./heading";
 
 import aboutCover from "@images/about/cover-1.jpg";
+import Rates from "@features/rates";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -26,7 +27,9 @@ const About: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }}
           className="text-sm md:text-base text-zinc-50 whitespace-break-spaces" />
       </CoverSection>
+      <Rates limit={[0, 3]} />
       <AboutWebSite />
+      <Rates limit={[3, 5]} />
     </>
   )
 }

@@ -10,35 +10,62 @@ export default function useColorsData() {
             desc: t("pink"),
             primary: { hue: 324, saturation: 23, lightness: 50 },
             secondary: { hue: 324, saturation: 34, lightness: 74 },
-            // https://www.realtimecolors.com/?colors=0d0d0d-f7f4f6-9e6386-d3a6c1-c96fa4&fonts=Inter-Inter
         },
         {
-            name: 'gold',
-            desc: t("gold"),
-            primary: { hue: 31, saturation: 35, lightness: 51 },
-            secondary: { hue: 31, saturation: 37, lightness: 72 },
+            name: 'midnight',
+            desc: t("midnight"),
+            primary: { hue: 220, saturation: 40, lightness: 30 },
+            secondary: { hue: 220, saturation: 25, lightness: 60 },
+        },
+
+        {
+            name: 'forest',
+            desc: t("forest"),
+            primary: { hue: 150, saturation: 40, lightness: 35 },
+            secondary: { hue: 150, saturation: 30, lightness: 65 },
         },
         {
-            name: 'green',
-            desc: t("green"),
-            primary: { hue: 169, saturation: 30, lightness: 52 },
-            secondary: { hue: 196, saturation: 31, lightness: 72 },
-            // https://www.realtimecolors.com/?colors=050a09-f3f8f7-60aa9d-a2c2ce-81a3bc&fonts=Inter-Inter#toolbar
+            name: 'lavender',
+            desc: t("lavender"),
+            primary: { hue: 270, saturation: 40, lightness: 50 },
+            secondary: { hue: 270, saturation: 30, lightness: 75 },
         },
         {
-            name: 'blue',
-            desc: t("blue"),
-            primary: { hue: 220, saturation: 40, lightness: 52 },
-            secondary: { hue: 221, saturation: 45, lightness: 72 },
-            // https://www.realtimecolors.com/?colors=f9f9fb-030407-496aab-273c68-2c4c8c&fonts=Inter-Inter
+            name: 'red',
+            desc: t("red"),
+            primary: { hue: 0, saturation: 60, lightness: 50 },
+            secondary: { hue: 0, saturation: 40, lightness: 75 },
         },
         {
-            name: 'purple',
-            desc: t("purple"),
-            primary: { hue: 262, saturation: 32, lightness: 53 },
-            secondary: { hue: 261, saturation: 45, lightness: 75 },
-            // https://www.realtimecolors.com/?colors=09080b-fcfbfc-7a679f-aea0c6-9a88bc&fonts=Inter-Inter
+            name: 'ocean',
+            desc: t("ocean"),
+            primary: { hue: 200, saturation: 50, lightness: 40 },
+            secondary: { hue: 200, saturation: 30, lightness: 70 },
         },
+        {
+            name: 'golden',
+            desc: t("golden"),
+            primary: { hue: 45, saturation: 70, lightness: 55 },
+            secondary: { hue: 45, saturation: 50, lightness: 80 },
+        },
+        {
+            name: 'mauve',
+            desc: t("mauve"),
+            primary: { hue: 300, saturation: 30, lightness: 50 },
+            secondary: { hue: 300, saturation: 20, lightness: 75 },
+        },
+        {
+            name: 'slate',
+            desc: t("slate"),
+            primary: { hue: 337.13, saturation: 100, lightness: 31.37 },
+            secondary: { hue: 210, saturation: 15, lightness: 65 },
+        },
+        {
+            name: 'gray',
+            desc: t("gray"),
+            primary: { hue: 0, saturation: 0.56, lightness: 22.11 },
+            secondary: { hue: 210, saturation: 15, lightness: 65 },
+        }
     ];
 
     return colorSets;

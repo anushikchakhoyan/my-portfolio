@@ -35,31 +35,30 @@ const ColorPicker = () => {
                     <FaPaintRoller />
                 </Button>
             </PopoverTrigger>
-            <PopoverContent className="p-2">
-                <h4 className='py-3 text-xl text-zinc-800 dark:text-zinc-50'>{t('chooseColorPallete')}</h4>
-                <div className="flex flex-col gap-1">
+            <PopoverContent className="p-4 max-w-2xl !w-full">
+                <h4 className='py-2 text-xl text-zinc-800 dark:text-zinc-50'>{t('chooseColorPallete')}</h4>
+                <div className="grid grid-cols-2 gap-2">
                     {colorsSet.map((color) => {
-                        const currentTheme = color.primary.hue === state.primary.hue;
+                        const currentTheme = color.primary.hue === state.primary.hue &&
+                            color.primary.saturation === state.primary.saturation &&
+                            color.primary.lightness === state.primary.lightness;
                         return (
                             <div
                                 key={color.name}
-                                className={cn(`group p-2 rounded flex items-center justify-between gap-4 cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-700`,
+                                className={cn(`p-2 group rounded flex items-center justify-between gap-4 cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-700`,
                                     {
-                                        "bg-zinc-50 dark:bg-zinc-700 border border-zinc-200": currentTheme,
+                                        "bg-zinc-50 dark:bg-zinc-700 border border-zinc-300 animate-shimmer bg-shimmer bg-[length:1200px_100%]": currentTheme,
                                     })}
                                 aria-label={`Select ${color.name} color`}
                                 onClick={() => handleColorChange(color)}>
                                 {currentTheme ? (
-                                    <div className="flex items-start">
-                                        <BiCheck className="w-6 text-green-600 text-2xl" />
-                                        <div>
-                                            <p className="text-base text-zinc-600 dark:text-zinc-300">
-                                                {t('currentTheme')}
-                                            </p>
-                                            <span className="text-xs text-zinc-600 dark:text-zinc-300">
-                                                {t('currentThemeDescription')}
-                                            </span>
-                                        </div>
+                                    <div className="flex flex-col items-start">
+                                        <p className="text-base text-zinc-600 dark:text-zinc-300">
+                                            {t('currentTheme')}
+                                        </p>
+                                        <span className="text-xs text-zinc-600 dark:text-zinc-300">
+                                            {t('currentThemeDescription')}
+                                        </span>
                                     </div>
                                 ) : (
                                     <div>

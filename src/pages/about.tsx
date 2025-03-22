@@ -15,24 +15,12 @@ const AboutPage: React.FC = () => {
   return (
     <MainLayout>
       <About />
-      <VisionMission />
-      <Rates limit={[0, 3]} />
       <EssentialSkills />
+      <WhyChooseUs />
+      <VisionMission />
       {/* <Skills /> */}
       {/* <Experiences /> */}
-      <WhyChooseUs />
-      <Rates limit={[3, 5]} />
-
-      {/* <h1>{t('efficientAndTransparentProcesses')}</h1>
-      <div className="flex justify-center">
-        <p className="w-full md:w-3/4 p-4 md:p-5"
-          dangerouslySetInnerHTML={{ __html: t('visionDescription') as string }} />
-      </div>
-      <div className="flex justify-end">
-        <p className="w-full md:w-1/2 p-4 md:p-5">
-          {t('myFocusDescription')}
-        </p>
-      </div> */}
+      {/* <h1>{t('efficientAndTransparentProcesses')}</h1> */}
       <Subscribe />
     </MainLayout>
   )
